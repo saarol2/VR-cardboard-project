@@ -152,7 +152,6 @@ struct U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009  : public Ru
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
-	VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* ___U3CU3E4__this;
 };
 struct InlinedArray_1_t3C09CF0FF8AFDDAE359F6963D9448B01EBD0F9D1 
 {
@@ -1424,9 +1423,9 @@ inline int32_t InputControl_1_ReadValue_m098F74445FF1AFEC68A0C5DB2EDC32AF3F56E28
 {
 	return ((  int32_t (*) (InputControl_1_t2BE808A88535A7BD02A4623F3798E6FCDAE1F21E*, const RuntimeMethod*))InputControl_1_ReadValue_m2D91FC0A31915FCC498882940C163485D51037B2_gshared)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42 (XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRManagerSettings_get_isInitializationComplete_m2F7E30B51DB12D34535BE7805A3CD490FFE12F68 (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline (const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline (XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRManagerSettings_get_isInitializationComplete_m2F7E30B51DB12D34535BE7805A3CD490FFE12F68_inline (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VrModeController_get__isVrModeEnabled_m1DD975D70FA5F03ADDA1DD5D3D0D1647C3EF0716 (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_ExitVR_m2419B854BE3F2283ADD4F28B80009FC3DF99C10E (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) ;
@@ -1474,7 +1473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 50257
+// Method Definition Index: 49871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardboardStartup_Start_m9E2B9EE3223188285BD0B946F89BB7AAF864972D (CardboardStartup_t694F2EA189A46AE69D570E747C4682C57BCAD861* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1483,36 +1482,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardboardStartup_Start_m9E2B9EE322318828
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:35>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:35>
 		Screen_set_sleepTimeout_mB375970159A73BB484A2B5E62A943330B83ABF9A((-1), NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:36>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:36>
 		Screen_set_brightness_m0EE16AC1CB4F674B178C75F8180E6A675A3CD8F7((1.0f), NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:39>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:39>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = Api_HasDeviceParams_m7158915814477F6D8C085ED748F12215F2F3F578(NULL);
-		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (L_0)
 		{
-			goto IL_0027;
+			goto IL_001c;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:41>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:41>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_ScanDeviceParams_m99D8CA832AFDD2229F96F2819B7F18BCEA5E8A17(NULL);
 	}
 
-IL_0027:
+IL_001c:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:43>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:43>
 		return;
 	}
 }
-// Method Definition Index: 50258
+// Method Definition Index: 49872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardboardStartup_Update_mF1E658CBE911A2B6EC1B7741EA7E1CF050A6EB35 (CardboardStartup_t694F2EA189A46AE69D570E747C4682C57BCAD861* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1522,95 +1518,83 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardboardStartup_Update_mF1E658CBE911A2B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:50>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:50>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = Api_get_IsGearButtonPressed_m922BF1A99A8B035D565441F96824AE9F0925156A(NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0012;
+			goto IL_000c;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:52>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:52>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_ScanDeviceParams_m99D8CA832AFDD2229F96F2819B7F18BCEA5E8A17(NULL);
 	}
 
-IL_0012:
+IL_000c:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:55>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:55>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
-		bool L_2;
-		L_2 = Api_get_IsCloseButtonPressed_m4B0EDA79280273FDD21B841B7E4765D90F978F43(NULL);
-		V_1 = L_2;
-		bool L_3 = V_1;
-		if (!L_3)
+		bool L_1;
+		L_1 = Api_get_IsCloseButtonPressed_m4B0EDA79280273FDD21B841B7E4765D90F978F43(NULL);
+		if (!L_1)
 		{
-			goto IL_0023;
+			goto IL_0018;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:57>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:57>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281(NULL);
 	}
 
-IL_0023:
+IL_0018:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:60>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:60>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Api_get_IsTriggerHeldPressed_m24BDCFD056C57E371E827EB59F09C9DD7F42191F(NULL);
-		V_2 = L_4;
-		bool L_5 = V_2;
-		if (!L_5)
+		bool L_2;
+		L_2 = Api_get_IsTriggerHeldPressed_m24BDCFD056C57E371E827EB59F09C9DD7F42191F(NULL);
+		if (!L_2)
 		{
-			goto IL_0034;
+			goto IL_0024;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:62>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:62>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_Recenter_m0668D49BC62C4DEDCE1A50C78F9E5016D01280C0(NULL);
 	}
 
-IL_0034:
+IL_0024:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:65>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:65>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
-		bool L_6;
-		L_6 = Api_HasNewDeviceParams_m8CF6742A64A20B00D8FFE2F229628D1DB54831C5(NULL);
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		bool L_3;
+		L_3 = Api_HasNewDeviceParams_m8CF6742A64A20B00D8FFE2F229628D1DB54831C5(NULL);
+		if (!L_3)
 		{
-			goto IL_0045;
+			goto IL_0030;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:67>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:67>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_ReloadDeviceParams_mBACF68BBC935329B23B19CB08A9CF0D5A6AB8F04(NULL);
 	}
 
-IL_0045:
+IL_0030:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:70>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:70>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_UpdateScreenParams_mC3CED586D588F397D1B53DAAEE0697DA5FDADB03(NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:71>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/CardboardStartup.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 50259
+// Method Definition Index: 49873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardboardStartup__ctor_m888D5DB9AEA238943ABF13433945D31D4A879DD1 (CardboardStartup_t694F2EA189A46AE69D570E747C4682C57BCAD861* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1626,7 +1610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CardboardStartup__ctor_m888D5DB9AEA23894
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 50260
+// Method Definition Index: 49874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GraphicsAPITextController_Start_m49C8D9C420C31246D749AA612E05B13D2DE31937 (GraphicsAPITextController_t1D08610549AF5946709E9675E3B2EBE3728ABC04* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1641,9 +1625,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GraphicsAPITextController_Start_m49C8D9C
 	}
 	TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* V_0 = NULL;
 	int32_t V_1 = 0;
-	int32_t V_2 = 0;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:34>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:34>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
 		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_1 = { reinterpret_cast<intptr_t> (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8_0_0_0_var) };
@@ -1654,71 +1637,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GraphicsAPITextController_Start_m49C8D9C
 		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_3;
 		L_3 = GameObject_GetComponent_m99E12753EA84947521DC711CA33F452B5E65B474(L_0, L_2, NULL);
 		V_0 = ((TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*)IsInstSealed((RuntimeObject*)L_3, TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8_il2cpp_TypeInfo_var));
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:35>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:35>
 		int32_t L_4;
 		L_4 = SystemInfo_get_graphicsDeviceType_m2D54A0B94D138727041B29B127D8837165686545(NULL);
-		V_2 = L_4;
-		int32_t L_5 = V_2;
-		V_1 = L_5;
+		V_1 = L_4;
+		int32_t L_5 = V_1;
+		if ((((int32_t)L_5) == ((int32_t)((int32_t)11))))
+		{
+			goto IL_002d;
+		}
+	}
+	{
 		int32_t L_6 = V_1;
-		if ((((int32_t)L_6) == ((int32_t)((int32_t)11))))
+		if ((((int32_t)L_6) == ((int32_t)((int32_t)21))))
 		{
-			goto IL_0032;
+			goto IL_0039;
 		}
 	}
 	{
-		goto IL_002b;
+		goto IL_0045;
 	}
 
-IL_002b:
+IL_002d:
 	{
-		int32_t L_7 = V_1;
-		if ((((int32_t)L_7) == ((int32_t)((int32_t)21))))
-		{
-			goto IL_0040;
-		}
-	}
-	{
-		goto IL_004e;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:43>
+		TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* L_7 = V_0;
+		NullCheck(L_7);
+		TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E(L_7, _stringLiteralD84C3E7354CDA203313388822BE34A4033AED5FA, NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:44>
+		return;
 	}
 
-IL_0032:
+IL_0039:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:43>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:52>
 		TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* L_8 = V_0;
 		NullCheck(L_8);
-		TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E(L_8, _stringLiteralD84C3E7354CDA203313388822BE34A4033AED5FA, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:44>
-		goto IL_005c;
+		TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E(L_8, _stringLiteral4C48A78EC98C79B757DD1F93DECCC9BCD200C9C0, NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:53>
+		return;
 	}
 
-IL_0040:
+IL_0045:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:52>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:56>
 		TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* L_9 = V_0;
 		NullCheck(L_9);
-		TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E(L_9, _stringLiteral4C48A78EC98C79B757DD1F93DECCC9BCD200C9C0, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:53>
-		goto IL_005c;
-	}
-
-IL_004e:
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:56>
-		TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* L_10 = V_0;
-		NullCheck(L_10);
-		TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E(L_10, _stringLiteral8FC0169D2757CDFF78A24B91F1AE4951AC4C5E35, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:57>
-		goto IL_005c;
-	}
-
-IL_005c:
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:59>
+		TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E(L_9, _stringLiteral8FC0169D2757CDFF78A24B91F1AE4951AC4C5E35, NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/GraphicsAPITextController.cs:59>
 		return;
 	}
 }
-// Method Definition Index: 50261
+// Method Definition Index: 49875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GraphicsAPITextController__ctor_m5988CBE9B0812A3CF27993565F6CB8D939793F2D (GraphicsAPITextController_t1D08610549AF5946709E9675E3B2EBE3728ABC04* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1734,7 +1704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GraphicsAPITextController__ctor_m5988CBE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 50262
+// Method Definition Index: 49876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_Start_m70FD9C9C78F6AD00454583F6B2EFD50D44EB7F6C (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1744,7 +1714,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_Start_m70FD9C9C78F6AD00
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:53>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:53>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
@@ -1754,37 +1724,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_Start_m70FD9C9C78F6AD00
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
 		L_2 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_1, NULL);
 		__this->____startingPosition = L_2;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:54>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:54>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_3;
 		L_3 = Component_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mC91ACC92AD57CA6CA00991DAF1DB3830BCE07AF8(__this, Component_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mC91ACC92AD57CA6CA00991DAF1DB3830BCE07AF8_RuntimeMethod_var);
 		__this->____myRenderer = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____myRenderer), (void*)L_3);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:55>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:55>
 		ObjectController_SetMaterial_m105DB6596A27C0A104B9BD3D4653FE01B323189C(__this, (bool)0, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:56>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:56>
 		return;
 	}
 }
-// Method Definition Index: 50263
+// Method Definition Index: 49877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_TeleportRandomly_m2D1C16F49D7104B589B2BB14DB85415B8FC6E304 (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
+	float V_2 = 0.0f;
 	float V_3 = 0.0f;
 	float V_4 = 0.0f;
-	float V_5 = 0.0f;
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_6;
-	memset((&V_6), 0, sizeof(V_6));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_5;
+	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:64>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:64>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = Transform_GetSiblingIndex_m45EE497589C36D1FBED87FB802BD80A95CE68575(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:65>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:65>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_2);
@@ -1794,14 +1763,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_TeleportRandomly_m2D1C1
 		int32_t L_4;
 		L_4 = Transform_get_childCount_mE9C29C702AB662CC540CA053EDE48BDAFA35B4B0(L_3, NULL);
 		V_1 = L_4;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:66>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:66>
 		int32_t L_5 = V_0;
 		int32_t L_6 = V_1;
 		int32_t L_7;
 		L_7 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(1, L_6, NULL);
 		int32_t L_8 = V_1;
 		V_0 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_5, L_7))%L_8));
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:67>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:67>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_9);
@@ -1814,86 +1783,84 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_TeleportRandomly_m2D1C1
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
 		L_13 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_12, NULL);
-		V_2 = L_13;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:70>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:70>
 		float L_14;
 		L_14 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((-3.14159274f), (3.14159274f), NULL);
-		V_3 = L_14;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:71>
+		V_2 = L_14;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:71>
 		float L_15;
 		L_15 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((2.5f), (3.5f), NULL);
-		V_4 = L_15;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:72>
+		V_3 = L_15;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:72>
 		float L_16;
 		L_16 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.5f), (3.5f), NULL);
-		V_5 = L_16;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:73>
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:74>
-		float L_17 = V_3;
+		V_4 = L_16;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:73>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:74>
+		float L_17 = V_2;
 		float L_18;
 		L_18 = cosf(L_17);
-		float L_19 = V_4;
-		float L_20 = V_5;
-		float L_21 = V_3;
+		float L_19 = V_3;
+		float L_20 = V_4;
+		float L_21 = V_2;
 		float L_22;
 		L_22 = sinf(L_21);
-		float L_23 = V_4;
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_6), ((float)il2cpp_codegen_multiply(L_18, L_19)), L_20, ((float)il2cpp_codegen_multiply(L_22, L_23)), NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:77>
+		float L_23 = V_3;
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_5), ((float)il2cpp_codegen_multiply(L_18, L_19)), L_20, ((float)il2cpp_codegen_multiply(L_22, L_23)), NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:77>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24;
 		L_24 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_24);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25;
 		L_25 = Transform_get_parent_m65354E28A4C94EC00EBCF03532F7B0718380791E(L_24, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = V_6;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = V_5;
 		NullCheck(L_25);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_25, L_26, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:79>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = V_2;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:79>
+		NullCheck(L_13);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)1, NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:80>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27;
+		L_27 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_27);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_27, (bool)1, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:80>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28;
-		L_28 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		NullCheck(L_28);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_28, (bool)0, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:81>
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_27, (bool)0, NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:81>
 		ObjectController_SetMaterial_m105DB6596A27C0A104B9BD3D4653FE01B323189C(__this, (bool)0, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:82>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:82>
 		return;
 	}
 }
-// Method Definition Index: 50264
+// Method Definition Index: 49878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_OnPointerEnter_m56EAD26415A4F4CB49CD6C8E2F22EECF3EF37FDA (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:89>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:89>
 		ObjectController_SetMaterial_m105DB6596A27C0A104B9BD3D4653FE01B323189C(__this, (bool)1, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:90>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:90>
 		return;
 	}
 }
-// Method Definition Index: 50265
+// Method Definition Index: 49879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_OnPointerExit_mF865AD766D6CADC9F24B1BDF35CE6665D85C1C82 (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:97>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:97>
 		ObjectController_SetMaterial_m105DB6596A27C0A104B9BD3D4653FE01B323189C(__this, (bool)0, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:98>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:98>
 		return;
 	}
 }
-// Method Definition Index: 50266
+// Method Definition Index: 49880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_OnPointerClick_m34951514A2BFC9C98CBD0B20BA68061DF5CB97D1 (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:106>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:106>
 		ObjectController_TeleportRandomly_m2D1C16F49D7104B589B2BB14DB85415B8FC6E304(__this, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:107>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:107>
 		return;
 	}
 }
-// Method Definition Index: 50267
+// Method Definition Index: 49881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_SetMaterial_m105DB6596A27C0A104B9BD3D4653FE01B323189C (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, bool ___0_gazedAt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1902,21 +1869,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_SetMaterial_m105DB6596A
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B6_0 = NULL;
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B5_0 = NULL;
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* G_B7_0 = NULL;
-	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B7_1 = NULL;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B4_0 = NULL;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B3_0 = NULL;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* G_B5_0 = NULL;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B5_1 = NULL;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:118>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:118>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = __this->___InactiveMaterial;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_001d;
+			goto IL_0038;
 		}
 	}
 	{
@@ -1924,62 +1889,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController_SetMaterial_m105DB6596A
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		G_B3_0 = ((int32_t)(L_3));
-		goto IL_001e;
-	}
-
-IL_001d:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_001e:
-	{
-		V_0 = (bool)G_B3_0;
-		bool L_4 = V_0;
-		if (!L_4)
+		if (!L_3)
 		{
-			goto IL_0041;
+			goto IL_0038;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:120>
-		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_5 = __this->____myRenderer;
-		bool L_6 = ___0_gazedAt;
-		if (L_6)
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:120>
+		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_4 = __this->____myRenderer;
+		bool L_5 = ___0_gazedAt;
+		if (L_5)
 		{
-			G_B6_0 = L_5;
-			goto IL_0034;
+			G_B4_0 = L_4;
+			goto IL_002d;
 		}
-		G_B5_0 = L_5;
+		G_B3_0 = L_4;
 	}
 	{
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_7 = __this->___InactiveMaterial;
-		G_B7_0 = L_7;
-		G_B7_1 = G_B5_0;
-		goto IL_003a;
-	}
-
-IL_0034:
-	{
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_8 = __this->___GazedAtMaterial;
-		G_B7_0 = L_8;
-		G_B7_1 = G_B6_0;
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_6 = __this->___InactiveMaterial;
+		G_B5_0 = L_6;
+		G_B5_1 = G_B3_0;
+		goto IL_0033;
 	}
 
-IL_003a:
+IL_002d:
 	{
-		NullCheck(G_B7_1);
-		Renderer_set_material_m21E88977071E0A914D62F3D9CFF0193B3117C45A(G_B7_1, G_B7_0, NULL);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_7 = __this->___GazedAtMaterial;
+		G_B5_0 = L_7;
+		G_B5_1 = G_B4_0;
 	}
 
-IL_0041:
+IL_0033:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:122>
+		NullCheck(G_B5_1);
+		Renderer_set_material_m21E88977071E0A914D62F3D9CFF0193B3117C45A(G_B5_1, G_B5_0, NULL);
+	}
+
+IL_0038:
+	{
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/ObjectController.cs:122>
 		return;
 	}
 }
-// Method Definition Index: 50268
+// Method Definition Index: 49882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController__ctor_m4D7145D00075C578D38E654EFBD0346E3B7A97BF (ObjectController_tBF20F280367D206F28C7FA39CEA13EC3DEA90A87* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1995,7 +1947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ObjectController__ctor_m4D7145D00075C578
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 50269
+// Method Definition Index: 49883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VrModeController_get__isScreenTouched_m66C98539DFFB271FCE8C14D3A3699BAB7BB5E8FE (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2005,18 +1957,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VrModeController_get__isScreenTouched_m6
 		s_Il2CppMethodInitialized = true;
 	}
 	TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* V_0 = NULL;
-	bool V_1 = false;
-	int32_t G_B3_0 = 0;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:50>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:50>
 		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_0;
 		L_0 = VrModeController_GetFirstTouchIfExists_mBE1BBDC56187981A4DA7A601F6BE586E9F5CBA92(NULL);
 		V_0 = L_0;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:51>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:51>
 		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_1 = V_0;
 		if (!L_1)
 		{
-			goto IL_001a;
+			goto IL_0018;
 		}
 	}
 	{
@@ -2027,29 +1977,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VrModeController_get__isScreenTouched_m6
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = InputControl_1_ReadValue_m098F74445FF1AFEC68A0C5DB2EDC32AF3F56E281(L_3, InputControl_1_ReadValue_m098F74445FF1AFEC68A0C5DB2EDC32AF3F56E281_RuntimeMethod_var);
-		G_B3_0 = ((((int32_t)L_4) == ((int32_t)1))? 1 : 0);
-		goto IL_001b;
+		return (bool)((((int32_t)L_4) == ((int32_t)1))? 1 : 0);
 	}
 
-IL_001a:
+IL_0018:
 	{
-		G_B3_0 = 0;
-	}
-
-IL_001b:
-	{
-		V_1 = (bool)G_B3_0;
-		goto IL_001e;
-	}
-
-IL_001e:
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:52>
-		bool L_5 = V_1;
-		return L_5;
+		return (bool)0;
 	}
 }
-// Method Definition Index: 50270
+// Method Definition Index: 49884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VrModeController_get__isVrModeEnabled_m1DD975D70FA5F03ADDA1DD5D3D0D1647C3EF0716 (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2058,30 +1994,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VrModeController_get__isVrModeEnabled_m1
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:62>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:62>
 		il2cpp_codegen_runtime_class_init_inline(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_0;
-		L_0 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C(NULL);
+		L_0 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline(NULL);
 		NullCheck(L_0);
 		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_1;
-		L_1 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42(L_0, NULL);
+		L_1 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline(L_0, NULL);
 		NullCheck(L_1);
 		bool L_2;
-		L_2 = XRManagerSettings_get_isInitializationComplete_m2F7E30B51DB12D34535BE7805A3CD490FFE12F68(L_1, NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:63>
-		bool L_3 = V_0;
-		return L_3;
+		L_2 = XRManagerSettings_get_isInitializationComplete_m2F7E30B51DB12D34535BE7805A3CD490FFE12F68_inline(L_1, NULL);
+		return L_2;
 	}
 }
-// Method Definition Index: 50271
+// Method Definition Index: 49885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_Start_m5C5D7B11B241D3ED9FB87BE527312E1485B7358C (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2090,41 +2017,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_Start_m5C5D7B11B241D3ED
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:72>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:72>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0;
 		L_0 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
 		__this->____mainCamera = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____mainCamera), (void*)L_0);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:77>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:77>
 		Screen_set_sleepTimeout_mB375970159A73BB484A2B5E62A943330B83ABF9A((-1), NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:78>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:78>
 		Screen_set_brightness_m0EE16AC1CB4F674B178C75F8180E6A675A3CD8F7((1.0f), NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:84>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:84>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Api_HasDeviceParams_m7158915814477F6D8C085ED748F12215F2F3F578(NULL);
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0032;
+			goto IL_0027;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:86>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:86>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_ScanDeviceParams_m99D8CA832AFDD2229F96F2819B7F18BCEA5E8A17(NULL);
 	}
 
-IL_0032:
+IL_0027:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:88>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:88>
 		return;
 	}
 }
-// Method Definition Index: 50272
+// Method Definition Index: 49886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_Update_m46834D5848F3B8AB8D98CF12AE211B7A451567B4 (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2133,93 +2057,77 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_Update_m46834D5848F3B8A
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	bool V_3 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:95>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:95>
 		bool L_0;
 		L_0 = VrModeController_get__isVrModeEnabled_m1DD975D70FA5F03ADDA1DD5D3D0D1647C3EF0716(__this, NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
+		if (!L_0)
+		{
+			goto IL_0027;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:97>
+		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Api_get_IsCloseButtonPressed_m4B0EDA79280273FDD21B841B7E4765D90F978F43(NULL);
 		if (!L_1)
 		{
-			goto IL_0038;
+			goto IL_0015;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:97>
-		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
-		bool L_2;
-		L_2 = Api_get_IsCloseButtonPressed_m4B0EDA79280273FDD21B841B7E4765D90F978F43(NULL);
-		V_1 = L_2;
-		bool L_3 = V_1;
-		if (!L_3)
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:99>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:99>
 		VrModeController_ExitVR_m2419B854BE3F2283ADD4F28B80009FC3DF99C10E(__this, NULL);
 	}
 
-IL_001e:
+IL_0015:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:102>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:102>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
-		bool L_4;
-		L_4 = Api_get_IsGearButtonPressed_m922BF1A99A8B035D565441F96824AE9F0925156A(NULL);
-		V_2 = L_4;
-		bool L_5 = V_2;
-		if (!L_5)
+		bool L_2;
+		L_2 = Api_get_IsGearButtonPressed_m922BF1A99A8B035D565441F96824AE9F0925156A(NULL);
+		if (!L_2)
 		{
-			goto IL_002f;
+			goto IL_0021;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:104>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:104>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_ScanDeviceParams_m99D8CA832AFDD2229F96F2819B7F18BCEA5E8A17(NULL);
 	}
 
-IL_002f:
+IL_0021:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:107>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:107>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_UpdateScreenParams_mC3CED586D588F397D1B53DAAEE0697DA5FDADB03(NULL);
-		goto IL_004d;
+		return;
 	}
 
-IL_0038:
+IL_0027:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:112>
-		bool L_6;
-		L_6 = VrModeController_get__isScreenTouched_m66C98539DFFB271FCE8C14D3A3699BAB7BB5E8FE(__this, NULL);
-		V_3 = L_6;
-		bool L_7 = V_3;
-		if (!L_7)
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:112>
+		bool L_3;
+		L_3 = VrModeController_get__isScreenTouched_m66C98539DFFB271FCE8C14D3A3699BAB7BB5E8FE(__this, NULL);
+		if (!L_3)
 		{
-			goto IL_004c;
+			goto IL_0035;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:114>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:114>
 		VrModeController_EnterVR_m5D5DE739026E88A1107B58874C3CA8DE3E4F816E(__this, NULL);
 	}
 
-IL_004c:
+IL_0035:
 	{
-	}
-
-IL_004d:
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:117>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:117>
 		return;
 	}
 }
-// Method Definition Index: 50273
+// Method Definition Index: 49887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* VrModeController_GetFirstTouchIfExists_mBE1BBDC56187981A4DA7A601F6BE586E9F5CBA92 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2234,93 +2142,73 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TouchControl_t3A64A795FF61A8B27E5EBD61632F23A
 	Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* V_0 = NULL;
 	ReadOnlyArray_1_t1AB67C13630F5ECC78559C8BCEFFC00C4457333E V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	bool V_2 = false;
-	TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* V_3 = NULL;
-	bool V_4 = false;
-	bool V_5 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:129>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:129>
 		il2cpp_codegen_runtime_class_init_inline(Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE_il2cpp_TypeInfo_var);
 		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_0;
 		L_0 = Touchscreen_get_current_m6D9CD2446B30224D18E695DF0ECC3A00E4F7B708_inline(NULL);
 		V_0 = L_0;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:130>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:130>
 		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_1 = V_0;
-		V_2 = (bool)((((RuntimeObject*)(Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE*)L_1) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
-		bool L_2 = V_2;
-		if (!L_2)
+		if (L_1)
 		{
-			goto IL_0014;
+			goto IL_000b;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:132>
-		V_3 = (TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079*)NULL;
-		goto IL_0053;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:132>
+		return (TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079*)NULL;
 	}
 
-IL_0014:
+IL_000b:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:135>
-		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_3 = V_0;
-		NullCheck(L_3);
-		bool L_4;
-		L_4 = InputDevice_get_enabled_m5BCE2D359DA6D6F7CB348996D75205C60E840AB4(L_3, NULL);
-		V_4 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
-		bool L_5 = V_4;
-		if (!L_5)
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:135>
+		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_2 = V_0;
+		NullCheck(L_2);
+		bool L_3;
+		L_3 = InputDevice_get_enabled_m5BCE2D359DA6D6F7CB348996D75205C60E840AB4(L_2, NULL);
+		if (L_3)
 		{
-			goto IL_002c;
+			goto IL_0019;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:137>
-		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_6 = V_0;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:137>
+		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(InputSystem_t4120CA4FE7DCFD56AF9391933FC3F1F485350164_il2cpp_TypeInfo_var);
-		InputSystem_EnableDevice_mED1442951B67B1B8742C29CE7F3ED2828B3B44F7(L_6, NULL);
+		InputSystem_EnableDevice_mED1442951B67B1B8742C29CE7F3ED2828B3B44F7(L_4, NULL);
 	}
 
-IL_002c:
+IL_0019:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:140>
-		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_7 = V_0;
-		NullCheck(L_7);
-		ReadOnlyArray_1_t1AB67C13630F5ECC78559C8BCEFFC00C4457333E L_8;
-		L_8 = Touchscreen_get_touches_mEFA7C5B2A80963C7947BCBDBE6258F5083B1CE66_inline(L_7, NULL);
-		V_1 = L_8;
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:141>
-		int32_t L_9;
-		L_9 = ReadOnlyArray_1_get_Count_m322B2C406CB93A8BB27DDBA287593AE863B8AA03_inline((&V_1), ReadOnlyArray_1_get_Count_m322B2C406CB93A8BB27DDBA287593AE863B8AA03_RuntimeMethod_var);
-		V_5 = (bool)((((int32_t)L_9) == ((int32_t)0))? 1 : 0);
-		bool L_10 = V_5;
-		if (!L_10)
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:140>
+		Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* L_5 = V_0;
+		NullCheck(L_5);
+		ReadOnlyArray_1_t1AB67C13630F5ECC78559C8BCEFFC00C4457333E L_6;
+		L_6 = Touchscreen_get_touches_mEFA7C5B2A80963C7947BCBDBE6258F5083B1CE66_inline(L_5, NULL);
+		V_1 = L_6;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:141>
+		int32_t L_7;
+		L_7 = ReadOnlyArray_1_get_Count_m322B2C406CB93A8BB27DDBA287593AE863B8AA03_inline((&V_1), ReadOnlyArray_1_get_Count_m322B2C406CB93A8BB27DDBA287593AE863B8AA03_RuntimeMethod_var);
+		if (L_7)
 		{
-			goto IL_0048;
+			goto IL_002b;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:143>
-		V_3 = (TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079*)NULL;
-		goto IL_0053;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:143>
+		return (TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079*)NULL;
 	}
 
-IL_0048:
+IL_002b:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:146>
-		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_11;
-		L_11 = ReadOnlyArray_1_get_Item_m8214EE7BC64119BFC600CFABF40483B334B4CC7C((&V_1), 0, ReadOnlyArray_1_get_Item_m8214EE7BC64119BFC600CFABF40483B334B4CC7C_RuntimeMethod_var);
-		V_3 = L_11;
-		goto IL_0053;
-	}
-
-IL_0053:
-	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:147>
-		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_12 = V_3;
-		return L_12;
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:146>
+		TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* L_8;
+		L_8 = ReadOnlyArray_1_get_Item_m8214EE7BC64119BFC600CFABF40483B334B4CC7C((&V_1), 0, ReadOnlyArray_1_get_Item_m8214EE7BC64119BFC600CFABF40483B334B4CC7C_RuntimeMethod_var);
+		return L_8;
 	}
 }
-// Method Definition Index: 50274
+// Method Definition Index: 49888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_EnterVR_m5D5DE739026E88A1107B58874C3CA8DE3E4F816E (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2329,47 +2217,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_EnterVR_m5D5DE739026E88
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:154>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:154>
 		RuntimeObject* L_0;
 		L_0 = VrModeController_StartXR_m2204AA1B619D5A8C8152CA2C7E36840B2CA4786E(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
 		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:155>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:155>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Api_HasNewDeviceParams_m8CF6742A64A20B00D8FFE2F229628D1DB54831C5(NULL);
-		V_0 = L_2;
-		bool L_3 = V_0;
-		if (!L_3)
+		if (!L_2)
 		{
-			goto IL_001f;
+			goto IL_0019;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:157>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:157>
 		il2cpp_codegen_runtime_class_init_inline(Api_t145FCB8AD359667011C398E3BE4F2962C25C363D_il2cpp_TypeInfo_var);
 		Api_ReloadDeviceParams_mBACF68BBC935329B23B19CB08A9CF0D5A6AB8F04(NULL);
 	}
 
-IL_001f:
+IL_0019:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:159>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:159>
 		return;
 	}
 }
-// Method Definition Index: 50275
+// Method Definition Index: 49889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_ExitVR_m2419B854BE3F2283ADD4F28B80009FC3DF99C10E (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:166>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:166>
 		VrModeController_StopXR_m938F67E76F9AD01C08257DA96328A182E4866D6C(__this, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:167>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:167>
 		return;
 	}
 }
-// Method Definition Index: 50276
+// Method Definition Index: 49890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VrModeController_StartXR_m2204AA1B619D5A8C8152CA2C7E36840B2CA4786E (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2381,14 +2266,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* VrModeController_StartXR_m2204
 	{
 		U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* L_0 = (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009*)il2cpp_codegen_object_new(U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009_il2cpp_TypeInfo_var);
 		U3CStartXRU3Ed__11__ctor_m211FD9D1011F0001C87CFBE9D472D8E996D1AA97(L_0, 0, NULL);
-		U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* L_1 = L_0;
-		NullCheck(L_1);
-		L_1->___U3CU3E4__this = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		return L_1;
+		return L_0;
 	}
 }
-// Method Definition Index: 50277
+// Method Definition Index: 49891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_StopXR_m938F67E76F9AD01C08257DA96328A182E4866D6C (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2403,45 +2284,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController_StopXR_m938F67E76F9AD01
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:202>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:202>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9573E0F11BD7081DAAEACC92F301DBBC3F5D12BF, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:203>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:203>
 		il2cpp_codegen_runtime_class_init_inline(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_0;
-		L_0 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C(NULL);
+		L_0 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline(NULL);
 		NullCheck(L_0);
 		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_1;
-		L_1 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42(L_0, NULL);
+		L_1 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline(L_0, NULL);
 		NullCheck(L_1);
 		XRManagerSettings_StopSubsystems_mB59730C9283178A5E9E6D6E9127FE3DB25CC82D4(L_1, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:204>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:204>
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral2A7B630B7137FE0D9A770BC44B619CE324CB5173, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:206>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:206>
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9B1958E6AE4057A73CD052F6EFFCC70AD0F447B4, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:207>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:207>
 		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_2;
-		L_2 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C(NULL);
+		L_2 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline(NULL);
 		NullCheck(L_2);
 		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_3;
-		L_3 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42(L_2, NULL);
+		L_3 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline(L_2, NULL);
 		NullCheck(L_3);
 		XRManagerSettings_DeinitializeLoader_m81038A43AD1AD84045B90396D1E2E4F2D8029BAB(L_3, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:208>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:208>
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral2C94361C3CF0648D05679FC64B7AD666F8D704CA, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:210>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:210>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_4 = __this->____mainCamera;
 		NullCheck(L_4);
 		Camera_ResetAspect_mAC248F92A2CAC44E2D33EFC3D08AACA9BC3DCEBB(L_4, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:211>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:211>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_5 = __this->____mainCamera;
 		NullCheck(L_5);
 		Camera_set_fieldOfView_m5AA9EED4D1603A1DEDBF883D9C42814B2BDEB777(L_5, (60.0f), NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:212>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:212>
 		return;
 	}
 }
-// Method Definition Index: 50278
+// Method Definition Index: 49892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController__ctor_m1955022FF618398873E8495886BDCB215FC08577 (VrModeController_t60FF928CE1AF0F8715EF1C052101425FB84CF1E7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2457,7 +2338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VrModeController__ctor_m1955022FF6183988
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 50279
+// Method Definition Index: 49893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartXRU3Ed__11__ctor_m211FD9D1011F0001C87CFBE9D472D8E996D1AA97 (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -2467,14 +2348,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartXRU3Ed__11__ctor_m211FD9D1011F00
 		return;
 	}
 }
-// Method Definition Index: 50280
+// Method Definition Index: 49894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartXRU3Ed__11_System_IDisposable_Dispose_m5DCB632411812CCBB115E39EA63A2DE545CA2688 (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 50281
+// Method Definition Index: 49895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartXRU3Ed__11_MoveNext_mBF5E1A48266A931A8BFD1F7E78B966ABB9A93683 (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2491,60 +2372,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartXRU3Ed__11_MoveNext_mBF5E1A48266
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
 	{
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
 		int32_t L_1 = V_0;
 		if (!L_1)
 		{
-			goto IL_0012;
+			goto IL_0010;
 		}
 	}
-	{
-		goto IL_000c;
-	}
-
-IL_000c:
 	{
 		int32_t L_2 = V_0;
 		if ((((int32_t)L_2) == ((int32_t)1)))
 		{
-			goto IL_0014;
+			goto IL_003f;
 		}
 	}
-	{
-		goto IL_0016;
-	}
-
-IL_0012:
-	{
-		goto IL_0018;
-	}
-
-IL_0014:
-	{
-		goto IL_0049;
-	}
-
-IL_0016:
 	{
 		return (bool)0;
 	}
 
-IL_0018:
+IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:179>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:179>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral1690F87675D46404DB6EEBA8A4B18F2A7FD4611D, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:180>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:180>
 		il2cpp_codegen_runtime_class_init_inline(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_3;
-		L_3 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C(NULL);
+		L_3 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline(NULL);
 		NullCheck(L_3);
 		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_4;
-		L_4 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42(L_3, NULL);
+		L_4 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline(L_3, NULL);
 		NullCheck(L_4);
 		RuntimeObject* L_5;
 		L_5 = XRManagerSettings_InitializeLoader_m563761BAF04C04AC931D738AD9E4EBF7FD87E62B(L_4, NULL);
@@ -2554,63 +2414,61 @@ IL_0018:
 		return (bool)1;
 	}
 
-IL_0049:
+IL_003f:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:182>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:182>
 		il2cpp_codegen_runtime_class_init_inline(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
 		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_6;
-		L_6 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C(NULL);
+		L_6 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline(NULL);
 		NullCheck(L_6);
 		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_7;
-		L_7 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42(L_6, NULL);
+		L_7 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline(L_6, NULL);
 		NullCheck(L_7);
 		XRLoader_t80B1B1934C40561C5352ABC95D567DC2A7C9C976* L_8;
 		L_8 = XRManagerSettings_get_activeLoader_mFB3B679005792D3DF871EAA7120DD86DCA1D5DEA_inline(L_7, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
 		L_9 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_1 = L_9;
-		bool L_10 = V_1;
-		if (!L_10)
+		if (!L_9)
 		{
-			goto IL_0078;
+			goto IL_0069;
 		}
 	}
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:184>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:184>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral747530FAD2C7DF5B08668539364CCC2CD2B5AFC2, NULL);
-		goto IL_00ab;
+		goto IL_0096;
 	}
 
-IL_0078:
+IL_0069:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:188>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:188>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral38396B3F6667C28970D73F84E06D0DCE797FDEB8, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:190>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:190>
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralAF171607C5CF88EC109EFE87AEB48F82DFCE3449, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:191>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:191>
 		il2cpp_codegen_runtime_class_init_inline(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
-		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_11;
-		L_11 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C(NULL);
+		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_10;
+		L_10 = XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline(NULL);
+		NullCheck(L_10);
+		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_11;
+		L_11 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline(L_10, NULL);
 		NullCheck(L_11);
-		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_12;
-		L_12 = XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42(L_11, NULL);
-		NullCheck(L_12);
-		XRManagerSettings_StartSubsystems_m94D89460222C083D6E25881C6825E44FEC98DDCC(L_12, NULL);
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:192>
+		XRManagerSettings_StartSubsystems_m94D89460222C083D6E25881C6825E44FEC98DDCC(L_11, NULL);
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:192>
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral61CFB84C83B441479C0A89B64CDD931B45CCA6ED, NULL);
 	}
 
-IL_00ab:
+IL_0096:
 	{
-		//<source_info:C:/Users/saari/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:194>
+		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Samples/Google Cardboard XR Plugin for Unity/1.30.0/Hello Cardboard/Scripts/VrModeController.cs:194>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 50282
+// Method Definition Index: 49896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartXRU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m956B1C7D0F62934AB9AAC8BEBF96E25162D60EDD (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2618,7 +2476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartXRU3Ed__11_System_Coll
 		return L_0;
 	}
 }
-// Method Definition Index: 50283
+// Method Definition Index: 49897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartXRU3Ed__11_System_Collections_IEnumerator_Reset_m756662A7C489C94D49786E1B87E79946549369D2 (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2627,7 +2485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartXRU3Ed__11_System_Collections_IE
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CStartXRU3Ed__11_System_Collections_IEnumerator_Reset_m756662A7C489C94D49786E1B87E79946549369D2_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 50284
+// Method Definition Index: 49898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartXRU3Ed__11_System_Collections_IEnumerator_get_Current_mB2D3BFF49921C015881EE731235409FB66D1B7DA (U3CStartXRU3Ed__11_t3EBD9D23D178F89A81FB56C7C3727DDFB4504009* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2643,7 +2501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartXRU3Ed__11_System_Coll
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 50285
+// Method Definition Index: 49899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m6D281699517731C97AAE0D311594B4A7C917EE5C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2656,8 +2514,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t6C767A4560EEA895881C4F659182E
 	}
 	MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5 V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5 V_1;
-	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)453));
@@ -2676,17 +2532,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t6C767A4560EEA895881C4F659182E
 		(&V_0)->___TotalTypes = 4;
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5 L_6 = V_0;
-		V_1 = L_6;
-		goto IL_005a;
-	}
-
-IL_005a:
-	{
-		MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5 L_7 = V_1;
-		return L_7;
+		return L_6;
 	}
 }
-// Method Definition Index: 50286
+// Method Definition Index: 49900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mFFB16A359D0CAC1EBAC2247D2BB3C6AE18988CED (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t61E0DEDF6DD17F591E2ADCEA9456EFBA887D82D1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2791,7 +2640,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t6C767A4560EEA895881C4F659182EE24FFB9C8D5_ma
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 37410
+// Method Definition Index: 37213
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -2804,7 +2653,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 28828
+// Method Definition Index: 28655
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TouchPhaseControl_t4652C6E0EBFAFA85A31607769876B02C1C9FCAEC* TouchControl_get_phase_mB82674B59168CD8074E9C371A51B088F76D4AC55_inline (TouchControl_t3A64A795FF61A8B27E5EBD61632F23AFCC725079* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2813,7 +2662,41 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TouchPhaseControl_t4652C6E0EBFAFA
 		return L_0;
 	}
 }
-// Method Definition Index: 26291
+// Method Definition Index: 49644
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* XRGeneralSettings_get_Instance_m9F222F982E62E066E119754858D8E73CFE42048C_inline (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.xr.management@574ebfb1e976/Runtime/XRGeneralSettings.cs:44>
+		il2cpp_codegen_runtime_class_init_inline(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var);
+		XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* L_0 = ((XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_StaticFields*)il2cpp_codegen_static_fields_for(XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE_il2cpp_TypeInfo_var))->___s_RuntimeSettingsInstance;
+		return L_0;
+	}
+}
+// Method Definition Index: 49642
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* XRGeneralSettings_get_Manager_m112FEB4E6DFB7B5F5C4A2DEC4E975CF2EBD51B42_inline (XRGeneralSettings_t8F8D096944606B5AD845D010706BF7094ADEC8CE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.xr.management@574ebfb1e976/Runtime/XRGeneralSettings.cs:28>
+		XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* L_0 = __this->___m_LoaderManagerInstance;
+		return L_0;
+	}
+}
+// Method Definition Index: 49684
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRManagerSettings_get_isInitializationComplete_m2F7E30B51DB12D34535BE7805A3CD490FFE12F68_inline (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:./Library/PackageCache/com.unity.xr.management@574ebfb1e976/Runtime/XRManagerSettings.cs:134>
+		bool L_0 = __this->___m_InitializationComplete;
+		return L_0;
+	}
+}
+// Method Definition Index: 26125
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* Touchscreen_get_current_m6D9CD2446B30224D18E695DF0ECC3A00E4F7B708_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2829,7 +2712,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Touchscreen_t5A3B494C10A53A822AED
 		return L_0;
 	}
 }
-// Method Definition Index: 26287
+// Method Definition Index: 26121
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlyArray_1_t1AB67C13630F5ECC78559C8BCEFFC00C4457333E Touchscreen_get_touches_mEFA7C5B2A80963C7947BCBDBE6258F5083B1CE66_inline (Touchscreen_t5A3B494C10A53A822AEDB3508093860D142D84CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2838,7 +2721,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ReadOnlyArray_1_t1AB67C13630F5ECC
 		return L_0;
 	}
 }
-// Method Definition Index: 49909
+// Method Definition Index: 49685
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRLoader_t80B1B1934C40561C5352ABC95D567DC2A7C9C976* XRManagerSettings_get_activeLoader_mFB3B679005792D3DF871EAA7120DD86DCA1D5DEA_inline (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2847,7 +2730,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR XRLoader_t80B1B1934C40561C5352ABC
 		return L_0;
 	}
 }
-// Method Definition Index: 29340
+// Method Definition Index: 29167
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ReadOnlyArray_1_get_Count_m37AE229E2BFB74375A7BD545982B745F982762F8_gshared_inline (ReadOnlyArray_1_t40B8DDDCD6ACBA3B2C0AF1387BE23D68DAEF77B5* __this, const RuntimeMethod* method) 
 {
 	{
