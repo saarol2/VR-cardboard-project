@@ -11,20 +11,33 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
     private int currentPlayerTurn = 1; // Which player's turn (1 or 2)
     private GameObject currentBall;
 
+    [Header("Spawn Points")]
+    public Transform player1SpawnPoint;
+    public Transform player2SpawnPoint;
+
     void Start()
     {
         Debug.Log("BeerPongManager Started");
+
+        if (player1SpawnPoint != null && player2SpawnPoint != null)
+        {
+            Debug.Log($"[LOCAL {PhotonNetwork.LocalPlayer.ActorNumber}] P1 spawn: {player1SpawnPoint.position}, P2 spawn: {player2SpawnPoint.position}");
+        }
+        else
+        {
+            Debug.LogWarning("Spawn points not assigned in inspector!");
+        }
     }
 
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
         Debug.Log("Joined room. IsMasterClient: " + PhotonNetwork.IsMasterClient);
-        
+
         // Only master spawns the first ball
         if (PhotonNetwork.IsMasterClient)
         {
-            Invoke("SpawnBallForCurrentPlayer", 2f);
+            Invoke(nameof(SpawnBallForCurrentPlayer), 2f);
         }
     }
 
@@ -42,10 +55,32 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
             PhotonNetwork.Destroy(currentBall);
         }
 
-        Debug.Log($"Spawning ball for Player {currentPlayerTurn}");
-        
-        currentBall = PhotonNetwork.Instantiate(ballPrefab.name, new Vector3(0, 1.6f, 0), Quaternion.identity);
-        
+        // Valitse spawn-piste pelaajan vuoron mukaan
+        Transform spawnPoint = null;
+
+        if (currentPlayerTurn == 1)
+        {
+            spawnPoint = player1SpawnPoint;
+        }
+        else if (currentPlayerTurn == 2)
+        {
+            spawnPoint = player2SpawnPoint;
+        }
+
+        if (spawnPoint == null)
+        {
+            Debug.LogError("Spawn point for current player is not assigned!");
+            return;
+        }
+
+        Debug.Log($"[MASTER] Spawning ball for Player {currentPlayerTurn} at {spawnPoint.position}");
+
+        currentBall = PhotonNetwork.Instantiate(
+            ballPrefab.name,
+            spawnPoint.position,
+            spawnPoint.rotation
+        );
+
         if (currentBall != null)
         {
             // Transfer ownership to the player whose turn it is
@@ -56,10 +91,10 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
                 pv.TransferOwnership(ownerActorNumber);
                 Debug.Log($"Ball ownership transferred to Player {currentPlayerTurn} (Actor {ownerActorNumber})");
             }
-
-            // Add component to detect when ball is thrown
-            BallWatcher watcher = currentBall.AddComponent<BallWatcher>();
-            watcher.manager = this;
+            else
+            {
+                Debug.LogError("Spawned ball has no PhotonView component!");
+            }
         }
     }
 
@@ -67,12 +102,12 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
     {
         var players = PhotonNetwork.PlayerList;
         Debug.Log($"Total players in room: {players.Length}");
-        
+
         for (int i = 0; i < players.Length; i++)
         {
             Debug.Log($"Player {i + 1}: ActorNumber = {players[i].ActorNumber}, IsMasterClient = {players[i].IsMasterClient}");
         }
-        
+
         if (players.Length >= 2)
         {
             // Player 1 = Master Client (first player)
@@ -102,17 +137,19 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
                 }
             }
         }
-        
+
         Debug.LogWarning($"Could not find player {playerNumber}, returning local player");
         return PhotonNetwork.LocalPlayer.ActorNumber;
     }
 
     public void OnBallThrown()
     {
+        // Tämän pitäisi kutsua vain masterilla RPC:n kautta,
+        // mutta varmistetaan silti:
         if (!PhotonNetwork.IsMasterClient) return;
 
         Debug.Log($"Player {currentPlayerTurn} threw the ball!");
-        
+
         // Switch turn
         currentPlayerTurn = (currentPlayerTurn == 1) ? 2 : 1;
         Debug.Log($"Turn switched to Player {currentPlayerTurn}");
@@ -125,28 +162,5 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
     {
         yield return new WaitForSeconds(ballRespawnDelay);
         SpawnBallForCurrentPlayer();
-    }
-}
-
-// Simple component to detect when ball has been thrown
-public class BallWatcher : MonoBehaviour
-{
-    public BeerPongManager manager;
-    private bool hasNotified = false;
-
-    void Update()
-    {
-        if (hasNotified) return;
-
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null && rb.useGravity && !rb.isKinematic)
-        {
-            // Ball has been thrown!
-            hasNotified = true;
-            if (manager != null)
-            {
-                manager.OnBallThrown();
-            }
-        }
     }
 }

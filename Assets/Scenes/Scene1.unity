@@ -246,10 +246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BeerPongManager
   ballPrefab: {fileID: 8634001572602406083, guid: 6c1e499e15fb55a4c89a7d25ae8890ef, type: 3}
-  ballResetDelay: 2
-  missedShotTimeout: 5
-  player1Score: 0
-  player2Score: 0
+  ballRespawnDelay: 3
+  player1SpawnPoint: {fileID: 1181748238}
+  player2SpawnPoint: {fileID: 1255382261}
 --- !u!4 &204399763
 Transform:
   m_ObjectHideFlags: 0
