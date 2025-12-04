@@ -142,7 +142,9 @@
           },
           {
             "name": "Cubemap",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Scene1.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -450,18 +452,14 @@
           },
           {
             "name": "Texture",
-            "scenes": [
-              "Assets/Scenes/Scene1.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
             "name": "Texture2D",
-            "scenes": [
-              "Assets/Scenes/Scene1.unity"
-            ],
-            "dependencyType": 0,
+            "scenes": [],
+            "dependencyType": 1,
             "icon": null
           },
           {
@@ -948,6 +946,14 @@
             "name": "PhysicsManager",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "PhysicsMaterial",
+            "scenes": [
+              "Assets/Scenes/Scene1.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {

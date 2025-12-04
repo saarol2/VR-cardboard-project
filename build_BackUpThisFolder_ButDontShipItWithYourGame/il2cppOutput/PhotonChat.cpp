@@ -154,6 +154,7 @@ struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
+struct StackFrameU5BU5D_tF4310E8FAB8C2853A3F0843921BF9FBEC18ABBF7;
 struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
@@ -187,6 +188,7 @@ struct PeerBase_tC71615DA721AC9BA568EA84EA23C1784A8CD837F;
 struct PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C;
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 struct SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37;
+struct StackTrace_t7C150C7C14136F985311A83A93524B1019F70853;
 struct Stopwatch_tA188A210449E22C07053A7D3014DD182C7369043;
 struct String_t;
 struct StringBuilder_t;
@@ -221,6 +223,7 @@ IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE9945
 IL2CPP_EXTERN_C RuntimeClass* PeerStateValue_tCDD305BA1E139FC2F43FF54C65049831770DDFC3_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* StackTrace_t7C150C7C14136F985311A83A93524B1019F70853_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringBuilder_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SupportClass_t32D0DFFDDE8571589E7CEE5BEA6955AD56E8D4A7_il2cpp_TypeInfo_var;
@@ -564,6 +567,12 @@ struct ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3  : public R
 {
 	NonAllocDictionary_2_t731311DC35E31CEB666B4A4099E518236EA55F79* ___paramDict;
 	StructWrapperPools_t578C08F079D4A055E0ED8EF8196750B3DEDCEBBD* ___wrapperPools;
+};
+struct StackTrace_t7C150C7C14136F985311A83A93524B1019F70853  : public RuntimeObject
+{
+	StackFrameU5BU5D_tF4310E8FAB8C2853A3F0843921BF9FBEC18ABBF7* ___frames;
+	StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF* ___captured_traces;
+	bool ___debug_info;
 };
 struct String_t  : public RuntimeObject
 {
@@ -1032,6 +1041,11 @@ struct ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_StaticFi
 {
 	ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* ___Default;
 };
+struct StackTrace_t7C150C7C14136F985311A83A93524B1019F70853_StaticFields
+{
+	bool ___isAotidSet;
+	String_t* ___aotid;
+};
 struct String_t_StaticFields
 {
 	String_t* ___Empty;
@@ -1439,7 +1453,7 @@ inline void Dictionary_2__ctor_m591E5A5F5686795BB4C305786E306F2600964177 (Dictio
 {
 	((  void (*) (Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DebugOut_m742DBBA5A5D1910991A3932A362A584D43E6402A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_TransportProtocol_m21D6C23D1B7EE7C8C4C71C5D5FBCB4FDBB58DD23 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) ;
@@ -1516,11 +1530,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AuthenticateOnFrontEnd_mA7969
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectToFrontEnd_m879F8C0ABFB420829231375D08CB8F31DD4A11D0 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void StackTrace__ctor_m269D00E49783BC3205FD5C7E879888884D72107C (StackTrace_t7C150C7C14136F985311A83A93524B1019F70853* __this, bool ___0_fNeedFileInfo, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonPeer_get_ServerAddress_m457DB66B44D79E66E4328D51C40EA5E2DB481108 (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_cause, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatPeer_AuthenticateOnNameServer_m31221AA4DF632CB3DB9BBDA4614AB1241F538BA3 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, String_t* ___0_appId, String_t* ___1_appVersion, String_t* ___2_region, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___3_authValues, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3 (ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* __this, uint8_t ___0_key, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D (String_t* __this, String_t* ___0_value, const RuntimeMethod* method) ;
@@ -1588,7 +1603,7 @@ inline bool Dictionary_2_TryGetValue_m7A41D6DDBFFD29C4429FA26A1BA2BF864009A3BE (
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentOutOfRangeException__ctor_mB596C51BFA864B65C2CED275458FAE90F7CD29C9 (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonPeer_get_IsEncryptionAvailable_mDD9BEA466A3556F2CBC320030D0E156B6382D246 (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) ;
@@ -1604,7 +1619,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Aut
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Uri_EscapeDataString_m844D0FB6899488BDEBAF160B23397CD7ED8CA2DF (String_t* ___0_stringToEscape, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_m918500C1EFB475181349A79989BB79BB36102894 (String_t* ___0_format, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, uint8_t ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, uint8_t ___0_value, const RuntimeMethod* method) ;
 inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*, RuntimeObject*, const RuntimeMethod*))List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared)(__this, ___0_item, method);
@@ -1623,7 +1638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48412
+// Method Definition Index: 48492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mC1EE1810DC92EE5AFB5BD9EA17776939A7BAB28C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1636,6 +1651,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t5A166F72B92AE2C851132A6B51C26
 	}
 	MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)634));
@@ -1654,10 +1671,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t5A166F72B92AE2C851132A6B51C26
 		(&V_0)->___TotalTypes = ((int32_t)14);
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E L_6 = V_0;
-		return L_6;
+		V_1 = L_6;
+		goto IL_005f;
+	}
+
+IL_005f:
+	{
+		MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E L_7 = V_1;
+		return L_7;
 	}
 }
-// Method Definition Index: 48413
+// Method Definition Index: 48493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mF00746AE00C18EE822D629C0D156BB0F7D7994CE (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tCC7F72FC029DA8E32998BCACACC0EF1A27F34234* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1743,45 +1767,45 @@ IL2CPP_EXTERN_C void MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48414
+// Method Definition Index: 48494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChannelCreationOptions_get_PublishSubscribers_m1DE43FC2FA2BC1B223AD3006D33726E429EC1CD4 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:14>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:14>
 		bool L_0 = __this->___U3CPublishSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48415
+// Method Definition Index: 48495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions_set_PublishSubscribers_m2B808C7A7AF9BB9C18F6E6A956F625AB58809020 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:14>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:14>
 		bool L_0 = ___0_value;
 		__this->___U3CPublishSubscribersU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48416
+// Method Definition Index: 48496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChannelCreationOptions_get_MaxSubscribers_m1F147E5851EF027099B954B5D4CADB288112ECA9 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:16>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:16>
 		int32_t L_0 = __this->___U3CMaxSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48417
+// Method Definition Index: 48497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions_set_MaxSubscribers_m94D7B927C7BA0F3A3AC23B1843C75A65B4FCFE48 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:16>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:16>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMaxSubscribersU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48418
+// Method Definition Index: 48498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__ctor_m1F62AA7111622F40FE14CCEB29A87991754DD694 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1789,7 +1813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__ctor_m1F62AA7111
 		return;
 	}
 }
-// Method Definition Index: 48419
+// Method Definition Index: 48499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__cctor_m416383118DC3B0116DED27C48A3B2832F04DA207 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1799,7 +1823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__cctor_m416383118
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:12>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:12>
 		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_0 = (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270*)il2cpp_codegen_object_new(ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_il2cpp_TypeInfo_var);
 		ChannelCreationOptions__ctor_m1F62AA7111622F40FE14CCEB29A87991754DD694(L_0, NULL);
 		((ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_StaticFields*)il2cpp_codegen_static_fields_for(ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_il2cpp_TypeInfo_var))->___Default = L_0;
@@ -1815,7 +1839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__cctor_m416383118
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48420
+// Method Definition Index: 48500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelWellKnownProperties__ctor_m9DFC27AD2EDA163874394D85D40BB14DE5E9A1F9 (ChannelWellKnownProperties_t5ACDCF18009291B8A4D1277B89C0B727B77F3088* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1831,24 +1855,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelWellKnownProperties__ctor_m9DFC27
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48421
+// Method Definition Index: 48501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatAppSettings_get_IsDefaultNameServer_m7847F68B2E3DCF7D3DC72481DDCBB048D0EFC050 (ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:62>
 		String_t* L_0 = __this->___Server;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
-		return L_1;
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:62>
+		bool L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48422
+// Method Definition Index: 48502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatAppSettings__ctor_m0B6F25C335A13983DA701EBD9CFADAC43E6011A3 (ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:56>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:52>
+		__this->___Protocol = 0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:56>
 		__this->___EnableProtocolFallback = (bool)1;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:59>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatAppSettings.cs:59>
 		__this->___NetworkLogging = 1;
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -1862,26 +1897,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatAppSettings__ctor_m0B6F25C335A13983D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48423
+// Method Definition Index: 48503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_get_IsPrivate_mC599C46B2CEC8BBE5DCAC94A90F806380EA4B714 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:49>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:49>
 		bool L_0 = __this->___U3CIsPrivateU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48424
+// Method Definition Index: 48504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_IsPrivate_mC15D3E62B0A6EB24F6C1D0C6EC7F7857886D8068 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:49>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:49>
 		bool L_0 = ___0_value;
 		__this->___U3CIsPrivateU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48425
+// Method Definition Index: 48505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MessageCount_m397FEA02D9BB924CFD66F741696D768968B382FC (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1890,73 +1925,82 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MessageCount_m397FEA0
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	int32_t V_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:52>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:52>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_0 = __this->___Messages;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_inline(L_0, List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_RuntimeMethod_var);
-		return L_1;
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:52>
+		int32_t L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48426
+// Method Definition Index: 48506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_LastMsgId_m915B3ED70A993EC92823F0AB378602411555E3FA (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:57>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:57>
 		int32_t L_0 = __this->___U3CLastMsgIdU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48427
+// Method Definition Index: 48507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_LastMsgId_m687ECE88274288B3CA564D41E8F129C90EAEED8A (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:57>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:57>
 		int32_t L_0 = ___0_value;
 		__this->___U3CLastMsgIdU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48428
+// Method Definition Index: 48508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
 		bool L_0 = __this->___U3CPublishSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48429
+// Method Definition Index: 48509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_PublishSubscribers_m2DA1D9D78E6A17E14CBA33FECB5469836E9FBB5A (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
 		bool L_0 = ___0_value;
 		__this->___U3CPublishSubscribersU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48430
+// Method Definition Index: 48510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
 		int32_t L_0 = __this->___U3CMaxSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48431
+// Method Definition Index: 48511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_MaxSubscribers_mABD8D726D312CCFA0CA5A75AFB4865F9D17C7079 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMaxSubscribersU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48432
+// Method Definition Index: 48512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel__ctor_m0C6E9FBE4AC69157786CA8E3CA9036064E9D99EC (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1971,32 +2015,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel__ctor_m0C6E9FBE4AC69157786CA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:37>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:37>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_0, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		__this->___Senders = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Senders), (void*)L_0);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:40>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:40>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_1 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)il2cpp_codegen_object_new(List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_il2cpp_TypeInfo_var);
 		List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690(L_1, List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_RuntimeMethod_var);
 		__this->___Messages = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Messages), (void*)L_1);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:68>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:68>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_2 = (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*)il2cpp_codegen_object_new(HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03(L_2, HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var);
 		__this->___Subscribers = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Subscribers), (void*)L_2);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:74>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:74>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:76>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:76>
 		String_t* L_3 = ___0_name;
 		__this->___Name = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___Name), (void*)L_3);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:77>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:77>
 		return;
 	}
 }
-// Method Definition Index: 48433
+// Method Definition Index: 48513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m22E0343342399B1C9130CCDD12325EAA80DA9440 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_sender, RuntimeObject* ___1_message, int32_t ___2_msgId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2007,26 +2051,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m22E0343342399B1C9130CCD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:82>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:82>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = __this->___Senders;
 		String_t* L_1 = ___0_sender;
 		NullCheck(L_0);
 		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_0, L_1, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:83>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:83>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_2 = __this->___Messages;
 		RuntimeObject* L_3 = ___1_message;
 		NullCheck(L_2);
 		List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_inline(L_2, L_3, List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:84>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:84>
 		int32_t L_4 = ___2_msgId;
 		ChatChannel_set_LastMsgId_m687ECE88274288B3CA564D41E8F129C90EAEED8A_inline(__this, L_4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:85>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:85>
 		ChatChannel_TruncateMessages_mFB6B287B9514E50824B638D050B055CB4FA206ED(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:86>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:86>
 		return;
 	}
 }
-// Method Definition Index: 48434
+// Method Definition Index: 48514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m3906378A35460170D74185680E5D50946D59FEE9 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_senders, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_messages, int32_t ___2_lastMsgId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2037,26 +2081,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m3906378A35460170D741856
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:91>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:91>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = __this->___Senders;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = ___0_senders;
 		NullCheck(L_0);
 		List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E(L_0, (RuntimeObject*)L_1, List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:92>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:92>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_2 = __this->___Messages;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = ___1_messages;
 		NullCheck(L_2);
 		List_1_AddRange_m1F76B300133150E6046C5FED00E88B5DE0A02E17(L_2, (RuntimeObject*)L_3, List_1_AddRange_m1F76B300133150E6046C5FED00E88B5DE0A02E17_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:93>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:93>
 		int32_t L_4 = ___2_lastMsgId;
 		ChatChannel_set_LastMsgId_m687ECE88274288B3CA564D41E8F129C90EAEED8A_inline(__this, L_4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:94>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:94>
 		ChatChannel_TruncateMessages_mFB6B287B9514E50824B638D050B055CB4FA206ED(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:95>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:95>
 		return;
 	}
 }
-// Method Definition Index: 48435
+// Method Definition Index: 48515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_TruncateMessages_mFB6B287B9514E50824B638D050B055CB4FA206ED (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2068,12 +2112,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_TruncateMessages_mFB6B287B95
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
+	bool V_1 = false;
+	int32_t G_B3_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:100>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:100>
 		int32_t L_0 = __this->___MessageLimit;
 		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
-			goto IL_001c;
+			goto IL_0022;
 		}
 	}
 	{
@@ -2082,42 +2128,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_TruncateMessages_mFB6B287B95
 		int32_t L_2;
 		L_2 = List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_inline(L_1, List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_RuntimeMethod_var);
 		int32_t L_3 = __this->___MessageLimit;
-		if ((((int32_t)L_2) > ((int32_t)L_3)))
+		G_B3_0 = ((((int32_t)((((int32_t)L_2) > ((int32_t)L_3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_0023;
+	}
+
+IL_0022:
+	{
+		G_B3_0 = 1;
+	}
+
+IL_0023:
+	{
+		V_1 = (bool)G_B3_0;
+		bool L_4 = V_1;
+		if (!L_4)
 		{
-			goto IL_001d;
+			goto IL_002a;
 		}
 	}
-
-IL_001c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:102>
-		return;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:102>
+		goto IL_0059;
 	}
 
-IL_001d:
+IL_002a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:105>
-		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_4 = __this->___Messages;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_inline(L_4, List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_RuntimeMethod_var);
-		int32_t L_6 = __this->___MessageLimit;
-		V_0 = ((int32_t)il2cpp_codegen_subtract(L_5, L_6));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:106>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_7 = __this->___Senders;
-		int32_t L_8 = V_0;
-		NullCheck(L_7);
-		List_1_RemoveRange_m33A351ADA40CDA64143F349FACB5993E95C41C7A(L_7, 0, L_8, List_1_RemoveRange_m33A351ADA40CDA64143F349FACB5993E95C41C7A_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:107>
-		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_9 = __this->___Messages;
-		int32_t L_10 = V_0;
-		NullCheck(L_9);
-		List_1_RemoveRange_m0D2A25C95EFDC6E9CD22B663D9633426B51E3699(L_9, 0, L_10, List_1_RemoveRange_m0D2A25C95EFDC6E9CD22B663D9633426B51E3699_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:108>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:105>
+		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_5 = __this->___Messages;
+		NullCheck(L_5);
+		int32_t L_6;
+		L_6 = List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_inline(L_5, List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_RuntimeMethod_var);
+		int32_t L_7 = __this->___MessageLimit;
+		V_0 = ((int32_t)il2cpp_codegen_subtract(L_6, L_7));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:106>
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_8 = __this->___Senders;
+		int32_t L_9 = V_0;
+		NullCheck(L_8);
+		List_1_RemoveRange_m33A351ADA40CDA64143F349FACB5993E95C41C7A(L_8, 0, L_9, List_1_RemoveRange_m33A351ADA40CDA64143F349FACB5993E95C41C7A_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:107>
+		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_10 = __this->___Messages;
+		int32_t L_11 = V_0;
+		NullCheck(L_10);
+		List_1_RemoveRange_m0D2A25C95EFDC6E9CD22B663D9633426B51E3699(L_10, 0, L_11, List_1_RemoveRange_m0D2A25C95EFDC6E9CD22B663D9633426B51E3699_RuntimeMethod_var);
+	}
+
+IL_0059:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:108>
 		return;
 	}
 }
-// Method Definition Index: 48436
+// Method Definition Index: 48516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ClearMessages_m046EA236CDD967B62CDE383F2098BF4B6ED80FFE (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2128,19 +2189,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ClearMessages_m046EA236CDD96
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:113>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:113>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = __this->___Senders;
 		NullCheck(L_0);
 		List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_inline(L_0, List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:114>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:114>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_1 = __this->___Messages;
 		NullCheck(L_1);
 		List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_inline(L_1, List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:115>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:115>
 		return;
 	}
 }
-// Method Definition Index: 48437
+// Method Definition Index: 48517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatChannel_ToStringMessages_mB286B6E5F35FAF7A5F4F4EE259BB64207F34FE18 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2155,19 +2216,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatChannel_ToStringMessages_mB286B
 	}
 	StringBuilder_t* V_0 = NULL;
 	int32_t V_1 = 0;
+	bool V_2 = false;
+	String_t* V_3 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:121>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:121>
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
 		V_0 = L_0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:122>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:122>
 		V_1 = 0;
-		goto IL_0037;
+		goto IL_003a;
 	}
 
-IL_000a:
+IL_000b:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:124>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:124>
 		StringBuilder_t* L_1 = V_0;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_2 = __this->___Senders;
 		int32_t L_3 = V_1;
@@ -2184,34 +2247,44 @@ IL_000a:
 		NullCheck(L_1);
 		StringBuilder_t* L_9;
 		L_9 = StringBuilder_AppendLine_mF75744CE941C63E33188E22E936B71A24D3CBF88(L_1, L_8, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:122>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:122>
 		int32_t L_10 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_10, 1));
 	}
 
-IL_0037:
+IL_003a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:122>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:122>
 		int32_t L_11 = V_1;
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_12 = __this->___Messages;
 		NullCheck(L_12);
 		int32_t L_13;
 		L_13 = List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_inline(L_12, List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_RuntimeMethod_var);
-		if ((((int32_t)L_11) < ((int32_t)L_13)))
+		V_2 = (bool)((((int32_t)L_11) < ((int32_t)L_13))? 1 : 0);
+		bool L_14 = V_2;
+		if (L_14)
 		{
-			goto IL_000a;
+			goto IL_000b;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:126>
-		StringBuilder_t* L_14 = V_0;
-		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_14);
-		return L_15;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:126>
+		StringBuilder_t* L_15 = V_0;
+		NullCheck(L_15);
+		String_t* L_16;
+		L_16 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_15);
+		V_3 = L_16;
+		goto IL_0055;
+	}
+
+IL_0055:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:127>
+		String_t* L_17 = V_3;
+		return L_17;
 	}
 }
-// Method Definition Index: 48438
+// Method Definition Index: 48518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ReadChannelProperties_m8A24F53556005A092A43DD57FD9BF99E3BAB3D35 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ___0_newProperties, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2231,17 +2304,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ReadChannelProperties_m8A24F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	RuntimeObject* V_0 = NULL;
-	Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 V_1;
-	memset((&V_1), 0, sizeof(V_1));
-	KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 V_2;
-	memset((&V_2), 0, sizeof(V_2));
+	bool V_0 = false;
+	RuntimeObject* V_1 = NULL;
+	bool V_2 = false;
+	Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	int32_t G_B3_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:131>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:131>
 		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_0 = ___0_newProperties;
 		if (!L_0)
 		{
-			goto IL_00d6;
+			goto IL_000f;
 		}
 	}
 	{
@@ -2249,105 +2328,126 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ReadChannelProperties_m8A24F
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549(L_1, Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549_RuntimeMethod_var);
-		if ((((int32_t)L_2) <= ((int32_t)0)))
-		{
-			goto IL_00d6;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:133>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_3 = __this->___properties;
-		if (L_3)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:135>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_4 = ___0_newProperties;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549(L_4, Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549_RuntimeMethod_var);
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_6 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)il2cpp_codegen_object_new(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8(L_6, L_5, Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8_RuntimeMethod_var);
-		__this->___properties = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___properties), (void*)L_6);
+		G_B3_0 = ((((int32_t)L_2) > ((int32_t)0))? 1 : 0);
+		goto IL_0010;
 	}
 
-IL_002b:
+IL_000f:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:137>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_7 = ___0_newProperties;
-		NullCheck(L_7);
-		Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 L_8;
-		L_8 = Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA(L_7, Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_RuntimeMethod_var);
-		V_1 = L_8;
+		G_B3_0 = 0;
+	}
+
+IL_0010:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0103;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:133>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_4 = __this->___properties;
+		V_2 = (bool)((((RuntimeObject*)(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)L_4) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_5 = V_2;
+		if (!L_5)
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:135>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_6 = ___0_newProperties;
+		NullCheck(L_6);
+		int32_t L_7;
+		L_7 = Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549(L_6, Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549_RuntimeMethod_var);
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_8 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)il2cpp_codegen_object_new(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8(L_8, L_7, Dictionary_2__ctor_mF225F49F6BE54C39563CECD7C693F0AE4F0530E8_RuntimeMethod_var);
+		__this->___properties = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___properties), (void*)L_8);
+	}
+
+IL_0038:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:137>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_9 = ___0_newProperties;
+		NullCheck(L_9);
+		Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9 L_10;
+		L_10 = Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA(L_9, Dictionary_2_GetEnumerator_m52AB12790B0B9B46B1DFB1F861C9DBEAB07C1FDA_RuntimeMethod_var);
+		V_3 = L_10;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_007e:
+FINALLY_009b:
 			{
-				Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C((&V_1), Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C_RuntimeMethod_var);
+				Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C((&V_3), Enumerator_Dispose_mEA5E01B81EB943B7003D87CEC1B6040524F0402C_RuntimeMethod_var);
 				return;
 			}
 		});
 		try
 		{
 			{
-				goto IL_0073_1;
+				goto IL_0090_1;
 			}
 
-IL_0034_1:
+IL_0042_1:
 			{
-				//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:137>
-				KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 L_9;
-				L_9 = Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_inline((&V_1), Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_RuntimeMethod_var);
-				V_2 = L_9;
-				//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:139>
-				RuntimeObject* L_10;
-				L_10 = KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_inline((&V_2), KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_RuntimeMethod_var);
-				if (L_10)
+				//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:137>
+				KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 L_11;
+				L_11 = Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_inline((&V_3), Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_RuntimeMethod_var);
+				V_4 = L_11;
+				//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:139>
+				RuntimeObject* L_12;
+				L_12 = KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_inline((&V_4), KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_RuntimeMethod_var);
+				V_5 = (bool)((((RuntimeObject*)(RuntimeObject*)L_12) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+				bool L_13 = V_5;
+				if (!L_13)
 				{
-					goto IL_005a_1;
+					goto IL_0073_1;
 				}
 			}
 			{
-				//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:141>
-				Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_11 = __this->___properties;
-				RuntimeObject* L_12;
-				L_12 = KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_inline((&V_2), KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_RuntimeMethod_var);
-				NullCheck(L_11);
-				bool L_13;
-				L_13 = Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86(L_11, L_12, Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86_RuntimeMethod_var);
-				goto IL_0073_1;
-			}
-
-IL_005a_1:
-			{
-				//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:145>
+				//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:141>
 				Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_14 = __this->___properties;
 				RuntimeObject* L_15;
-				L_15 = KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_inline((&V_2), KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_RuntimeMethod_var);
-				RuntimeObject* L_16;
-				L_16 = KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_inline((&V_2), KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_RuntimeMethod_var);
+				L_15 = KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_inline((&V_4), KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_RuntimeMethod_var);
 				NullCheck(L_14);
-				Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD(L_14, L_15, L_16, Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_RuntimeMethod_var);
+				bool L_16;
+				L_16 = Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86(L_14, L_15, Dictionary_2_Remove_m5C7C45E75D951A75843F3F7AADD56ECD64F6BC86_RuntimeMethod_var);
+				goto IL_008f_1;
 			}
 
 IL_0073_1:
 			{
-				//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:137>
-				bool L_17;
-				L_17 = Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4((&V_1), Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_RuntimeMethod_var);
-				if (L_17)
+				//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:145>
+				Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_17 = __this->___properties;
+				RuntimeObject* L_18;
+				L_18 = KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_inline((&V_4), KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_RuntimeMethod_var);
+				RuntimeObject* L_19;
+				L_19 = KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_inline((&V_4), KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_RuntimeMethod_var);
+				NullCheck(L_17);
+				Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD(L_17, L_18, L_19, Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_RuntimeMethod_var);
+			}
+
+IL_008f_1:
+			{
+			}
+
+IL_0090_1:
+			{
+				//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:137>
+				bool L_20;
+				L_20 = Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4((&V_3), Enumerator_MoveNext_mCD4950A75FFADD54AF354D48C6C0DB0B5A22A5F4_RuntimeMethod_var);
+				if (L_20)
 				{
-					goto IL_0034_1;
+					goto IL_0042_1;
 				}
 			}
 			{
-				goto IL_008c;
+				goto IL_00aa;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -2356,53 +2456,61 @@ IL_0073_1:
 		}
 	}
 
-IL_008c:
+IL_00aa:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:149>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_18 = __this->___properties;
-		uint8_t L_19 = ((uint8_t)((int32_t)254));
-		RuntimeObject* L_20 = Box(il2cpp_defaults.byte_class, &L_19);
-		NullCheck(L_18);
-		bool L_21;
-		L_21 = Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849(L_18, L_20, (&V_0), Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_RuntimeMethod_var);
-		if (!L_21)
-		{
-			goto IL_00b1;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:151>
-		RuntimeObject* L_22 = V_0;
-		ChatChannel_set_PublishSubscribers_m2DA1D9D78E6A17E14CBA33FECB5469836E9FBB5A_inline(__this, ((*(bool*)UnBox(L_22, il2cpp_defaults.boolean_class))), NULL);
-	}
-
-IL_00b1:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:153>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_23 = __this->___properties;
-		uint8_t L_24 = ((uint8_t)((int32_t)255));
-		RuntimeObject* L_25 = Box(il2cpp_defaults.byte_class, &L_24);
-		NullCheck(L_23);
-		bool L_26;
-		L_26 = Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849(L_23, L_25, (&V_0), Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_RuntimeMethod_var);
-		if (!L_26)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:149>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_21 = __this->___properties;
+		uint8_t L_22 = ((uint8_t)((int32_t)254));
+		RuntimeObject* L_23 = Box(il2cpp_defaults.byte_class, &L_22);
+		NullCheck(L_21);
+		bool L_24;
+		L_24 = Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849(L_21, L_23, (&V_1), Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_RuntimeMethod_var);
+		V_6 = L_24;
+		bool L_25 = V_6;
+		if (!L_25)
 		{
 			goto IL_00d6;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:155>
-		RuntimeObject* L_27 = V_0;
-		ChatChannel_set_MaxSubscribers_mABD8D726D312CCFA0CA5A75AFB4865F9D17C7079_inline(__this, ((*(int32_t*)UnBox(L_27, il2cpp_defaults.int32_class))), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:151>
+		RuntimeObject* L_26 = V_1;
+		ChatChannel_set_PublishSubscribers_m2DA1D9D78E6A17E14CBA33FECB5469836E9FBB5A_inline(__this, ((*(bool*)UnBox(L_26, il2cpp_defaults.boolean_class))), NULL);
 	}
 
 IL_00d6:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:158>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:153>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_27 = __this->___properties;
+		uint8_t L_28 = ((uint8_t)((int32_t)255));
+		RuntimeObject* L_29 = Box(il2cpp_defaults.byte_class, &L_28);
+		NullCheck(L_27);
+		bool L_30;
+		L_30 = Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849(L_27, L_29, (&V_1), Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_RuntimeMethod_var);
+		V_7 = L_30;
+		bool L_31 = V_7;
+		if (!L_31)
+		{
+			goto IL_0102;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:155>
+		RuntimeObject* L_32 = V_1;
+		ChatChannel_set_MaxSubscribers_mABD8D726D312CCFA0CA5A75AFB4865F9D17C7079_inline(__this, ((*(int32_t*)UnBox(L_32, il2cpp_defaults.int32_class))), NULL);
+	}
+
+IL_0102:
+	{
+	}
+
+IL_0103:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:158>
 		return;
 	}
 }
-// Method Definition Index: 48439
+// Method Definition Index: 48519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_AddSubscribers_mF79231AA897C23C7901F4767C7AD8C917C1DA8B0 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_users, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2412,76 +2520,95 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_AddSubscribers_mF79231AA897C
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	int32_t V_1 = 0;
+	bool V_1 = false;
+	bool V_2 = false;
+	int32_t V_3 = 0;
+	bool V_4 = false;
+	bool V_5 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:162>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:162>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = ___0_users;
-		if (L_0)
+		V_1 = (bool)((((RuntimeObject*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0005;
+			goto IL_000e;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:164>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:164>
+		V_2 = (bool)0;
+		goto IL_0045;
 	}
 
-IL_0005:
+IL_000e:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:166>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:166>
 		V_0 = (bool)1;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:167>
-		V_1 = 0;
-		goto IL_0021;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:167>
+		V_3 = 0;
+		goto IL_0035;
 	}
 
-IL_000b:
+IL_0014:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:169>
-		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_1 = __this->___Subscribers;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = ___0_users;
-		int32_t L_3 = V_1;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:169>
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_2 = __this->___Subscribers;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = ___0_users;
+		int32_t L_4 = V_3;
+		NullCheck(L_3);
+		int32_t L_5 = L_4;
+		String_t* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		NullCheck(L_2);
-		int32_t L_4 = L_3;
-		String_t* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		NullCheck(L_1);
-		bool L_6;
-		L_6 = HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D(L_1, L_5, HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D_RuntimeMethod_var);
-		if (L_6)
+		bool L_7;
+		L_7 = HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D(L_2, L_6, HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D_RuntimeMethod_var);
+		V_4 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
+		bool L_8 = V_4;
+		if (!L_8)
 		{
-			goto IL_001d;
+			goto IL_0030;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:171>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:171>
 		V_0 = (bool)0;
 	}
 
-IL_001d:
+IL_0030:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:167>
-		int32_t L_7 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_7, 1));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:167>
+		int32_t L_9 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add(L_9, 1));
 	}
 
-IL_0021:
+IL_0035:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:167>
-		int32_t L_8 = V_1;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = ___0_users;
-		NullCheck(L_9);
-		if ((((int32_t)L_8) < ((int32_t)((int32_t)(((RuntimeArray*)L_9)->max_length)))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:167>
+		int32_t L_10 = V_3;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = ___0_users;
+		NullCheck(L_11);
+		V_5 = (bool)((((int32_t)L_10) < ((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length))))? 1 : 0);
+		bool L_12 = V_5;
+		if (L_12)
 		{
-			goto IL_000b;
+			goto IL_0014;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:174>
-		bool L_10 = V_0;
-		return L_10;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:174>
+		bool L_13 = V_0;
+		V_2 = L_13;
+		goto IL_0045;
+	}
+
+IL_0045:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:175>
+		bool L_14 = V_2;
+		return L_14;
 	}
 }
-// Method Definition Index: 48440
+// Method Definition Index: 48520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_AddSubscriber_m99C1D8A453B5D493031845BD8642B2E21CC52198 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2490,17 +2617,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_AddSubscriber_m99C1D8A453B5D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:179>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:179>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_0 = __this->___Subscribers;
 		String_t* L_1 = ___0_userId;
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D(L_0, L_1, HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D_RuntimeMethod_var);
-		return L_2;
+		V_0 = L_2;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:180>
+		bool L_3 = V_0;
+		return L_3;
 	}
 }
-// Method Definition Index: 48441
+// Method Definition Index: 48521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_RemoveSubscriber_m77F6089D6E0D3158EB99FD8696CF4314F5D4E73D (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2510,32 +2646,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_RemoveSubscriber_m77F6089D6E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:184>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:184>
 		Dictionary_2_t491A326E784F135D7D3DEEA1DBB454F3B03579EF* L_0 = __this->___usersProperties;
-		if (!L_0)
+		V_0 = (bool)((!(((RuntimeObject*)(Dictionary_2_t491A326E784F135D7D3DEEA1DBB454F3B03579EF*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0015;
+			goto IL_001d;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:186>
-		Dictionary_2_t491A326E784F135D7D3DEEA1DBB454F3B03579EF* L_1 = __this->___usersProperties;
-		String_t* L_2 = ___0_userId;
-		NullCheck(L_1);
-		bool L_3;
-		L_3 = Dictionary_2_Remove_mC30F8F7F52EA919AF68674E1E568E853EA47A078(L_1, L_2, Dictionary_2_Remove_mC30F8F7F52EA919AF68674E1E568E853EA47A078_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:186>
+		Dictionary_2_t491A326E784F135D7D3DEEA1DBB454F3B03579EF* L_2 = __this->___usersProperties;
+		String_t* L_3 = ___0_userId;
+		NullCheck(L_2);
+		bool L_4;
+		L_4 = Dictionary_2_Remove_mC30F8F7F52EA919AF68674E1E568E853EA47A078(L_2, L_3, Dictionary_2_Remove_mC30F8F7F52EA919AF68674E1E568E853EA47A078_RuntimeMethod_var);
 	}
 
-IL_0015:
+IL_001d:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:188>
-		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_4 = __this->___Subscribers;
-		String_t* L_5 = ___0_userId;
-		NullCheck(L_4);
-		bool L_6;
-		L_6 = HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA(L_4, L_5, HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA_RuntimeMethod_var);
-		return L_6;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:188>
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_5 = __this->___Subscribers;
+		String_t* L_6 = ___0_userId;
+		NullCheck(L_5);
+		bool L_7;
+		L_7 = HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA(L_5, L_6, HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA_RuntimeMethod_var);
+		V_1 = L_7;
+		goto IL_002c;
+	}
+
+IL_002c:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:189>
+		bool L_8 = V_1;
+		return L_8;
 	}
 }
 #ifdef __clang__
@@ -2546,148 +2694,173 @@ IL_0015:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48442
+// Method Definition Index: 48522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
 		bool L_0 = __this->___U3CEnableProtocolFallbackU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48443
+// Method Definition Index: 48523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
 		bool L_0 = ___0_value;
 		__this->___U3CEnableProtocolFallbackU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48444
+// Method Definition Index: 48524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_NameServerAddress_mCAE58820E4D0221517E68E9C7B97FE9CACAE8744 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
 		String_t* L_0 = __this->___U3CNameServerAddressU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48445
+// Method Definition Index: 48525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_NameServerAddress_m151DD2A6FF91AAA0F9651E73E2B10BAC5AAC398E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameServerAddressU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameServerAddressU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48446
+// Method Definition Index: 48526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
 		String_t* L_0 = __this->___U3CFrontendAddressU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48447
+// Method Definition Index: 48527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_FrontendAddress_m11BEEFC4E38A657099753638560CF27FD8BEA8C6 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
 		String_t* L_0 = ___0_value;
 		__this->___U3CFrontendAddressU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CFrontendAddressU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48448
+// Method Definition Index: 48528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	String_t* V_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:73>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:73>
 		String_t* L_0 = __this->___chatRegion;
-		return L_0;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:73>
+		String_t* L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 48449
+// Method Definition Index: 48529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:74>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:74>
 		String_t* L_0 = ___0_value;
 		__this->___chatRegion = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___chatRegion), (void*)L_0);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:74>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:74>
 		return;
 	}
 }
-// Method Definition Index: 48450
+// Method Definition Index: 48530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
 		int32_t L_0 = __this->___U3CStateU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48451
+// Method Definition Index: 48531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
 		int32_t L_0 = ___0_value;
 		__this->___U3CStateU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48452
+// Method Definition Index: 48532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatClient_get_DisconnectedCause_mE36D0EDB819FF001973B6D318B1DB4CD7C1CC9B6 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
 		int32_t L_0 = __this->___U3CDisconnectedCauseU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48453
+// Method Definition Index: 48533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
 		int32_t L_0 = ___0_value;
 		__this->___U3CDisconnectedCauseU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48454
+// Method Definition Index: 48534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:103>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:103>
 		int32_t L_0;
 		L_0 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)7))))
 		{
-			goto IL_0010;
+			goto IL_0012;
 		}
 	}
 	{
 		bool L_1;
 		L_1 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
-		return L_1;
+		G_B3_0 = ((int32_t)(L_1));
+		goto IL_0013;
 	}
 
-IL_0010:
+IL_0012:
 	{
-		return (bool)0;
+		G_B3_0 = 0;
+	}
+
+IL_0013:
+	{
+		V_0 = (bool)G_B3_0;
+		goto IL_0016;
+	}
+
+IL_0016:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:103>
+		bool L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48455
+// Method Definition Index: 48535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_CanChatInChannel_mB8F68786A04CFE98CC246EC5DA346519E0671D0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2697,13 +2870,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_CanChatInChannel_mB8F68786A04
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	int32_t G_B4_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:112>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:112>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_0026;
+			goto IL_0028;
 		}
 	}
 	{
@@ -2714,7 +2889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_CanChatInChannel_mB8F68786A04
 		L_3 = Dictionary_2_ContainsKey_m43998BB50D68FD0B18E4445DED51EE80D6EF1643(L_1, L_2, Dictionary_2_ContainsKey_m43998BB50D68FD0B18E4445DED51EE80D6EF1643_RuntimeMethod_var);
 		if (!L_3)
 		{
-			goto IL_0026;
+			goto IL_0028;
 		}
 	}
 	{
@@ -2723,110 +2898,149 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_CanChatInChannel_mB8F68786A04
 		NullCheck(L_4);
 		bool L_6;
 		L_6 = HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853(L_4, L_5, HashSet_1_Contains_mAE49939A0DE08C4864E8560F3F7FCDAC2E193853_RuntimeMethod_var);
-		return (bool)((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
+		G_B4_0 = ((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
+		goto IL_0029;
 	}
 
-IL_0026:
+IL_0028:
 	{
-		return (bool)0;
+		G_B4_0 = 0;
+	}
+
+IL_0029:
+	{
+		V_0 = (bool)G_B4_0;
+		goto IL_002c;
+	}
+
+IL_002c:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:113>
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
-// Method Definition Index: 48456
+// Method Definition Index: 48536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:117>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:117>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
-		return (bool)((!(((RuntimeObject*)(ChatPeer_t216E56C8D1791380415477470013A3787DF76D43*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		V_0 = (bool)((!(((RuntimeObject*)(ChatPeer_t216E56C8D1791380415477470013A3787DF76D43*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:117>
+		bool L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 48457
+// Method Definition Index: 48537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
 		String_t* L_0 = __this->___U3CAppVersionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48458
+// Method Definition Index: 48538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AppVersion_mDCCA9627D033CA507EC3414F1B27F6620FDFD418 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
 		String_t* L_0 = ___0_value;
 		__this->___U3CAppVersionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAppVersionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48459
+// Method Definition Index: 48539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
 		String_t* L_0 = __this->___U3CAppIdU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48460
+// Method Definition Index: 48540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AppId_m59122AD30CE686185534AB99FE427F9659C705F1 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
 		String_t* L_0 = ___0_value;
 		__this->___U3CAppIdU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAppIdU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48461
+// Method Definition Index: 48541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0 = __this->___U3CAuthValuesU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48462
+// Method Definition Index: 48542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0 = ___0_value;
 		__this->___U3CAuthValuesU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAuthValuesU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48463
+// Method Definition Index: 48543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	String_t* V_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:138>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:138>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0;
 		L_0 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
 		if (L_0)
 		{
-			goto IL_000a;
+			goto IL_000c;
 		}
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_0017;
 	}
 
-IL_000a:
+IL_000c:
 	{
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_1;
 		L_1 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
 		NullCheck(L_1);
 		String_t* L_2;
 		L_2 = AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline(L_1, NULL);
-		return L_2;
+		G_B3_0 = L_2;
+	}
+
+IL_0017:
+	{
+		V_0 = G_B3_0;
+		goto IL_001a;
+	}
+
+IL_001a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:139>
+		String_t* L_3 = V_0;
+		return L_3;
 	}
 }
-// Method Definition Index: 48464
+// Method Definition Index: 48544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_UserId_m5B177DA1889900F53C5AC0B55FB9C765469970B3 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2835,66 +3049,78 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_UserId_m5B177DA1889900F53
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:142>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:142>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0;
 		L_0 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		if (L_0)
+		V_0 = (bool)((((RuntimeObject*)(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0013;
+			goto IL_001c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:144>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_1 = (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)il2cpp_codegen_object_new(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C_il2cpp_TypeInfo_var);
-		AuthenticationValues__ctor_m0EC34240479292C7E3D292072C7AE92D1CEA7C60(L_1, NULL);
-		ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline(__this, L_1, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:144>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_2 = (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)il2cpp_codegen_object_new(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C_il2cpp_TypeInfo_var);
+		AuthenticationValues__ctor_m0EC34240479292C7E3D292072C7AE92D1CEA7C60(L_2, NULL);
+		ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline(__this, L_2, NULL);
 	}
 
-IL_0013:
+IL_001c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:146>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_2;
-		L_2 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		String_t* L_3 = ___0_value;
-		NullCheck(L_2);
-		AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0_inline(L_2, L_3, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:147>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:146>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_3;
+		L_3 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		String_t* L_4 = ___0_value;
+		NullCheck(L_3);
+		AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0_inline(L_3, L_4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:147>
 		return;
 	}
 }
-// Method Definition Index: 48465
+// Method Definition Index: 48545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:200>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:200>
 		bool L_0 = __this->___U3CUseBackgroundWorkerForSendingU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48466
+// Method Definition Index: 48546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_UseBackgroundWorkerForSending_m6B0CF62C2EBF74CB62FFB1557DC30969292B7596 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:200>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:200>
 		bool L_0 = ___0_value;
 		__this->___U3CUseBackgroundWorkerForSendingU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48467
+// Method Definition Index: 48547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ChatClient_get_TransportProtocol_mA8A1C69B50CAF221B290D80AD48244FC667EE772 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	uint8_t V_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:205>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:205>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
 		NullCheck(L_0);
 		uint8_t L_1;
 		L_1 = PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline(L_0, NULL);
-		return L_1;
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:205>
+		uint8_t L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48468
+// Method Definition Index: 48548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_TransportProtocol_m21D6C23D1B7EE7C8C4C71C5D5FBCB4FDBB58DD23 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2907,23 +3133,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_TransportProtocol_m21D6C2
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA1EBF015C0D71167210B0E732686AEE3A3E976B);
 		s_Il2CppMethodInitialized = true;
 	}
-	uint8_t V_0 = 0;
-	String_t* G_B4_0 = NULL;
-	int32_t G_B4_1 = 0;
-	RuntimeObject* G_B4_2 = NULL;
-	String_t* G_B3_0 = NULL;
-	int32_t G_B3_1 = 0;
-	RuntimeObject* G_B3_2 = NULL;
+	bool V_0 = false;
+	uint8_t V_1 = 0;
+	int32_t G_B3_0 = 0;
+	String_t* G_B6_0 = NULL;
+	int32_t G_B6_1 = 0;
+	RuntimeObject* G_B6_2 = NULL;
 	String_t* G_B5_0 = NULL;
-	String_t* G_B5_1 = NULL;
-	int32_t G_B5_2 = 0;
-	RuntimeObject* G_B5_3 = NULL;
+	int32_t G_B5_1 = 0;
+	RuntimeObject* G_B5_2 = NULL;
+	String_t* G_B7_0 = NULL;
+	String_t* G_B7_1 = NULL;
+	int32_t G_B7_2 = 0;
+	RuntimeObject* G_B7_3 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:208>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:208>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
 		if (!L_0)
 		{
-			goto IL_0015;
+			goto IL_0019;
 		}
 	}
 	{
@@ -2931,87 +3159,111 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_TransportProtocol_m21D6C2
 		NullCheck(L_1);
 		uint8_t L_2;
 		L_2 = PhotonPeer_get_PeerState_mFE3E3AA3BB9531F98BD274F0AAC83BDF44FCBEEC(L_1, NULL);
-		if (!L_2)
-		{
-			goto IL_005e;
-		}
+		G_B3_0 = ((!(((uint32_t)L_2) <= ((uint32_t)0)))? 1 : 0);
+		goto IL_001a;
 	}
 
-IL_0015:
+IL_0019:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:210>
-		RuntimeObject* L_3 = __this->___listener;
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_4 = __this->___chatPeer;
-		if (L_4)
-		{
-			G_B4_0 = _stringLiteralDA1EBF015C0D71167210B0E732686AEE3A3E976B;
-			G_B4_1 = 2;
-			G_B4_2 = L_3;
-			goto IL_0030;
-		}
-		G_B3_0 = _stringLiteralDA1EBF015C0D71167210B0E732686AEE3A3E976B;
-		G_B3_1 = 2;
-		G_B3_2 = L_3;
-	}
-	{
-		G_B5_0 = _stringLiteral55BE77744B85C109A578D5AB1BBDCE3460B55D03;
-		G_B5_1 = G_B3_0;
-		G_B5_2 = G_B3_1;
-		G_B5_3 = G_B3_2;
-		goto IL_0053;
+		G_B3_0 = 1;
 	}
 
-IL_0030:
+IL_001a:
 	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_006a;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:210>
+		RuntimeObject* L_4 = __this->___listener;
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_5 = __this->___chatPeer;
-		NullCheck(L_5);
-		uint8_t L_6;
-		L_6 = PhotonPeer_get_PeerState_mFE3E3AA3BB9531F98BD274F0AAC83BDF44FCBEEC(L_5, NULL);
-		V_0 = L_6;
-		Il2CppFakeBox<uint8_t> L_7(PeerStateValue_tCDD305BA1E139FC2F43FF54C65049831770DDFC3_il2cpp_TypeInfo_var, (&V_0));
-		String_t* L_8;
-		L_8 = Enum_ToString_m946B0B83C4470457D0FF555D862022C72BB55741((Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2*)(&L_7), NULL);
+		if (L_5)
+		{
+			G_B6_0 = _stringLiteralDA1EBF015C0D71167210B0E732686AEE3A3E976B;
+			G_B6_1 = 2;
+			G_B6_2 = L_4;
+			goto IL_003a;
+		}
+		G_B5_0 = _stringLiteralDA1EBF015C0D71167210B0E732686AEE3A3E976B;
+		G_B5_1 = 2;
+		G_B5_2 = L_4;
+	}
+	{
+		G_B7_0 = _stringLiteral55BE77744B85C109A578D5AB1BBDCE3460B55D03;
+		G_B7_1 = G_B5_0;
+		G_B7_2 = G_B5_1;
+		G_B7_3 = G_B5_2;
+		goto IL_005d;
+	}
+
+IL_003a:
+	{
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_6 = __this->___chatPeer;
+		NullCheck(L_6);
+		uint8_t L_7;
+		L_7 = PhotonPeer_get_PeerState_mFE3E3AA3BB9531F98BD274F0AAC83BDF44FCBEEC(L_6, NULL);
+		V_1 = L_7;
+		Il2CppFakeBox<uint8_t> L_8(PeerStateValue_tCDD305BA1E139FC2F43FF54C65049831770DDFC3_il2cpp_TypeInfo_var, (&V_1));
 		String_t* L_9;
-		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral172E7126E04AAF6726B1FF8DE1B89DC2CE7B19CB, L_8, NULL);
-		G_B5_0 = L_9;
-		G_B5_1 = G_B4_0;
-		G_B5_2 = G_B4_1;
-		G_B5_3 = G_B4_2;
-	}
-
-IL_0053:
-	{
+		L_9 = Enum_ToString_m946B0B83C4470457D0FF555D862022C72BB55741((Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2*)(&L_8), NULL);
 		String_t* L_10;
-		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B5_1, G_B5_0, NULL);
-		NullCheck(G_B5_3);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, G_B5_3, G_B5_2, L_10);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:211>
-		return;
+		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral172E7126E04AAF6726B1FF8DE1B89DC2CE7B19CB, L_9, NULL);
+		G_B7_0 = L_10;
+		G_B7_1 = G_B6_0;
+		G_B7_2 = G_B6_1;
+		G_B7_3 = G_B6_2;
 	}
 
-IL_005e:
+IL_005d:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:213>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_11 = __this->___chatPeer;
-		uint8_t L_12 = ___0_value;
-		NullCheck(L_11);
-		PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline(L_11, L_12, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:214>
+		String_t* L_11;
+		L_11 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B7_1, G_B7_0, NULL);
+		NullCheck(G_B7_3);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, G_B7_3, G_B7_2, L_11);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:211>
+		goto IL_0077;
+	}
+
+IL_006a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:213>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_12 = __this->___chatPeer;
+		uint8_t L_13 = ___0_value;
+		NullCheck(L_12);
+		PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline(L_12, L_13, NULL);
+	}
+
+IL_0077:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:214>
 		return;
 	}
 }
-// Method Definition Index: 48469
+// Method Definition Index: 48549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* ChatClient_get_SocketImplementationConfig_mE7AFB116514353572B13B63A1C067FCC6DB89199 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* V_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:228>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:228>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
 		NullCheck(L_0);
 		Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* L_1 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)L_0)->___SocketImplementationConfig;
-		return L_1;
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:228>
+		Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48470
+// Method Definition Index: 48550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient__ctor_m5C32CB0A0CAC33E980D4C6FA700B551D0DAF46F4 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, RuntimeObject* ___0_listener, uint8_t ___1_protocol, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3026,51 +3278,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient__ctor_m5C32CB0A0CAC33E980D4C6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:68>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:68>
 		__this->___chatRegion = _stringLiteralF836C8AF47AFF33F1175FF955458D6180A087B6E;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___chatRegion), (void*)_stringLiteralF836C8AF47AFF33F1175FF955458D6180A087B6E);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:167>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:167>
 		__this->___PrivateChatHistoryLength = (-1);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:187>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:178>
+		__this->___listener = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___listener), (void*)(RuntimeObject*)NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:180>
+		__this->___chatPeer = (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___chatPeer), (void*)(ChatPeer_t216E56C8D1791380415477470013A3787DF76D43*)NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:187>
 		__this->___msDeltaForServiceCalls = ((int32_t)50);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:236>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:236>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:238>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:238>
 		RuntimeObject* L_0 = ___0_listener;
 		__this->___listener = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___listener), (void*)L_0);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:239>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:239>
 		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:241>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:241>
 		uint8_t L_1 = ___1_protocol;
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_2 = (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43*)il2cpp_codegen_object_new(ChatPeer_t216E56C8D1791380415477470013A3787DF76D43_il2cpp_TypeInfo_var);
 		ChatPeer__ctor_mA7BE40BE95B917104BCECEA560E5A314855FC3B0(L_2, __this, L_1, NULL);
 		__this->___chatPeer = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___chatPeer), (void*)L_2);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:242>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:242>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_3 = __this->___chatPeer;
 		NullCheck(L_3);
 		PhotonPeer_set_SerializationProtocolType_m3A949C39212B0109744721F7CEFC122C6C4C573B_inline(L_3, 1, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:244>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:244>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_4 = (Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E*)il2cpp_codegen_object_new(Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m591E5A5F5686795BB4C305786E306F2600964177(L_4, Dictionary_2__ctor_m591E5A5F5686795BB4C305786E306F2600964177_RuntimeMethod_var);
 		__this->___PublicChannels = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___PublicChannels), (void*)L_4);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:245>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:245>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_5 = (Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E*)il2cpp_codegen_object_new(Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m591E5A5F5686795BB4C305786E306F2600964177(L_5, Dictionary_2__ctor_m591E5A5F5686795BB4C305786E306F2600964177_RuntimeMethod_var);
 		__this->___PrivateChannels = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___PrivateChannels), (void*)L_5);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:247>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:247>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_6 = (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*)il2cpp_codegen_object_new(HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03(L_6, HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var);
 		__this->___PublicChannelsUnsubscribing = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___PublicChannelsUnsubscribing), (void*)L_6);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:248>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:248>
 		return;
 	}
 }
-// Method Definition Index: 48471
+// Method Definition Index: 48551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectUsingSettings_m3DCD03EA4CAE4ADDD935BDA323CCF37B5E96BB4C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* ___0_appSettings, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3080,112 +3338,131 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectUsingSettings_m3DCD03E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3BAD168215B6409DFD378F9C0FBE1D56E09E7BB9);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:253>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:253>
 		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_0 = ___0_appSettings;
-		if (L_0)
+		V_0 = (bool)((((RuntimeObject*)(ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0016;
+			goto IL_0023;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:255>
-		RuntimeObject* L_1 = __this->___listener;
-		NullCheck(L_1);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_1, 1, _stringLiteral3BAD168215B6409DFD378F9C0FBE1D56E09E7BB9);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:256>
-		return (bool)0;
-	}
-
-IL_0016:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:259>
-		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_2 = ___0_appSettings;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:255>
+		RuntimeObject* L_2 = __this->___listener;
 		NullCheck(L_2);
-		String_t* L_3 = L_2->___FixedRegion;
-		bool L_4;
-		L_4 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_3, NULL);
-		if (L_4)
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral3BAD168215B6409DFD378F9C0FBE1D56E09E7BB9);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:256>
+		V_1 = (bool)0;
+		goto IL_00c3;
+	}
+
+IL_0023:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:259>
+		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_3 = ___0_appSettings;
+		NullCheck(L_3);
+		String_t* L_4 = L_3->___FixedRegion;
+		bool L_5;
+		L_5 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_4, NULL);
+		V_2 = (bool)((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
+		bool L_6 = V_2;
+		if (!L_6)
 		{
-			goto IL_002f;
+			goto IL_0044;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:261>
-		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_5 = ___0_appSettings;
-		NullCheck(L_5);
-		String_t* L_6 = L_5->___FixedRegion;
-		ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06_inline(__this, L_6, NULL);
-	}
-
-IL_002f:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:264>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:261>
 		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_7 = ___0_appSettings;
 		NullCheck(L_7);
-		uint8_t L_8 = L_7->___NetworkLogging;
-		ChatClient_set_DebugOut_m742DBBA5A5D1910991A3932A362A584D43E6402A(__this, L_8, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:266>
+		String_t* L_8 = L_7->___FixedRegion;
+		ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06(__this, L_8, NULL);
+	}
+
+IL_0044:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:264>
 		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_9 = ___0_appSettings;
 		NullCheck(L_9);
-		uint8_t L_10 = L_9->___Protocol;
-		ChatClient_set_TransportProtocol_m21D6C23D1B7EE7C8C4C71C5D5FBCB4FDBB58DD23(__this, L_10, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:267>
+		uint8_t L_10 = L_9->___NetworkLogging;
+		ChatClient_set_DebugOut_m742DBBA5A5D1910991A3932A362A584D43E6402A(__this, L_10, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:266>
 		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_11 = ___0_appSettings;
 		NullCheck(L_11);
-		bool L_12 = L_11->___EnableProtocolFallback;
-		ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline(__this, L_12, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:269>
+		uint8_t L_12 = L_11->___Protocol;
+		ChatClient_set_TransportProtocol_m21D6C23D1B7EE7C8C4C71C5D5FBCB4FDBB58DD23(__this, L_12, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:267>
 		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_13 = ___0_appSettings;
 		NullCheck(L_13);
-		bool L_14;
-		L_14 = ChatAppSettings_get_IsDefaultNameServer_m7847F68B2E3DCF7D3DC72481DDCBB048D0EFC050(L_13, NULL);
-		if (L_14)
+		bool L_14 = L_13->___EnableProtocolFallback;
+		ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline(__this, L_14, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:269>
+		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_15 = ___0_appSettings;
+		NullCheck(L_15);
+		bool L_16;
+		L_16 = ChatAppSettings_get_IsDefaultNameServer_m7847F68B2E3DCF7D3DC72481DDCBB048D0EFC050(L_15, NULL);
+		V_3 = (bool)((((int32_t)L_16) == ((int32_t)0))? 1 : 0);
+		bool L_17 = V_3;
+		if (!L_17)
 		{
-			goto IL_007d;
+			goto IL_009c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:271>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_15 = __this->___chatPeer;
-		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_16 = ___0_appSettings;
-		NullCheck(L_16);
-		String_t* L_17 = L_16->___Server;
-		NullCheck(L_15);
-		L_15->___NameServerHost = L_17;
-		Il2CppCodeGenWriteBarrier((void**)(&L_15->___NameServerHost), (void*)L_17);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:272>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:271>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_18 = __this->___chatPeer;
 		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_19 = ___0_appSettings;
 		NullCheck(L_19);
-		uint16_t L_20 = L_19->___Port;
+		String_t* L_20 = L_19->___Server;
 		NullCheck(L_18);
-		L_18->___NameServerPortOverride = L_20;
+		L_18->___NameServerHost = L_20;
+		Il2CppCodeGenWriteBarrier((void**)(&L_18->___NameServerHost), (void*)L_20);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:272>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_21 = __this->___chatPeer;
+		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_22 = ___0_appSettings;
+		NullCheck(L_22);
+		uint16_t L_23 = L_22->___Port;
+		NullCheck(L_21);
+		L_21->___NameServerPortOverride = L_23;
 	}
 
-IL_007d:
+IL_009c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:275>
-		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_21 = ___0_appSettings;
-		NullCheck(L_21);
-		String_t* L_22 = L_21->___ProxyServer;
-		__this->___ProxyServerAddress = L_22;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___ProxyServerAddress), (void*)L_22);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:277>
-		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_23 = ___0_appSettings;
-		NullCheck(L_23);
-		String_t* L_24 = L_23->___AppIdChat;
-		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_25 = ___0_appSettings;
-		NullCheck(L_25);
-		String_t* L_26 = L_25->___AppVersion;
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_27;
-		L_27 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		bool L_28;
-		L_28 = ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121(__this, L_24, L_26, L_27, NULL);
-		return L_28;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:275>
+		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_24 = ___0_appSettings;
+		NullCheck(L_24);
+		String_t* L_25 = L_24->___ProxyServer;
+		__this->___ProxyServerAddress = L_25;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___ProxyServerAddress), (void*)L_25);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:277>
+		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_26 = ___0_appSettings;
+		NullCheck(L_26);
+		String_t* L_27 = L_26->___AppIdChat;
+		ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* L_28 = ___0_appSettings;
+		NullCheck(L_28);
+		String_t* L_29 = L_28->___AppVersion;
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_30;
+		L_30 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		bool L_31;
+		L_31 = ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121(__this, L_27, L_29, L_30, NULL);
+		V_1 = L_31;
+		goto IL_00c3;
+	}
+
+IL_00c3:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:278>
+		bool L_32 = V_1;
+		return L_32;
 	}
 }
-// Method Definition Index: 48472
+// Method Definition Index: 48552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_appId, String_t* ___1_appVersion, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___2_authValues, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3200,119 +3477,130 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Connect_m1733B76CCE95AFB18699
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDF6A7CB87243568376528ACED2E19B84FDCE6A7C);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool G_B4_0 = false;
-	bool G_B3_0 = false;
-	bool G_B6_0 = false;
-	bool G_B5_0 = false;
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:292>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:292>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
 		NullCheck(L_0);
 		((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)L_0)->___TimePingInterval = ((int32_t)3000);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:293>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:293>
 		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:295>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:295>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_1 = ___2_authValues;
-		if (!L_1)
+		V_1 = (bool)((!(((RuntimeObject*)(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)L_1) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_2 = V_1;
+		if (!L_2)
 		{
-			goto IL_0021;
+			goto IL_002b;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:297>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_2 = ___2_authValues;
-		ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline(__this, L_2, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:297>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_3 = ___2_authValues;
+		ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline(__this, L_3, NULL);
 	}
 
-IL_0021:
+IL_002b:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:300>
-		String_t* L_3 = ___0_appId;
-		ChatClient_set_AppId_m59122AD30CE686185534AB99FE427F9659C705F1_inline(__this, L_3, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:301>
-		String_t* L_4 = ___1_appVersion;
-		ChatClient_set_AppVersion_mDCCA9627D033CA507EC3414F1B27F6620FDFD418_inline(__this, L_4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:302>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:300>
+		String_t* L_4 = ___0_appId;
+		ChatClient_set_AppId_m59122AD30CE686185534AB99FE427F9659C705F1_inline(__this, L_4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:301>
+		String_t* L_5 = ___1_appVersion;
+		ChatClient_set_AppVersion_mDCCA9627D033CA507EC3414F1B27F6620FDFD418_inline(__this, L_5, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:302>
 		__this->___didAuthenticate = (bool)0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:303>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_5 = __this->___chatPeer;
-		NullCheck(L_5);
-		PhotonPeer_set_QuickResendAttempts_m51EB0627F94F2B9320D0845DF8A602DF08BFB2FB(L_5, (uint8_t)2, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:304>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:303>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_6 = __this->___chatPeer;
 		NullCheck(L_6);
-		((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)L_6)->___SentCountAllowance = 7;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:307>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_7 = __this->___PublicChannels;
+		PhotonPeer_set_QuickResendAttempts_m51EB0627F94F2B9320D0845DF8A602DF08BFB2FB(L_6, (uint8_t)2, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:304>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_7 = __this->___chatPeer;
 		NullCheck(L_7);
-		Dictionary_2_Clear_m67FCF37A9346FA007FF9A80658C31E309E6BFB74(L_7, Dictionary_2_Clear_m67FCF37A9346FA007FF9A80658C31E309E6BFB74_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:308>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_8 = __this->___PrivateChannels;
+		((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)L_7)->___SentCountAllowance = 7;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:307>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_8 = __this->___PublicChannels;
 		NullCheck(L_8);
 		Dictionary_2_Clear_m67FCF37A9346FA007FF9A80658C31E309E6BFB74(L_8, Dictionary_2_Clear_m67FCF37A9346FA007FF9A80658C31E309E6BFB74_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:309>
-		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_9 = __this->___PublicChannelsUnsubscribing;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:308>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_9 = __this->___PrivateChannels;
 		NullCheck(L_9);
-		HashSet_1_Clear_m0181AAD373CCA0B6C26FE43A802121B3C0DE5F90(L_9, HashSet_1_Clear_m0181AAD373CCA0B6C26FE43A802121B3C0DE5F90_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:319>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_10 = __this->___chatPeer;
+		Dictionary_2_Clear_m67FCF37A9346FA007FF9A80658C31E309E6BFB74(L_9, Dictionary_2_Clear_m67FCF37A9346FA007FF9A80658C31E309E6BFB74_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:309>
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_10 = __this->___PublicChannelsUnsubscribing;
 		NullCheck(L_10);
-		String_t* L_11;
-		L_11 = ChatPeer_get_NameServerAddress_m34FD6CEB0A89DF565D492EB7ED3E12CDC17A9797(L_10, NULL);
-		ChatClient_set_NameServerAddress_m151DD2A6FF91AAA0F9651E73E2B10BAC5AAC398E_inline(__this, L_11, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:321>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_12 = __this->___chatPeer;
-		String_t* L_13;
-		L_13 = ChatClient_get_NameServerAddress_mCAE58820E4D0221517E68E9C7B97FE9CACAE8744_inline(__this, NULL);
-		String_t* L_14 = __this->___ProxyServerAddress;
-		NullCheck(L_12);
-		bool L_15;
-		L_15 = VirtualFuncInvoker5< bool, String_t*, String_t*, String_t*, RuntimeObject*, RuntimeObject* >::Invoke(7, L_12, L_13, L_14, _stringLiteral84F3409D006A485853CE590C6F1C4AA00ABCA26F, NULL, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:322>
-		bool L_16 = L_15;
-		if (!L_16)
+		HashSet_1_Clear_m0181AAD373CCA0B6C26FE43A802121B3C0DE5F90(L_10, HashSet_1_Clear_m0181AAD373CCA0B6C26FE43A802121B3C0DE5F90_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:319>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_11 = __this->___chatPeer;
+		NullCheck(L_11);
+		String_t* L_12;
+		L_12 = ChatPeer_get_NameServerAddress_m34FD6CEB0A89DF565D492EB7ED3E12CDC17A9797(L_11, NULL);
+		ChatClient_set_NameServerAddress_m151DD2A6FF91AAA0F9651E73E2B10BAC5AAC398E_inline(__this, L_12, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:321>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_13 = __this->___chatPeer;
+		String_t* L_14;
+		L_14 = ChatClient_get_NameServerAddress_mCAE58820E4D0221517E68E9C7B97FE9CACAE8744_inline(__this, NULL);
+		String_t* L_15 = __this->___ProxyServerAddress;
+		NullCheck(L_13);
+		bool L_16;
+		L_16 = VirtualFuncInvoker5< bool, String_t*, String_t*, String_t*, RuntimeObject*, RuntimeObject* >::Invoke(7, L_13, L_14, L_15, _stringLiteral84F3409D006A485853CE590C6F1C4AA00ABCA26F, NULL, NULL);
+		V_0 = L_16;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:322>
+		bool L_17 = V_0;
+		V_2 = L_17;
+		bool L_18 = V_2;
+		if (!L_18)
 		{
-			G_B4_0 = L_16;
-			goto IL_00a8;
+			goto IL_00bf;
 		}
-		G_B3_0 = L_16;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:324>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:324>
 		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 1, NULL);
-		G_B4_0 = G_B3_0;
 	}
 
-IL_00a8:
+IL_00bf:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:327>
-		bool L_17;
-		L_17 = ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288_inline(__this, NULL);
-		if (!L_17)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:327>
+		bool L_19;
+		L_19 = ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288_inline(__this, NULL);
+		V_3 = L_19;
+		bool L_20 = V_3;
+		if (!L_20)
 		{
-			G_B6_0 = G_B4_0;
-			goto IL_00cd;
+			goto IL_00e8;
 		}
-		G_B5_0 = G_B4_0;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:332>
-		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_18 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
-		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_18, __this, (intptr_t)((void*)ChatClient_SendOutgoingInBackground_m5639D30394C3AEAAF72AA718874BF90ABB1D35B2_RuntimeMethod_var), NULL);
-		int32_t L_19 = __this->___msDeltaForServiceCalls;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:332>
+		Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* L_21 = (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457*)il2cpp_codegen_object_new(Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457_il2cpp_TypeInfo_var);
+		Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22(L_21, __this, (intptr_t)((void*)ChatClient_SendOutgoingInBackground_m5639D30394C3AEAAF72AA718874BF90ABB1D35B2_RuntimeMethod_var), NULL);
+		int32_t L_22 = __this->___msDeltaForServiceCalls;
 		il2cpp_codegen_runtime_class_init_inline(SupportClass_t32D0DFFDDE8571589E7CEE5BEA6955AD56E8D4A7_il2cpp_TypeInfo_var);
-		uint8_t L_20;
-		L_20 = SupportClass_StartBackgroundCalls_m42B198ADEDAE9A907D4931759B4C1D5AC0F7B329(L_18, L_19, _stringLiteralDF6A7CB87243568376528ACED2E19B84FDCE6A7C, NULL);
-		G_B6_0 = G_B5_0;
+		uint8_t L_23;
+		L_23 = SupportClass_StartBackgroundCalls_m42B198ADEDAE9A907D4931759B4C1D5AC0F7B329(L_21, L_22, _stringLiteralDF6A7CB87243568376528ACED2E19B84FDCE6A7C, NULL);
 	}
 
-IL_00cd:
+IL_00e8:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:336>
-		return G_B6_0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:336>
+		bool L_24 = V_0;
+		V_4 = L_24;
+		goto IL_00ed;
+	}
+
+IL_00ed:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:337>
+		bool L_25 = V_4;
+		return L_25;
 	}
 }
-// Method Definition Index: 48473
+// Method Definition Index: 48553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectAndSetStatus_m8B3FE8E9EF96CB28C4895188429657080ED1181E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_appId, String_t* ___1_appVersion, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___2_authValues, int32_t ___3_status, RuntimeObject* ___4_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3321,38 +3609,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectAndSetStatus_m8B3FE8E9
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:353>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:353>
 		int32_t L_0 = ___3_status;
 		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703((&L_1), L_0, Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_RuntimeMethod_var);
 		__this->___statusToSetWhenConnected = L_1;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:354>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:354>
 		RuntimeObject* L_2 = ___4_message;
 		__this->___messageToSetWhenConnected = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___messageToSetWhenConnected), (void*)L_2);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:355>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:355>
 		String_t* L_3 = ___0_appId;
 		String_t* L_4 = ___1_appVersion;
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_5 = ___2_authValues;
 		bool L_6;
 		L_6 = ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121(__this, L_3, L_4, L_5, NULL);
-		return L_6;
+		V_0 = L_6;
+		goto IL_0022;
+	}
+
+IL_0022:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:356>
+		bool L_7 = V_0;
+		return L_7;
 	}
 }
-// Method Definition Index: 48474
+// Method Definition Index: 48554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_Service_mD968988B9275FE4CA7113196FFB455F3BA79D0B7 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
-
-IL_0000:
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	int32_t G_B5_0 = 0;
+	int32_t G_B10_0 = 0;
+	int32_t G_B16_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:368>
+		goto IL_0005;
+	}
+
+IL_0003:
+	{
+	}
+
+IL_0005:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:368>
 		bool L_0;
 		L_0 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_0015;
+			goto IL_001a;
 		}
 	}
 	{
@@ -3360,88 +3671,146 @@ IL_0000:
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = VirtualFuncInvoker0< bool >::Invoke(14, L_1);
-		if (L_2)
-		{
-			goto IL_0000;
-		}
+		G_B5_0 = ((int32_t)(L_2));
+		goto IL_001b;
 	}
 
-IL_0015:
+IL_001a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:373>
-		bool L_3;
-		L_3 = ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288_inline(__this, NULL);
+		G_B5_0 = 0;
+	}
+
+IL_001b:
+	{
+		V_0 = (bool)G_B5_0;
+		bool L_3 = V_0;
 		if (L_3)
 		{
-			goto IL_0059;
+			goto IL_0003;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:375>
-		int32_t L_4;
-		L_4 = Environment_get_TickCount_m183BFCF001E12849E3D898957F0B81FD88BA183C(NULL);
-		int32_t L_5 = __this->___msTimestampOfLastServiceCall;
-		int32_t L_6 = __this->___msDeltaForServiceCalls;
-		if ((((int32_t)((int32_t)il2cpp_codegen_subtract(L_4, L_5))) > ((int32_t)L_6)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:373>
+		bool L_4;
+		L_4 = ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288_inline(__this, NULL);
+		V_1 = (bool)((((int32_t)L_4) == ((int32_t)0))? 1 : 0);
+		bool L_5 = V_1;
+		if (!L_5)
 		{
-			goto IL_0039;
+			goto IL_007d;
 		}
 	}
 	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:375>
+		int32_t L_6;
+		L_6 = Environment_get_TickCount_m183BFCF001E12849E3D898957F0B81FD88BA183C(NULL);
 		int32_t L_7 = __this->___msTimestampOfLastServiceCall;
-		if (L_7)
+		int32_t L_8 = __this->___msDeltaForServiceCalls;
+		if ((((int32_t)((int32_t)il2cpp_codegen_subtract(L_6, L_7))) > ((int32_t)L_8)))
 		{
-			goto IL_0059;
-		}
-	}
-
-IL_0039:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:377>
-		int32_t L_8;
-		L_8 = Environment_get_TickCount_m183BFCF001E12849E3D898957F0B81FD88BA183C(NULL);
-		__this->___msTimestampOfLastServiceCall = L_8;
-	}
-
-IL_0044:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:379>
-		bool L_9;
-		L_9 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
-		if (!L_9)
-		{
-			goto IL_0059;
+			goto IL_004c;
 		}
 	}
 	{
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_10 = __this->___chatPeer;
-		NullCheck(L_10);
-		bool L_11;
-		L_11 = VirtualFuncInvoker0< bool >::Invoke(12, L_10);
-		if (L_11)
-		{
-			goto IL_0044;
-		}
+		int32_t L_9 = __this->___msTimestampOfLastServiceCall;
+		G_B10_0 = ((((int32_t)L_9) == ((int32_t)0))? 1 : 0);
+		goto IL_004d;
 	}
 
-IL_0059:
+IL_004c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:384>
+		G_B10_0 = 1;
+	}
+
+IL_004d:
+	{
+		V_2 = (bool)G_B10_0;
+		bool L_10 = V_2;
+		if (!L_10)
+		{
+			goto IL_007c;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:377>
+		int32_t L_11;
+		L_11 = Environment_get_TickCount_m183BFCF001E12849E3D898957F0B81FD88BA183C(NULL);
+		__this->___msTimestampOfLastServiceCall = L_11;
+		goto IL_0061;
+	}
+
+IL_005f:
+	{
+	}
+
+IL_0061:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:379>
+		bool L_12;
+		L_12 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
+		if (!L_12)
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_13 = __this->___chatPeer;
+		NullCheck(L_13);
+		bool L_14;
+		L_14 = VirtualFuncInvoker0< bool >::Invoke(12, L_13);
+		G_B16_0 = ((int32_t)(L_14));
+		goto IL_0077;
+	}
+
+IL_0076:
+	{
+		G_B16_0 = 0;
+	}
+
+IL_0077:
+	{
+		V_3 = (bool)G_B16_0;
+		bool L_15 = V_3;
+		if (L_15)
+		{
+			goto IL_005f;
+		}
+	}
+	{
+	}
+
+IL_007c:
+	{
+	}
+
+IL_007d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:384>
 		return;
 	}
 }
-// Method Definition Index: 48475
+// Method Definition Index: 48555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendOutgoingInBackground_m5639D30394C3AEAAF72AA718874BF90ABB1D35B2 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
-
-IL_0000:
+	bool V_0 = false;
+	bool V_1 = false;
+	int32_t G_B5_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:392>
+		goto IL_0005;
+	}
+
+IL_0003:
+	{
+	}
+
+IL_0005:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:392>
 		bool L_0;
 		L_0 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_0015;
+			goto IL_001a;
 		}
 	}
 	{
@@ -3449,56 +3818,80 @@ IL_0000:
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = VirtualFuncInvoker0< bool >::Invoke(12, L_1);
-		if (L_2)
-		{
-			goto IL_0000;
-		}
+		G_B5_0 = ((int32_t)(L_2));
+		goto IL_001b;
 	}
 
-IL_0015:
+IL_001a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:396>
-		int32_t L_3;
-		L_3 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		return (bool)((((int32_t)((((int32_t)L_3) == ((int32_t)((int32_t)11)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		G_B5_0 = 0;
+	}
+
+IL_001b:
+	{
+		V_0 = (bool)G_B5_0;
+		bool L_3 = V_0;
+		if (L_3)
+		{
+			goto IL_0003;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:396>
+		int32_t L_4;
+		L_4 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		V_1 = (bool)((((int32_t)((((int32_t)L_4) == ((int32_t)((int32_t)11)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_002f;
+	}
+
+IL_002f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:397>
+		bool L_5 = V_1;
+		return L_5;
 	}
 }
-// Method Definition Index: 48476
+// Method Definition Index: 48556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_SendAcksOnly_m28C6305565EFD80AAFDE3919C4F5AB0F7BC50A3B (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:403>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:403>
 		bool L_0;
 		L_0 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
-		if (!L_0)
+		V_0 = L_0;
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0014;
+			goto IL_0017;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:403>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_1 = __this->___chatPeer;
-		NullCheck(L_1);
-		bool L_2;
-		L_2 = VirtualFuncInvoker0< bool >::Invoke(13, L_1);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:403>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_2 = __this->___chatPeer;
+		NullCheck(L_2);
+		bool L_3;
+		L_3 = VirtualFuncInvoker0< bool >::Invoke(13, L_2);
 	}
 
-IL_0014:
+IL_0017:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:404>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:404>
 		return;
 	}
 }
-// Method Definition Index: 48477
+// Method Definition Index: 48557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_cause, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:412>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:412>
 		bool L_0;
 		L_0 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
 		if (!L_0)
 		{
-			goto IL_002f;
+			goto IL_0019;
 		}
 	}
 	{
@@ -3506,66 +3899,91 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_Disconnect_m678FDF44265FD926B
 		NullCheck(L_1);
 		uint8_t L_2;
 		L_2 = PhotonPeer_get_PeerState_mFE3E3AA3BB9531F98BD274F0AAC83BDF44FCBEEC(L_1, NULL);
-		if (!L_2)
+		G_B3_0 = ((!(((uint32_t)L_2) <= ((uint32_t)0)))? 1 : 0);
+		goto IL_001a;
+	}
+
+IL_0019:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_001a:
+	{
+		V_0 = (bool)G_B3_0;
+		bool L_3 = V_0;
+		if (!L_3)
 		{
-			goto IL_002f;
+			goto IL_003d;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:414>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:414>
 		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)10), NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:415>
-		int32_t L_3 = ___0_cause;
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, L_3, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:416>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_4 = __this->___chatPeer;
-		NullCheck(L_4);
-		VirtualActionInvoker0::Invoke(8, L_4);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:415>
+		int32_t L_4 = ___0_cause;
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, L_4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:416>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_5 = __this->___chatPeer;
+		NullCheck(L_5);
+		VirtualActionInvoker0::Invoke(8, L_5);
 	}
 
-IL_002f:
+IL_003d:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:418>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:418>
 		return;
 	}
 }
-// Method Definition Index: 48478
+// Method Definition Index: 48558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_StopThread_mDE8EC6DC08826F84C881E1D2DA26AE9FC45F5EC3 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:425>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:425>
 		bool L_0;
 		L_0 = ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275(__this, NULL);
-		if (!L_0)
+		V_0 = L_0;
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0013;
+			goto IL_0019;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:427>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_1 = __this->___chatPeer;
-		NullCheck(L_1);
-		VirtualActionInvoker0::Invoke(9, L_1);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:427>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_2 = __this->___chatPeer;
+		NullCheck(L_2);
+		VirtualActionInvoker0::Invoke(9, L_2);
 	}
 
-IL_0013:
+IL_0019:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:429>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:429>
 		return;
 	}
 }
-// Method Definition Index: 48479
+// Method Definition Index: 48559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_mAB072792329A26749E58FED202C38A51691CD32C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:437>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:437>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = ___0_channels;
 		bool L_1;
 		L_1 = ChatClient_Subscribe_m4A3A6D2D5703A1D8CF8ED0CACA717114062A6559(__this, L_0, 0, NULL);
-		return L_1;
+		V_0 = L_1;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:438>
+		bool L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48480
+// Method Definition Index: 48560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_mB3CCAE652E721F860D36F5ED421B752F33F304D8 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_lastMsgIds, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3583,224 +4001,284 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_mB3CCAE652E721F860D
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
-	int32_t V_1 = 0;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	int32_t V_6 = 0;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	bool V_11 = false;
+	int32_t G_B7_0 = 0;
+	int32_t G_B21_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:449>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:449>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_003a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:451>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:453>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral32ED8AFB67F5C8CAB439735AE376C0A3A92B5785);
-	}
-
-IL_0022:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:455>
-		return (bool)0;
-	}
-
-IL_0024:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:458>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = ___0_channels;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:451>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
 		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_0033;
 		}
 	}
 	{
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = ___0_channels;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:453>
+		RuntimeObject* L_4 = __this->___listener;
 		NullCheck(L_4);
-		if ((((RuntimeArray*)L_4)->max_length))
-		{
-			goto IL_0047;
-		}
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral32ED8AFB67F5C8CAB439735AE376C0A3A92B5785);
 	}
 
-IL_002b:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:460>
-		uint8_t L_5;
-		L_5 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_5) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:455>
+		V_3 = (bool)0;
+		goto IL_015b;
+	}
+
+IL_003a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:458>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = ___0_channels;
+		if (!L_5)
 		{
-			goto IL_0045;
+			goto IL_0044;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:462>
-		RuntimeObject* L_6 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = ___0_channels;
 		NullCheck(L_6);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_6, 2, _stringLiteral2443176A6E60D62ADAED633DBC0B0319623F9628);
+		G_B7_0 = ((((int32_t)(((RuntimeArray*)L_6)->max_length)) == ((int32_t)0))? 1 : 0);
+		goto IL_0045;
+	}
+
+IL_0044:
+	{
+		G_B7_0 = 1;
 	}
 
 IL_0045:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:464>
-		return (bool)0;
-	}
-
-IL_0047:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:467>
-		V_1 = 0;
-		goto IL_0080;
-	}
-
-IL_004b:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:469>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = ___0_channels;
-		int32_t L_8 = V_1;
-		NullCheck(L_7);
-		int32_t L_9 = L_8;
-		String_t* L_10 = (L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_9));
-		bool L_11;
-		L_11 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_10, NULL);
-		if (!L_11)
+		V_4 = (bool)G_B7_0;
+		bool L_7 = V_4;
+		if (!L_7)
 		{
-			goto IL_007c;
+			goto IL_0079;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:471>
-		uint8_t L_12;
-		L_12 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_12) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:460>
+		uint8_t L_8;
+		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_8) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_5;
+		if (!L_9)
 		{
-			goto IL_007a;
+			goto IL_0072;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:473>
-		RuntimeObject* L_13 = __this->___listener;
-		int32_t L_14 = V_1;
-		int32_t L_15 = L_14;
-		RuntimeObject* L_16 = Box(il2cpp_defaults.int32_class, &L_15);
-		String_t* L_17;
-		L_17 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralE699C4CC364949CA52ACF808CE9CD98DA290FDF5, L_16, NULL);
-		NullCheck(L_13);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_13, 1, L_17);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:462>
+		RuntimeObject* L_10 = __this->___listener;
+		NullCheck(L_10);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, 2, _stringLiteral2443176A6E60D62ADAED633DBC0B0319623F9628);
 	}
 
-IL_007a:
+IL_0072:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:475>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:464>
+		V_3 = (bool)0;
+		goto IL_015b;
 	}
 
-IL_007c:
+IL_0079:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:467>
-		int32_t L_18 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_18, 1));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:467>
+		V_6 = 0;
+		goto IL_00cf;
 	}
 
-IL_0080:
+IL_007e:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:467>
-		int32_t L_19 = V_1;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_20 = ___0_channels;
-		NullCheck(L_20);
-		if ((((int32_t)L_19) < ((int32_t)((int32_t)(((RuntimeArray*)L_20)->max_length)))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:469>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = ___0_channels;
+		int32_t L_12 = V_6;
+		NullCheck(L_11);
+		int32_t L_13 = L_12;
+		String_t* L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
+		bool L_15;
+		L_15 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_14, NULL);
+		V_7 = L_15;
+		bool L_16 = V_7;
+		if (!L_16)
 		{
-			goto IL_004b;
+			goto IL_00c8;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:479>
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_21 = ___1_lastMsgIds;
-		if (!L_21)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:471>
+		uint8_t L_17;
+		L_17 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_8 = (bool)((((int32_t)((((int32_t)L_17) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_18 = V_8;
+		if (!L_18)
 		{
-			goto IL_0091;
+			goto IL_00c1;
 		}
 	}
 	{
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_22 = ___1_lastMsgIds;
-		NullCheck(L_22);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_23 = ___0_channels;
-		NullCheck(L_23);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_22)->max_length))) == ((int32_t)((int32_t)(((RuntimeArray*)L_23)->max_length)))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:473>
+		RuntimeObject* L_19 = __this->___listener;
+		int32_t L_20 = V_6;
+		int32_t L_21 = L_20;
+		RuntimeObject* L_22 = Box(il2cpp_defaults.int32_class, &L_21);
+		String_t* L_23;
+		L_23 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralE699C4CC364949CA52ACF808CE9CD98DA290FDF5, L_22, NULL);
+		NullCheck(L_19);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_19, 1, L_23);
+	}
+
+IL_00c1:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:475>
+		V_3 = (bool)0;
+		goto IL_015b;
+	}
+
+IL_00c8:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:467>
+		int32_t L_24 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_24, 1));
+	}
+
+IL_00cf:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:467>
+		int32_t L_25 = V_6;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_26 = ___0_channels;
+		NullCheck(L_26);
+		V_9 = (bool)((((int32_t)L_25) < ((int32_t)((int32_t)(((RuntimeArray*)L_26)->max_length))))? 1 : 0);
+		bool L_27 = V_9;
+		if (L_27)
 		{
-			goto IL_00ad;
+			goto IL_007e;
 		}
 	}
-
-IL_0091:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:481>
-		uint8_t L_24;
-		L_24 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_24) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:479>
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_28 = ___1_lastMsgIds;
+		if (!L_28)
 		{
-			goto IL_00ab;
+			goto IL_00ec;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:483>
-		RuntimeObject* L_25 = __this->___listener;
-		NullCheck(L_25);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_25, 1, _stringLiteralF7943DAD13F6480BF6073BD0C327DF2B8C0B5F24);
-	}
-
-IL_00ab:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:485>
-		return (bool)0;
-	}
-
-IL_00ad:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:488>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:489>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:490>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:491>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:492>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:493>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_26 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_26, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_27 = L_26;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_28 = ___0_channels;
-		NullCheck(L_27);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_27, (uint8_t)0, (RuntimeObject*)L_28, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_29 = L_27;
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_30 = ___1_lastMsgIds;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_29 = ___1_lastMsgIds;
 		NullCheck(L_29);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_29, (uint8_t)((int32_t)9), (RuntimeObject*)L_30, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_31 = L_29;
-		int32_t L_32 = (-1);
-		RuntimeObject* L_33 = Box(il2cpp_defaults.int32_class, &L_32);
-		NullCheck(L_31);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_31, (uint8_t)((int32_t)14), L_33, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_31;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:495>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_34 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_35 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_36 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = ___0_channels;
+		NullCheck(L_30);
+		G_B21_0 = ((((int32_t)((((int32_t)((int32_t)(((RuntimeArray*)L_29)->max_length))) == ((int32_t)((int32_t)(((RuntimeArray*)L_30)->max_length))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_00ed;
+	}
+
+IL_00ec:
+	{
+		G_B21_0 = 1;
+	}
+
+IL_00ed:
+	{
+		V_10 = (bool)G_B21_0;
+		bool L_31 = V_10;
+		if (!L_31)
+		{
+			goto IL_011e;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:481>
+		uint8_t L_32;
+		L_32 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_11 = (bool)((((int32_t)((((int32_t)L_32) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_33 = V_11;
+		if (!L_33)
+		{
+			goto IL_011a;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:483>
+		RuntimeObject* L_34 = __this->___listener;
 		NullCheck(L_34);
-		bool L_37;
-		L_37 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_34, (uint8_t)0, L_35, L_36);
-		return L_37;
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_34, 1, _stringLiteralF7943DAD13F6480BF6073BD0C327DF2B8C0B5F24);
+	}
+
+IL_011a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:485>
+		V_3 = (bool)0;
+		goto IL_015b;
+	}
+
+IL_011e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:488>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:489>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:490>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:491>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:492>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:493>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_35 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_35, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_36 = L_35;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_37 = ___0_channels;
+		NullCheck(L_36);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_36, (uint8_t)0, (RuntimeObject*)L_37, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_38 = L_36;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_39 = ___1_lastMsgIds;
+		NullCheck(L_38);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_38, (uint8_t)((int32_t)9), (RuntimeObject*)L_39, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_40 = L_38;
+		int32_t L_41 = (-1);
+		RuntimeObject* L_42 = Box(il2cpp_defaults.int32_class, &L_41);
+		NullCheck(L_40);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_40, (uint8_t)((int32_t)14), L_42, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_0 = L_40;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:495>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_43 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_44 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_45 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_43);
+		bool L_46;
+		L_46 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_43, (uint8_t)0, L_44, L_45);
+		V_3 = L_46;
+		goto IL_015b;
+	}
+
+IL_015b:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:496>
+		bool L_47 = V_3;
+		return L_47;
 	}
 }
-// Method Definition Index: 48481
+// Method Definition Index: 48561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_m4A3A6D2D5703A1D8CF8ED0CACA717114062A6559 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, int32_t ___1_messagesFromHistory, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3811,89 +4289,122 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_m4A3A6D2D5703A1D8CF
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral32ED8AFB67F5C8CAB439735AE376C0A3A92B5785);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	int32_t G_B7_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:512>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:512>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_0037;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:514>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:516>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral32ED8AFB67F5C8CAB439735AE376C0A3A92B5785);
-	}
-
-IL_0022:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:518>
-		return (bool)0;
-	}
-
-IL_0024:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:521>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = ___0_channels;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:514>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_1 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_1;
 		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_0033;
 		}
 	}
 	{
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = ___0_channels;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:516>
+		RuntimeObject* L_4 = __this->___listener;
 		NullCheck(L_4);
-		if ((((RuntimeArray*)L_4)->max_length))
-		{
-			goto IL_0047;
-		}
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral32ED8AFB67F5C8CAB439735AE376C0A3A92B5785);
 	}
 
-IL_002b:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:523>
-		uint8_t L_5;
-		L_5 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_5) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:518>
+		V_2 = (bool)0;
+		goto IL_007d;
+	}
+
+IL_0037:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:521>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = ___0_channels;
+		if (!L_5)
 		{
-			goto IL_0045;
+			goto IL_0041;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:525>
-		RuntimeObject* L_6 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = ___0_channels;
 		NullCheck(L_6);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_6, 2, _stringLiteral2443176A6E60D62ADAED633DBC0B0319623F9628);
+		G_B7_0 = ((((int32_t)(((RuntimeArray*)L_6)->max_length)) == ((int32_t)0))? 1 : 0);
+		goto IL_0042;
 	}
 
-IL_0045:
+IL_0041:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:527>
-		return (bool)0;
+		G_B7_0 = 1;
 	}
 
-IL_0047:
+IL_0042:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:530>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = ___0_channels;
-		int32_t L_8 = ___1_messagesFromHistory;
-		bool L_9;
-		L_9 = ChatClient_SendChannelOperation_mDB9A461F277FC2A7F0574F9BAF93CDAB94FA97D8(__this, L_7, (uint8_t)0, L_8, NULL);
-		return L_9;
+		V_3 = (bool)G_B7_0;
+		bool L_7 = V_3;
+		if (!L_7)
+		{
+			goto IL_0071;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:523>
+		uint8_t L_8;
+		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_4 = (bool)((((int32_t)((((int32_t)L_8) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_4;
+		if (!L_9)
+		{
+			goto IL_006d;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:525>
+		RuntimeObject* L_10 = __this->___listener;
+		NullCheck(L_10);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, 2, _stringLiteral2443176A6E60D62ADAED633DBC0B0319623F9628);
+	}
+
+IL_006d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:527>
+		V_2 = (bool)0;
+		goto IL_007d;
+	}
+
+IL_0071:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:530>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = ___0_channels;
+		int32_t L_12 = ___1_messagesFromHistory;
+		bool L_13;
+		L_13 = ChatClient_SendChannelOperation_mDB9A461F277FC2A7F0574F9BAF93CDAB94FA97D8(__this, L_11, (uint8_t)0, L_12, NULL);
+		V_2 = L_13;
+		goto IL_007d;
+	}
+
+IL_007d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:531>
+		bool L_14 = V_2;
+		return L_14;
 	}
 }
-// Method Definition Index: 48482
+// Method Definition Index: 48562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Unsubscribe_m384652194B1073EDB7A8CA3DBA04EFB7A14F0B0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3905,155 +4416,206 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Unsubscribe_m384652194B1073ED
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral906FAEAAB91B0A987113A33F7759502D4DB5D57B);
 		s_Il2CppMethodInitialized = true;
 	}
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
-	int32_t V_1 = 0;
-	String_t* V_2 = NULL;
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_5 = NULL;
+	int32_t V_6 = 0;
+	String_t* V_7 = NULL;
+	int32_t G_B7_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:546>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:546>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_0037;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:548>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:550>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral906FAEAAB91B0A987113A33F7759502D4DB5D57B);
-	}
-
-IL_0022:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:552>
-		return (bool)0;
-	}
-
-IL_0024:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:555>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = ___0_channels;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:548>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_1 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_1;
 		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_0033;
 		}
 	}
 	{
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = ___0_channels;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:550>
+		RuntimeObject* L_4 = __this->___listener;
 		NullCheck(L_4);
-		if ((((RuntimeArray*)L_4)->max_length))
-		{
-			goto IL_0047;
-		}
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral906FAEAAB91B0A987113A33F7759502D4DB5D57B);
 	}
 
-IL_002b:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:557>
-		uint8_t L_5;
-		L_5 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_5) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:552>
+		V_2 = (bool)0;
+		goto IL_00ab;
+	}
+
+IL_0037:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:555>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = ___0_channels;
+		if (!L_5)
 		{
-			goto IL_0045;
+			goto IL_0041;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:559>
-		RuntimeObject* L_6 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = ___0_channels;
 		NullCheck(L_6);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_6, 2, _stringLiteral64F9D94F66B496B12E4135DCB8897AC320C6639C);
+		G_B7_0 = ((((int32_t)(((RuntimeArray*)L_6)->max_length)) == ((int32_t)0))? 1 : 0);
+		goto IL_0042;
 	}
 
-IL_0045:
+IL_0041:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:561>
-		return (bool)0;
+		G_B7_0 = 1;
 	}
 
-IL_0047:
+IL_0042:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:564>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = ___0_channels;
-		V_0 = L_7;
-		V_1 = 0;
-		goto IL_0062;
-	}
-
-IL_004d:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:564>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = V_0;
-		int32_t L_9 = V_1;
-		NullCheck(L_8);
-		int32_t L_10 = L_9;
-		String_t* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
-		V_2 = L_11;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:566>
-		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_12 = __this->___PublicChannelsUnsubscribing;
-		String_t* L_13 = V_2;
-		NullCheck(L_12);
-		bool L_14;
-		L_14 = HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D(L_12, L_13, HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D_RuntimeMethod_var);
-		int32_t L_15 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_15, 1));
-	}
-
-IL_0062:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:564>
-		int32_t L_16 = V_1;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_17 = V_0;
-		NullCheck(L_17);
-		if ((((int32_t)L_16) < ((int32_t)((int32_t)(((RuntimeArray*)L_17)->max_length)))))
+		V_3 = (bool)G_B7_0;
+		bool L_7 = V_3;
+		if (!L_7)
 		{
-			goto IL_004d;
+			goto IL_0071;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:568>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = ___0_channels;
-		bool L_19;
-		L_19 = ChatClient_SendChannelOperation_mDB9A461F277FC2A7F0574F9BAF93CDAB94FA97D8(__this, L_18, (uint8_t)1, 0, NULL);
-		return L_19;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:557>
+		uint8_t L_8;
+		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_4 = (bool)((((int32_t)((((int32_t)L_8) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_4;
+		if (!L_9)
+		{
+			goto IL_006d;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:559>
+		RuntimeObject* L_10 = __this->___listener;
+		NullCheck(L_10);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, 2, _stringLiteral64F9D94F66B496B12E4135DCB8897AC320C6639C);
+	}
+
+IL_006d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:561>
+		V_2 = (bool)0;
+		goto IL_00ab;
+	}
+
+IL_0071:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:564>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = ___0_channels;
+		V_5 = L_11;
+		V_6 = 0;
+		goto IL_0097;
+	}
+
+IL_007a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:564>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = V_5;
+		int32_t L_13 = V_6;
+		NullCheck(L_12);
+		int32_t L_14 = L_13;
+		String_t* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
+		V_7 = L_15;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:566>
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_16 = __this->___PublicChannelsUnsubscribing;
+		String_t* L_17 = V_7;
+		NullCheck(L_16);
+		bool L_18;
+		L_18 = HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D(L_16, L_17, HashSet_1_Add_mF3D4CF6D0150392127D5561A87DCDEDA9A81BE5D_RuntimeMethod_var);
+		int32_t L_19 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_19, 1));
+	}
+
+IL_0097:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:564>
+		int32_t L_20 = V_6;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_21 = V_5;
+		NullCheck(L_21);
+		if ((((int32_t)L_20) < ((int32_t)((int32_t)(((RuntimeArray*)L_21)->max_length)))))
+		{
+			goto IL_007a;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:568>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = ___0_channels;
+		bool L_23;
+		L_23 = ChatClient_SendChannelOperation_mDB9A461F277FC2A7F0574F9BAF93CDAB94FA97D8(__this, L_22, (uint8_t)1, 0, NULL);
+		V_2 = L_23;
+		goto IL_00ab;
+	}
+
+IL_00ab:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:569>
+		bool L_24 = V_2;
+		return L_24;
 	}
 }
-// Method Definition Index: 48483
+// Method Definition Index: 48563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_PublishMessage_mC0EA414F46817A9F77DF910D9094AF23B563A2D8 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, RuntimeObject* ___1_message, bool ___2_forwardAsWebhook, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:582>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:582>
 		String_t* L_0 = ___0_channelName;
 		RuntimeObject* L_1 = ___1_message;
 		bool L_2 = ___2_forwardAsWebhook;
 		bool L_3;
 		L_3 = ChatClient_publishMessage_m1D582A9BD53AE5064740B5F5F12825F5C26CCC0A(__this, L_0, L_1, (bool)1, L_2, NULL);
-		return L_3;
+		V_0 = L_3;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:583>
+		bool L_4 = V_0;
+		return L_4;
 	}
 }
-// Method Definition Index: 48484
+// Method Definition Index: 48564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_PublishMessageUnreliable_m9738E4EE77647B19CF2E54E03B8FC2128EC36648 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, RuntimeObject* ___1_message, bool ___2_forwardAsWebhook, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:587>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:587>
 		String_t* L_0 = ___0_channelName;
 		RuntimeObject* L_1 = ___1_message;
 		bool L_2 = ___2_forwardAsWebhook;
 		bool L_3;
 		L_3 = ChatClient_publishMessage_m1D582A9BD53AE5064740B5F5F12825F5C26CCC0A(__this, L_0, L_1, (bool)0, L_2, NULL);
-		return L_3;
+		V_0 = L_3;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:588>
+		bool L_4 = V_0;
+		return L_4;
 	}
 }
-// Method Definition Index: 48485
+// Method Definition Index: 48565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_publishMessage_m1D582A9BD53AE5064740B5F5F12825F5C26CCC0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, RuntimeObject* ___1_message, bool ___2_reliable, bool ___3_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4069,173 +4631,236 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_publishMessage_m1D582A9BD53AE
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
-	SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 V_1;
-	memset((&V_1), 0, sizeof(V_1));
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	int32_t G_B7_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:592>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:592>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_003a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:594>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:594>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
 		{
-			goto IL_0022;
+			goto IL_0033;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:596>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral54E8D47E4F8EF60373D0CB9FE4B271BF0F317D5C);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:596>
+		RuntimeObject* L_4 = __this->___listener;
+		NullCheck(L_4);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral54E8D47E4F8EF60373D0CB9FE4B271BF0F317D5C);
 	}
 
-IL_0022:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:598>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:598>
+		V_3 = (bool)0;
+		goto IL_00ce;
 	}
 
-IL_0024:
+IL_003a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:601>
-		String_t* L_3 = ___0_channelName;
-		bool L_4;
-		L_4 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_3, NULL);
-		if (L_4)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:601>
+		String_t* L_5 = ___0_channelName;
+		bool L_6;
+		L_6 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_5, NULL);
+		if (L_6)
 		{
-			goto IL_002f;
+			goto IL_0048;
 		}
 	}
 	{
-		RuntimeObject* L_5 = ___1_message;
-		if (L_5)
-		{
-			goto IL_004b;
-		}
+		RuntimeObject* L_7 = ___1_message;
+		G_B7_0 = ((((RuntimeObject*)(RuntimeObject*)L_7) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		goto IL_0049;
 	}
 
-IL_002f:
+IL_0048:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:603>
-		uint8_t L_6;
-		L_6 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_6) < ((int32_t)2)))
-		{
-			goto IL_0049;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:605>
-		RuntimeObject* L_7 = __this->___listener;
-		NullCheck(L_7);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_7, 2, _stringLiteralB521CAB8B7F8FEE2FF3D6340BCAF8DE9F95F9A66);
+		G_B7_0 = 1;
 	}
 
 IL_0049:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:607>
-		return (bool)0;
-	}
-
-IL_004b:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:610>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:611>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:612>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:613>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:614>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_8 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_8, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_9 = L_8;
-		String_t* L_10 = ___0_channelName;
-		NullCheck(L_9);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_9, (uint8_t)1, L_10, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_11 = L_9;
-		RuntimeObject* L_12 = ___1_message;
-		NullCheck(L_11);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_11, (uint8_t)3, L_12, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_11;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:615>
-		bool L_13 = ___3_forwardAsWebhook;
-		if (!L_13)
+		V_4 = (bool)G_B7_0;
+		bool L_8 = V_4;
+		if (!L_8)
 		{
-			goto IL_0073;
+			goto IL_007a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:617>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_14 = V_0;
-		uint8_t L_15 = ((uint8_t)1);
-		RuntimeObject* L_16 = Box(il2cpp_defaults.byte_class, &L_15);
-		NullCheck(L_14);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_14, (uint8_t)((int32_t)21), L_16, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:603>
+		uint8_t L_9;
+		L_9 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_9) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_10 = V_5;
+		if (!L_10)
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:605>
+		RuntimeObject* L_11 = __this->___listener;
+		NullCheck(L_11);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_11, 2, _stringLiteralB521CAB8B7F8FEE2FF3D6340BCAF8DE9F95F9A66);
 	}
 
-IL_0073:
+IL_0076:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:620>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_17 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_18 = V_0;
-		il2cpp_codegen_initobj((&V_1), sizeof(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8));
-		bool L_19 = ___2_reliable;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:607>
+		V_3 = (bool)0;
+		goto IL_00ce;
+	}
+
+IL_007a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:610>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:611>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:612>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:613>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:614>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_12 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_12, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_13 = L_12;
+		String_t* L_14 = ___0_channelName;
+		NullCheck(L_13);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_13, (uint8_t)1, L_14, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_15 = L_13;
+		RuntimeObject* L_16 = ___1_message;
+		NullCheck(L_15);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_15, (uint8_t)3, L_16, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_0 = L_15;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:615>
+		bool L_17 = ___3_forwardAsWebhook;
+		V_6 = L_17;
+		bool L_18 = V_6;
+		if (!L_18)
+		{
+			goto IL_00ab;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:617>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_19 = V_0;
+		uint8_t L_20 = ((uint8_t)1);
+		RuntimeObject* L_21 = Box(il2cpp_defaults.byte_class, &L_20);
+		NullCheck(L_19);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_19, (uint8_t)((int32_t)21), L_21, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+	}
+
+IL_00ab:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:620>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_22 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_23 = V_0;
+		il2cpp_codegen_initobj((&V_7), sizeof(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8));
+		bool L_24 = ___2_reliable;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_set_Reliability_mE183CC0D1E7EC44C9ADF1F0E17D20A3A05BD5C6A((&V_1), L_19, NULL);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_20 = V_1;
-		NullCheck(L_17);
-		bool L_21;
-		L_21 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_17, (uint8_t)2, L_18, L_20);
-		return L_21;
+		SendOptions_set_Reliability_mE183CC0D1E7EC44C9ADF1F0E17D20A3A05BD5C6A((&V_7), L_24, NULL);
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_25 = V_7;
+		NullCheck(L_22);
+		bool L_26;
+		L_26 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_22, (uint8_t)2, L_23, L_25);
+		V_3 = L_26;
+		goto IL_00ce;
+	}
+
+IL_00ce:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:621>
+		bool L_27 = V_3;
+		return L_27;
 	}
 }
-// Method Definition Index: 48486
+// Method Definition Index: 48566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendPrivateMessage_m736B989819416ADFFE92A9B4EB297FE6DC607E36 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_forwardAsWebhook, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:632>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:632>
 		String_t* L_0 = ___0_target;
 		RuntimeObject* L_1 = ___1_message;
 		bool L_2 = ___2_forwardAsWebhook;
 		bool L_3;
 		L_3 = ChatClient_SendPrivateMessage_mD0CBC64A95983197A562032B8DABE544D64DDBBA(__this, L_0, L_1, (bool)0, L_2, NULL);
-		return L_3;
+		V_0 = L_3;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:633>
+		bool L_4 = V_0;
+		return L_4;
 	}
 }
-// Method Definition Index: 48487
+// Method Definition Index: 48567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendPrivateMessage_mD0CBC64A95983197A562032B8DABE544D64DDBBA (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_encrypt, bool ___3_forwardAsWebhook, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:645>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:645>
 		String_t* L_0 = ___0_target;
 		RuntimeObject* L_1 = ___1_message;
 		bool L_2 = ___2_encrypt;
 		bool L_3 = ___3_forwardAsWebhook;
 		bool L_4;
 		L_4 = ChatClient_sendPrivateMessage_m1451A1E63E97234F5F6B8E98339ACAE3241A6361(__this, L_0, L_1, L_2, (bool)1, L_3, NULL);
-		return L_4;
+		V_0 = L_4;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:646>
+		bool L_5 = V_0;
+		return L_5;
 	}
 }
-// Method Definition Index: 48488
+// Method Definition Index: 48568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendPrivateMessageUnreliable_m928B4AA913DA3A3CF6E619E75DED9F0CAAF7212A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_encrypt, bool ___3_forwardAsWebhook, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:650>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:650>
 		String_t* L_0 = ___0_target;
 		RuntimeObject* L_1 = ___1_message;
 		bool L_2 = ___2_encrypt;
 		bool L_3 = ___3_forwardAsWebhook;
 		bool L_4;
 		L_4 = ChatClient_sendPrivateMessage_m1451A1E63E97234F5F6B8E98339ACAE3241A6361(__this, L_0, L_1, L_2, (bool)0, L_3, NULL);
-		return L_4;
+		V_0 = L_4;
+		goto IL_0010;
+	}
+
+IL_0010:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:651>
+		bool L_5 = V_0;
+		return L_5;
 	}
 }
-// Method Definition Index: 48489
+// Method Definition Index: 48569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_sendPrivateMessage_m1451A1E63E97234F5F6B8E98339ACAE3241A6361 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_encrypt, bool ___3_reliable, bool ___4_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4251,134 +4876,170 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_sendPrivateMessage_m1451A1E63
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
-	SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 V_1;
-	memset((&V_1), 0, sizeof(V_1));
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	int32_t G_B7_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:655>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:655>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_003a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:657>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:657>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
 		{
-			goto IL_0022;
+			goto IL_0033;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:659>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral3A92BECAEC51D53182904975AED07C4B2D68B774);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:659>
+		RuntimeObject* L_4 = __this->___listener;
+		NullCheck(L_4);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral3A92BECAEC51D53182904975AED07C4B2D68B774);
 	}
 
-IL_0022:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:661>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:661>
+		V_3 = (bool)0;
+		goto IL_00db;
 	}
 
-IL_0024:
+IL_003a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:664>
-		String_t* L_3 = ___0_target;
-		bool L_4;
-		L_4 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_3, NULL);
-		if (L_4)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:664>
+		String_t* L_5 = ___0_target;
+		bool L_6;
+		L_6 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_5, NULL);
+		if (L_6)
 		{
-			goto IL_002f;
+			goto IL_0048;
 		}
 	}
 	{
-		RuntimeObject* L_5 = ___1_message;
-		if (L_5)
-		{
-			goto IL_004b;
-		}
+		RuntimeObject* L_7 = ___1_message;
+		G_B7_0 = ((((RuntimeObject*)(RuntimeObject*)L_7) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		goto IL_0049;
 	}
 
-IL_002f:
+IL_0048:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:666>
-		uint8_t L_6;
-		L_6 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_6) < ((int32_t)2)))
-		{
-			goto IL_0049;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:668>
-		RuntimeObject* L_7 = __this->___listener;
-		NullCheck(L_7);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_7, 2, _stringLiteral14903F1665F1519144501C7CD4831F50EA3BD6F7);
+		G_B7_0 = 1;
 	}
 
 IL_0049:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:670>
-		return (bool)0;
-	}
-
-IL_004b:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:673>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:674>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:675>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:676>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:677>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_8 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_8, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_9 = L_8;
-		String_t* L_10 = ___0_target;
-		NullCheck(L_9);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_9, (uint8_t)((int32_t)225), L_10, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_11 = L_9;
-		RuntimeObject* L_12 = ___1_message;
-		NullCheck(L_11);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_11, (uint8_t)3, L_12, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_11;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:678>
-		bool L_13 = ___4_forwardAsWebhook;
-		if (!L_13)
+		V_4 = (bool)G_B7_0;
+		bool L_8 = V_4;
+		if (!L_8)
 		{
-			goto IL_0077;
+			goto IL_007a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:680>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_14 = V_0;
-		uint8_t L_15 = ((uint8_t)1);
-		RuntimeObject* L_16 = Box(il2cpp_defaults.byte_class, &L_15);
-		NullCheck(L_14);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_14, (uint8_t)((int32_t)21), L_16, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:666>
+		uint8_t L_9;
+		L_9 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_9) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_10 = V_5;
+		if (!L_10)
+		{
+			goto IL_0076;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:668>
+		RuntimeObject* L_11 = __this->___listener;
+		NullCheck(L_11);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_11, 2, _stringLiteral14903F1665F1519144501C7CD4831F50EA3BD6F7);
 	}
 
-IL_0077:
+IL_0076:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:683>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_17 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_18 = V_0;
-		il2cpp_codegen_initobj((&V_1), sizeof(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8));
-		bool L_19 = ___3_reliable;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:670>
+		V_3 = (bool)0;
+		goto IL_00db;
+	}
+
+IL_007a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:673>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:674>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:675>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:676>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:677>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_12 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_12, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_13 = L_12;
+		String_t* L_14 = ___0_target;
+		NullCheck(L_13);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_13, (uint8_t)((int32_t)225), L_14, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_15 = L_13;
+		RuntimeObject* L_16 = ___1_message;
+		NullCheck(L_15);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_15, (uint8_t)3, L_16, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_0 = L_15;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:678>
+		bool L_17 = ___4_forwardAsWebhook;
+		V_6 = L_17;
+		bool L_18 = V_6;
+		if (!L_18)
+		{
+			goto IL_00af;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:680>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_19 = V_0;
+		uint8_t L_20 = ((uint8_t)1);
+		RuntimeObject* L_21 = Box(il2cpp_defaults.byte_class, &L_20);
+		NullCheck(L_19);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_19, (uint8_t)((int32_t)21), L_21, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+	}
+
+IL_00af:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:683>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_22 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_23 = V_0;
+		il2cpp_codegen_initobj((&V_7), sizeof(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8));
+		bool L_24 = ___3_reliable;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_set_Reliability_mE183CC0D1E7EC44C9ADF1F0E17D20A3A05BD5C6A((&V_1), L_19, NULL);
-		bool L_20 = ___2_encrypt;
-		(&V_1)->___Encrypt = L_20;
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_21 = V_1;
-		NullCheck(L_17);
-		bool L_22;
-		L_22 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_17, (uint8_t)3, L_18, L_21);
-		return L_22;
+		SendOptions_set_Reliability_mE183CC0D1E7EC44C9ADF1F0E17D20A3A05BD5C6A((&V_7), L_24, NULL);
+		bool L_25 = ___2_encrypt;
+		(&V_7)->___Encrypt = L_25;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_26 = V_7;
+		NullCheck(L_22);
+		bool L_27;
+		L_27 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_22, (uint8_t)3, L_23, L_26);
+		V_3 = L_27;
+		goto IL_00db;
+	}
+
+IL_00db:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:684>
+		bool L_28 = V_3;
+		return L_28;
 	}
 }
-// Method Definition Index: 48490
+// Method Definition Index: 48570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_m4966D3F9DC69453B3AE2830C8FCA5A4D9DCA3A15 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_status, RuntimeObject* ___1_message, bool ___2_skipMessage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4394,115 +5055,152 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_m4966D3F9DC69
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:703>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:703>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_0037;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:705>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:705>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
 		{
-			goto IL_0022;
+			goto IL_0033;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:707>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral695E1FE878B0520A6C9E2F883C405378F3C8ED3F);
-	}
-
-IL_0022:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:709>
-		return (bool)0;
-	}
-
-IL_0024:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:712>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:713>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:714>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:715>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_3 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_3, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_4 = L_3;
-		int32_t L_5 = ___0_status;
-		int32_t L_6 = L_5;
-		RuntimeObject* L_7 = Box(il2cpp_defaults.int32_class, &L_6);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:707>
+		RuntimeObject* L_4 = __this->___listener;
 		NullCheck(L_4);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_4, (uint8_t)((int32_t)10), L_7, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_4;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:717>
-		bool L_8 = ___2_skipMessage;
-		if (!L_8)
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral695E1FE878B0520A6C9E2F883C405378F3C8ED3F);
+	}
+
+IL_0033:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:709>
+		V_3 = (bool)0;
+		goto IL_0086;
+	}
+
+IL_0037:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:712>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:713>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:714>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:715>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_5 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_5, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_6 = L_5;
+		int32_t L_7 = ___0_status;
+		int32_t L_8 = L_7;
+		RuntimeObject* L_9 = Box(il2cpp_defaults.int32_class, &L_8);
+		NullCheck(L_6);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_6, (uint8_t)((int32_t)10), L_9, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_0 = L_6;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:717>
+		bool L_10 = ___2_skipMessage;
+		V_4 = L_10;
+		bool L_11 = V_4;
+		if (!L_11)
 		{
-			goto IL_004b;
+			goto IL_0066;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:719>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_9 = V_0;
-		bool L_10 = ((bool)1);
-		RuntimeObject* L_11 = Box(il2cpp_defaults.boolean_class, &L_10);
-		NullCheck(L_9);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_9, (uint8_t)((int32_t)12), L_11, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-		goto IL_0053;
-	}
-
-IL_004b:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:723>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:719>
 		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_12 = V_0;
-		RuntimeObject* L_13 = ___1_message;
+		bool L_13 = ((bool)1);
+		RuntimeObject* L_14 = Box(il2cpp_defaults.boolean_class, &L_13);
 		NullCheck(L_12);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_12, (uint8_t)3, L_13, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_12, (uint8_t)((int32_t)12), L_14, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		goto IL_0071;
 	}
 
-IL_0053:
+IL_0066:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:726>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_14 = __this->___chatPeer;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:723>
 		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_15 = V_0;
+		RuntimeObject* L_16 = ___1_message;
+		NullCheck(L_15);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_15, (uint8_t)3, L_16, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+	}
+
+IL_0071:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:726>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_17 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_18 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_16 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
-		NullCheck(L_14);
-		bool L_17;
-		L_17 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_14, (uint8_t)5, L_15, L_16);
-		return L_17;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_19 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_17);
+		bool L_20;
+		L_20 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_17, (uint8_t)5, L_18, L_19);
+		V_3 = L_20;
+		goto IL_0086;
+	}
+
+IL_0086:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:727>
+		bool L_21 = V_3;
+		return L_21;
 	}
 }
-// Method Definition Index: 48491
+// Method Definition Index: 48571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_mEFE64834C76CBF45AB5B986DE9FE28A27D77E6CD (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_status, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:743>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:743>
 		int32_t L_0 = ___0_status;
 		bool L_1;
 		L_1 = ChatClient_SetOnlineStatus_m4966D3F9DC69453B3AE2830C8FCA5A4D9DCA3A15(__this, L_0, NULL, (bool)1, NULL);
-		return L_1;
+		V_0 = L_1;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:744>
+		bool L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48492
+// Method Definition Index: 48572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_mA793BD64EB3D9ED4E360835951BD0333424C918D (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_status, RuntimeObject* ___1_message, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:762>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:762>
 		int32_t L_0 = ___0_status;
 		RuntimeObject* L_1 = ___1_message;
 		bool L_2;
 		L_2 = ChatClient_SetOnlineStatus_m4966D3F9DC69453B3AE2830C8FCA5A4D9DCA3A15(__this, L_0, L_1, (bool)0, NULL);
-		return L_2;
+		V_0 = L_2;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:763>
+		bool L_3 = V_0;
+		return L_3;
 	}
 }
-// Method Definition Index: 48493
+// Method Definition Index: 48573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AddFriends_mC7A8A45F98205A68592ED3BE7A5FC88BF4EFB809 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_friends, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4520,146 +5218,186 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AddFriends_mC7A8A45F98205A685
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
-	int32_t V_1 = 0;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	int32_t V_8 = 0;
+	int32_t G_B7_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:791>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:791>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_003a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:793>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:795>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteral62A96FA0BD40BECCCDE57B87BAAD7344D196B1AA);
-	}
-
-IL_0022:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:797>
-		return (bool)0;
-	}
-
-IL_0024:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:800>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = ___0_friends;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:793>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
 		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_0033;
 		}
 	}
 	{
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = ___0_friends;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:795>
+		RuntimeObject* L_4 = __this->___listener;
 		NullCheck(L_4);
-		if ((((RuntimeArray*)L_4)->max_length))
-		{
-			goto IL_0047;
-		}
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral62A96FA0BD40BECCCDE57B87BAAD7344D196B1AA);
 	}
 
-IL_002b:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:802>
-		uint8_t L_5;
-		L_5 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_5) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:797>
+		V_3 = (bool)0;
+		goto IL_00fd;
+	}
+
+IL_003a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:800>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = ___0_friends;
+		if (!L_5)
 		{
-			goto IL_0045;
+			goto IL_0044;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:804>
-		RuntimeObject* L_6 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = ___0_friends;
 		NullCheck(L_6);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_6, 2, _stringLiteralC542CF71ADE21664A8CC512222D2769749604E30);
+		G_B7_0 = ((((int32_t)(((RuntimeArray*)L_6)->max_length)) == ((int32_t)0))? 1 : 0);
+		goto IL_0045;
+	}
+
+IL_0044:
+	{
+		G_B7_0 = 1;
 	}
 
 IL_0045:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:806>
-		return (bool)0;
-	}
-
-IL_0047:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:808>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = ___0_friends;
-		NullCheck(L_7);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_7)->max_length))) <= ((int32_t)((int32_t)1024))))
+		V_4 = (bool)G_B7_0;
+		bool L_7 = V_4;
+		if (!L_7)
 		{
-			goto IL_008f;
+			goto IL_0079;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:810>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:802>
 		uint8_t L_8;
 		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_8) < ((int32_t)2)))
+		V_5 = (bool)((((int32_t)((((int32_t)L_8) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_5;
+		if (!L_9)
 		{
-			goto IL_008d;
+			goto IL_0072;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:812>
-		RuntimeObject* L_9 = __this->___listener;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = ___0_friends;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:804>
+		RuntimeObject* L_10 = __this->___listener;
 		NullCheck(L_10);
-		V_1 = ((int32_t)(((RuntimeArray*)L_10)->max_length));
-		String_t* L_11;
-		L_11 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
-		V_1 = ((int32_t)1024);
-		String_t* L_12;
-		L_12 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
-		String_t* L_13;
-		L_13 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral46EDC735A64857CCBB54DA3A191D860CD77E4BC6, L_11, _stringLiteral717DA9E2386BEADCFFB33AE09B063FCD2EE1A657, L_12, NULL);
-		NullCheck(L_9);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_9, 2, L_13);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, 2, _stringLiteralC542CF71ADE21664A8CC512222D2769749604E30);
 	}
 
-IL_008d:
+IL_0072:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:814>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:806>
+		V_3 = (bool)0;
+		goto IL_00fd;
 	}
 
-IL_008f:
+IL_0079:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:817>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:818>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:819>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:820>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_14 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_14, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_15 = L_14;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:808>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = ___0_friends;
+		NullCheck(L_11);
+		V_6 = (bool)((((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length))) > ((int32_t)((int32_t)1024)))? 1 : 0);
+		bool L_12 = V_6;
+		if (!L_12)
+		{
+			goto IL_00d8;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:810>
+		uint8_t L_13;
+		L_13 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_7 = (bool)((((int32_t)((((int32_t)L_13) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_14 = V_7;
+		if (!L_14)
+		{
+			goto IL_00d4;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:812>
+		RuntimeObject* L_15 = __this->___listener;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = ___0_friends;
+		NullCheck(L_16);
+		V_8 = ((int32_t)(((RuntimeArray*)L_16)->max_length));
+		String_t* L_17;
+		L_17 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_8), NULL);
+		V_8 = ((int32_t)1024);
+		String_t* L_18;
+		L_18 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_8), NULL);
+		String_t* L_19;
+		L_19 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral46EDC735A64857CCBB54DA3A191D860CD77E4BC6, L_17, _stringLiteral717DA9E2386BEADCFFB33AE09B063FCD2EE1A657, L_18, NULL);
 		NullCheck(L_15);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_15, (uint8_t)((int32_t)11), (RuntimeObject*)L_16, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_15;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:822>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_17 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_18 = V_0;
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_15, 2, L_19);
+	}
+
+IL_00d4:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:814>
+		V_3 = (bool)0;
+		goto IL_00fd;
+	}
+
+IL_00d8:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:817>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:818>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:819>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:820>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_20 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_20, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_21 = L_20;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = ___0_friends;
+		NullCheck(L_21);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_21, (uint8_t)((int32_t)11), (RuntimeObject*)L_22, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_0 = L_21;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:822>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_23 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_24 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_19 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
-		NullCheck(L_17);
-		bool L_20;
-		L_20 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_17, (uint8_t)6, L_18, L_19);
-		return L_20;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_25 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_23);
+		bool L_26;
+		L_26 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_23, (uint8_t)6, L_24, L_25);
+		V_3 = L_26;
+		goto IL_00fd;
+	}
+
+IL_00fd:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:823>
+		bool L_27 = V_3;
+		return L_27;
 	}
 }
-// Method Definition Index: 48494
+// Method Definition Index: 48574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_RemoveFriends_m2134FFBAC12E8F9BE1A374C749E3CA150D57F1D2 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_friends, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4677,146 +5415,186 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_RemoveFriends_m2134FFBAC12E8F
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
-	int32_t V_1 = 0;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	int32_t V_8 = 0;
+	int32_t G_B7_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:869>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:869>
 		bool L_0;
 		L_0 = ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C(__this, NULL);
-		if (L_0)
+		V_1 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_003a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:871>
-		uint8_t L_1;
-		L_1 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_1) < ((int32_t)1)))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:873>
-		RuntimeObject* L_2 = __this->___listener;
-		NullCheck(L_2);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 1, _stringLiteralA4A3F6514E2CF8783CDAB372E72E9BCD8E42ADA3);
-	}
-
-IL_0022:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:875>
-		return (bool)0;
-	}
-
-IL_0024:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:878>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = ___0_friends;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:871>
+		uint8_t L_2;
+		L_2 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_2) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
 		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_0033;
 		}
 	}
 	{
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = ___0_friends;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:873>
+		RuntimeObject* L_4 = __this->___listener;
 		NullCheck(L_4);
-		if ((((RuntimeArray*)L_4)->max_length))
-		{
-			goto IL_0047;
-		}
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteralA4A3F6514E2CF8783CDAB372E72E9BCD8E42ADA3);
 	}
 
-IL_002b:
+IL_0033:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:880>
-		uint8_t L_5;
-		L_5 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_5) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:875>
+		V_3 = (bool)0;
+		goto IL_00fd;
+	}
+
+IL_003a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:878>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = ___0_friends;
+		if (!L_5)
 		{
-			goto IL_0045;
+			goto IL_0044;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:882>
-		RuntimeObject* L_6 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = ___0_friends;
 		NullCheck(L_6);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_6, 2, _stringLiteral05735D340DC6F0A0F9208712869EFC8065DB1040);
+		G_B7_0 = ((((int32_t)(((RuntimeArray*)L_6)->max_length)) == ((int32_t)0))? 1 : 0);
+		goto IL_0045;
+	}
+
+IL_0044:
+	{
+		G_B7_0 = 1;
 	}
 
 IL_0045:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:884>
-		return (bool)0;
-	}
-
-IL_0047:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:886>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = ___0_friends;
-		NullCheck(L_7);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_7)->max_length))) <= ((int32_t)((int32_t)1024))))
+		V_4 = (bool)G_B7_0;
+		bool L_7 = V_4;
+		if (!L_7)
 		{
-			goto IL_008f;
+			goto IL_0079;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:888>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:880>
 		uint8_t L_8;
 		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_8) < ((int32_t)2)))
+		V_5 = (bool)((((int32_t)((((int32_t)L_8) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_5;
+		if (!L_9)
 		{
-			goto IL_008d;
+			goto IL_0072;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:890>
-		RuntimeObject* L_9 = __this->___listener;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = ___0_friends;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:882>
+		RuntimeObject* L_10 = __this->___listener;
 		NullCheck(L_10);
-		V_1 = ((int32_t)(((RuntimeArray*)L_10)->max_length));
-		String_t* L_11;
-		L_11 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
-		V_1 = ((int32_t)1024);
-		String_t* L_12;
-		L_12 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
-		String_t* L_13;
-		L_13 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral6E14C99C5905C97FAA1BAD3AA2BB4F3DA6FA045B, L_11, _stringLiteral717DA9E2386BEADCFFB33AE09B063FCD2EE1A657, L_12, NULL);
-		NullCheck(L_9);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_9, 2, L_13);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, 2, _stringLiteral05735D340DC6F0A0F9208712869EFC8065DB1040);
 	}
 
-IL_008d:
+IL_0072:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:892>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:884>
+		V_3 = (bool)0;
+		goto IL_00fd;
 	}
 
-IL_008f:
+IL_0079:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:895>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:896>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:897>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:898>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_14 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_14, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_15 = L_14;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:886>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = ___0_friends;
+		NullCheck(L_11);
+		V_6 = (bool)((((int32_t)((int32_t)(((RuntimeArray*)L_11)->max_length))) > ((int32_t)((int32_t)1024)))? 1 : 0);
+		bool L_12 = V_6;
+		if (!L_12)
+		{
+			goto IL_00d8;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:888>
+		uint8_t L_13;
+		L_13 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_7 = (bool)((((int32_t)((((int32_t)L_13) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_14 = V_7;
+		if (!L_14)
+		{
+			goto IL_00d4;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:890>
+		RuntimeObject* L_15 = __this->___listener;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = ___0_friends;
+		NullCheck(L_16);
+		V_8 = ((int32_t)(((RuntimeArray*)L_16)->max_length));
+		String_t* L_17;
+		L_17 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_8), NULL);
+		V_8 = ((int32_t)1024);
+		String_t* L_18;
+		L_18 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_8), NULL);
+		String_t* L_19;
+		L_19 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral6E14C99C5905C97FAA1BAD3AA2BB4F3DA6FA045B, L_17, _stringLiteral717DA9E2386BEADCFFB33AE09B063FCD2EE1A657, L_18, NULL);
 		NullCheck(L_15);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_15, (uint8_t)((int32_t)11), (RuntimeObject*)L_16, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_15;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:900>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_17 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_18 = V_0;
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_15, 2, L_19);
+	}
+
+IL_00d4:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:892>
+		V_3 = (bool)0;
+		goto IL_00fd;
+	}
+
+IL_00d8:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:895>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:896>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:897>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:898>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_20 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_20, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_21 = L_20;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = ___0_friends;
+		NullCheck(L_21);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_21, (uint8_t)((int32_t)11), (RuntimeObject*)L_22, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_0 = L_21;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:900>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_23 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_24 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_19 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
-		NullCheck(L_17);
-		bool L_20;
-		L_20 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_17, (uint8_t)7, L_18, L_19);
-		return L_20;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_25 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_23);
+		bool L_26;
+		L_26 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_23, (uint8_t)7, L_24, L_25);
+		V_3 = L_26;
+		goto IL_00fd;
+	}
+
+IL_00fd:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:901>
+		bool L_27 = V_3;
+		return L_27;
 	}
 }
-// Method Definition Index: 48495
+// Method Definition Index: 48575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_userName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4825,17 +5603,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_GetPrivateChannelNameByU
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAD6CD2C36915DEB6A18BCF0F46B294FC1D97072F);
 		s_Il2CppMethodInitialized = true;
 	}
+	String_t* V_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:913>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:913>
 		String_t* L_0;
 		L_0 = ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E(__this, NULL);
 		String_t* L_1 = ___0_userName;
 		String_t* L_2;
 		L_2 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralAD6CD2C36915DEB6A18BCF0F46B294FC1D97072F, L_0, L_1, NULL);
-		return L_2;
+		V_0 = L_2;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:914>
+		String_t* L_3 = V_0;
+		return L_3;
 	}
 }
-// Method Definition Index: 48496
+// Method Definition Index: 48576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetChannel_m5C5176103E0A618C661F6351BEBE408F4A06D925 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, bool ___1_isPrivate, ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4844,38 +5631,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetChannel_m5C5176103E0A61
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:927>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:927>
 		bool L_0 = ___1_isPrivate;
-		if (L_0)
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0011;
+			goto IL_001a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:929>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_1 = __this->___PublicChannels;
-		String_t* L_2 = ___0_channelName;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_3 = ___2_channel;
-		NullCheck(L_1);
-		bool L_4;
-		L_4 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_1, L_2, L_3, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		return L_4;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:929>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_2 = __this->___PublicChannels;
+		String_t* L_3 = ___0_channelName;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_4 = ___2_channel;
+		NullCheck(L_2);
+		bool L_5;
+		L_5 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_2, L_3, L_4, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
+		V_1 = L_5;
+		goto IL_002b;
 	}
 
-IL_0011:
+IL_001a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:933>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_5 = __this->___PrivateChannels;
-		String_t* L_6 = ___0_channelName;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_7 = ___2_channel;
-		NullCheck(L_5);
-		bool L_8;
-		L_8 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_5, L_6, L_7, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		return L_8;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:933>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_6 = __this->___PrivateChannels;
+		String_t* L_7 = ___0_channelName;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_8 = ___2_channel;
+		NullCheck(L_6);
+		bool L_9;
+		L_9 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_6, L_7, L_8, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
+		V_1 = L_9;
+		goto IL_002b;
+	}
+
+IL_002b:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:935>
+		bool L_10 = V_1;
+		return L_10;
 	}
 }
-// Method Definition Index: 48497
+// Method Definition Index: 48577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetChannel_m596F2DCA70B7C83E7E82B92B341DDEE9A5864C0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4884,101 +5684,143 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetChannel_m596F2DCA70B7C8
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:948>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:947>
+		V_0 = (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:948>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_0 = __this->___PublicChannels;
 		String_t* L_1 = ___0_channelName;
 		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_2 = ___1_channel;
 		NullCheck(L_0);
 		bool L_3;
 		L_3 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_0, L_1, L_2, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:949>
-		if (!L_3)
+		V_0 = L_3;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:949>
+		bool L_4 = V_0;
+		V_1 = L_4;
+		bool L_5 = V_1;
+		if (!L_5)
 		{
-			goto IL_0011;
+			goto IL_001a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:949>
-		return (bool)1;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:949>
+		V_2 = (bool)1;
+		goto IL_002c;
 	}
 
-IL_0011:
+IL_001a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:951>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_4 = __this->___PrivateChannels;
-		String_t* L_5 = ___0_channelName;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_6 = ___1_channel;
-		NullCheck(L_4);
-		bool L_7;
-		L_7 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_4, L_5, L_6, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:952>
-		return L_7;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:951>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_6 = __this->___PrivateChannels;
+		String_t* L_7 = ___0_channelName;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_8 = ___1_channel;
+		NullCheck(L_6);
+		bool L_9;
+		L_9 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_6, L_7, L_8, Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
+		V_0 = L_9;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:952>
+		bool L_10 = V_0;
+		V_2 = L_10;
+		goto IL_002c;
+	}
+
+IL_002c:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:953>
+		bool L_11 = V_2;
+		return L_11;
 	}
 }
-// Method Definition Index: 48498
+// Method Definition Index: 48578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetPrivateChannelByUser_m5B951249A1D4B3DA9B2D2B0F962915AA03B6A7BE (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_userId, ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** ___1_channel, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:963>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:963>
 		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_0 = ___1_channel;
 		*((RuntimeObject**)L_0) = (RuntimeObject*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_0, (void*)(RuntimeObject*)NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:964>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:964>
 		String_t* L_1 = ___0_userId;
 		bool L_2;
 		L_2 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_1, NULL);
-		if (!L_2)
+		V_1 = L_2;
+		bool L_3 = V_1;
+		if (!L_3)
 		{
-			goto IL_000d;
+			goto IL_0013;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:966>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:966>
+		V_2 = (bool)0;
+		goto IL_0027;
 	}
 
-IL_000d:
+IL_0013:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:968>
-		String_t* L_3 = ___0_userId;
-		String_t* L_4;
-		L_4 = ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F(__this, L_3, NULL);
-		V_0 = L_4;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:969>
-		String_t* L_5 = V_0;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_6 = ___1_channel;
-		bool L_7;
-		L_7 = ChatClient_TryGetChannel_m5C5176103E0A618C661F6351BEBE408F4A06D925(__this, L_5, (bool)1, L_6, NULL);
-		return L_7;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:968>
+		String_t* L_4 = ___0_userId;
+		String_t* L_5;
+		L_5 = ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F(__this, L_4, NULL);
+		V_0 = L_5;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:969>
+		String_t* L_6 = V_0;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** L_7 = ___1_channel;
+		bool L_8;
+		L_8 = ChatClient_TryGetChannel_m5C5176103E0A618C661F6351BEBE408F4A06D925(__this, L_6, (bool)1, L_7, NULL);
+		V_2 = L_8;
+		goto IL_0027;
+	}
+
+IL_0027:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:970>
+		bool L_9 = V_2;
+		return L_9;
 	}
 }
-// Method Definition Index: 48499
+// Method Definition Index: 48579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DebugOut_m742DBBA5A5D1910991A3932A362A584D43E6402A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:981>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:981>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
 		uint8_t L_1 = ___0_value;
 		NullCheck(L_0);
 		((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)L_0)->___DebugOut = L_1;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:981>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:981>
 		return;
 	}
 }
-// Method Definition Index: 48500
+// Method Definition Index: 48580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
+	uint8_t V_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:982>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:982>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_0 = __this->___chatPeer;
 		NullCheck(L_0);
 		uint8_t L_1 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)L_0)->___DebugOut;
-		return L_1;
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:982>
+		uint8_t L_2 = V_0;
+		return L_2;
 	}
 }
-// Method Definition Index: 48501
+// Method Definition Index: 48581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_DebugReturn_m590A6E7F333B2F16A679E400DD34C595CF7E0B81 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_level, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4988,143 +5830,148 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhot
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:991>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:991>
 		RuntimeObject* L_0 = __this->___listener;
 		uint8_t L_1 = ___0_level;
 		String_t* L_2 = ___1_message;
 		NullCheck(L_0);
 		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_0, L_1, L_2);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:992>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:992>
 		return;
 	}
 }
-// Method Definition Index: 48502
+// Method Definition Index: 48582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_OnEvent_mDBC0668C71E45CE9817CBA5A74D44101710180CD (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0x0;
+	uint8_t V_1 = 0x0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:996>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:996>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		uint8_t L_1 = L_0->___Code;
-		V_0 = L_1;
-		uint8_t L_2 = V_0;
-		switch (L_2)
+		V_1 = L_1;
+		uint8_t L_2 = V_1;
+		V_0 = L_2;
+		uint8_t L_3 = V_0;
+		switch (L_3)
 		{
 			case 0:
 			{
-				goto IL_0036;
+				goto IL_003a;
 			}
 			case 1:
 			{
-				goto IL_006d;
+				goto IL_0080;
 			}
 			case 2:
 			{
-				goto IL_003e;
+				goto IL_0044;
 			}
 			case 3:
 			{
-				goto IL_006d;
+				goto IL_0080;
 			}
 			case 4:
 			{
-				goto IL_0046;
+				goto IL_004e;
 			}
 			case 5:
 			{
-				goto IL_004e;
+				goto IL_0058;
 			}
 			case 6:
 			{
-				goto IL_0056;
+				goto IL_0062;
 			}
 			case 7:
 			{
-				goto IL_006d;
+				goto IL_0080;
 			}
 			case 8:
 			{
-				goto IL_005e;
+				goto IL_006c;
 			}
 			case 9:
 			{
-				goto IL_0066;
+				goto IL_0076;
 			}
 		}
 	}
 	{
-		return;
+		goto IL_0080;
 	}
 
-IL_0036:
+IL_003a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:999>
-		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
-		ChatClient_HandleChatMessagesEvent_m02DB6D4309A64B61FA34E2A7B45E7FAC476C2B1F(__this, L_3, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1000>
-		return;
-	}
-
-IL_003e:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1002>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:999>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_4 = ___0_eventData;
-		ChatClient_HandlePrivateMessageEvent_m380A7506206A6F1493EF61005ECC712D9BD9BE28(__this, L_4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1003>
-		return;
+		ChatClient_HandleChatMessagesEvent_m02DB6D4309A64B61FA34E2A7B45E7FAC476C2B1F(__this, L_4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1000>
+		goto IL_0080;
 	}
 
-IL_0046:
+IL_0044:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1005>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1002>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_5 = ___0_eventData;
-		ChatClient_HandleStatusUpdate_m10E9C9324C8204A4887C67648683EA3A49C556F7(__this, L_5, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1006>
-		return;
+		ChatClient_HandlePrivateMessageEvent_m380A7506206A6F1493EF61005ECC712D9BD9BE28(__this, L_5, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1003>
+		goto IL_0080;
 	}
 
 IL_004e:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1008>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1005>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_6 = ___0_eventData;
-		ChatClient_HandleSubscribeEvent_m2EDD7435FC9D8267571BAC98A3974D082799509B(__this, L_6, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1009>
-		return;
+		ChatClient_HandleStatusUpdate_m10E9C9324C8204A4887C67648683EA3A49C556F7(__this, L_6, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1006>
+		goto IL_0080;
 	}
 
-IL_0056:
+IL_0058:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1011>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1008>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_7 = ___0_eventData;
-		ChatClient_HandleUnsubscribeEvent_m905C05E19B4D368A7A59D7F1F06A86B251AC7461(__this, L_7, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1012>
-		return;
+		ChatClient_HandleSubscribeEvent_m2EDD7435FC9D8267571BAC98A3974D082799509B(__this, L_7, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1009>
+		goto IL_0080;
 	}
 
-IL_005e:
+IL_0062:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1014>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1011>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_8 = ___0_eventData;
-		ChatClient_HandleUserSubscribedEvent_m8F835E34839B69198C7D0067421F1B2BD30A48AC(__this, L_8, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1015>
-		return;
+		ChatClient_HandleUnsubscribeEvent_m905C05E19B4D368A7A59D7F1F06A86B251AC7461(__this, L_8, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1012>
+		goto IL_0080;
 	}
 
-IL_0066:
+IL_006c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1017>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1014>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_9 = ___0_eventData;
-		ChatClient_HandleUserUnsubscribedEvent_m6E44BD9864D21DF5BEF3F5585D2DA5E7C152D046(__this, L_9, NULL);
+		ChatClient_HandleUserSubscribedEvent_m8F835E34839B69198C7D0067421F1B2BD30A48AC(__this, L_9, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1015>
+		goto IL_0080;
 	}
 
-IL_006d:
+IL_0076:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1028>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1017>
+		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_10 = ___0_eventData;
+		ChatClient_HandleUserUnsubscribedEvent_m6E44BD9864D21DF5BEF3F5585D2DA5E7C152D046(__this, L_10, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1018>
+		goto IL_0080;
+	}
+
+IL_0080:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1028>
 		return;
 	}
 }
-// Method Definition Index: 48503
+// Method Definition Index: 48583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_OnOperationResponse_mA6E3C6475748F8561B1F394DC4DFF3EA3EF1E559 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* ___0_operationResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5136,107 +5983,148 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhot
 		s_Il2CppMethodInitialized = true;
 	}
 	uint8_t V_0 = 0x0;
+	uint8_t V_1 = 0x0;
+	bool V_2 = false;
+	bool V_3 = false;
+	int32_t G_B8_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1032>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1032>
 		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_0 = ___0_operationResponse;
 		NullCheck(L_0);
 		uint8_t L_1 = L_0->___OperationCode;
-		V_0 = L_1;
-		uint8_t L_2 = V_0;
-		if ((!(((uint32_t)L_2) > ((uint32_t)3))))
-		{
-			goto IL_001b;
-		}
-	}
-	{
+		V_1 = L_1;
+		uint8_t L_2 = V_1;
+		V_0 = L_2;
 		uint8_t L_3 = V_0;
-		if ((!(((uint32_t)L_3) == ((uint32_t)((int32_t)230)))))
+		if ((!(((uint32_t)L_3) > ((uint32_t)3))))
 		{
-			goto IL_001b;
+			goto IL_0027;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1035>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_4 = ___0_operationResponse;
-		ChatClient_HandleAuthResponse_m17B43A51ED0F7F675A42E4BAAB273DFCF791C14F(__this, L_4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1036>
-		return;
+		goto IL_0010;
 	}
 
-IL_001b:
+IL_0010:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1044>
+		uint8_t L_4 = V_0;
+		if ((((int32_t)L_4) == ((int32_t)((int32_t)230))))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		goto IL_0027;
+	}
+
+IL_001a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1035>
 		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_5 = ___0_operationResponse;
-		NullCheck(L_5);
-		int16_t L_6 = L_5->___ReturnCode;
-		if (!L_6)
+		ChatClient_HandleAuthResponse_m17B43A51ED0F7F675A42E4BAAB273DFCF791C14F(__this, L_5, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1036>
+		goto IL_00af;
+	}
+
+IL_0027:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1044>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_6 = ___0_operationResponse;
+		NullCheck(L_6);
+		int16_t L_7 = L_6->___ReturnCode;
+		if (!L_7)
 		{
-			goto IL_008a;
+			goto IL_003d;
 		}
 	}
 	{
-		uint8_t L_7;
-		L_7 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_7) < ((int32_t)1)))
+		uint8_t L_8;
+		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		G_B8_0 = ((((int32_t)((((int32_t)L_8) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		goto IL_003e;
+	}
+
+IL_003d:
+	{
+		G_B8_0 = 0;
+	}
+
+IL_003e:
+	{
+		V_2 = (bool)G_B8_0;
+		bool L_9 = V_2;
+		if (!L_9)
 		{
-			goto IL_008a;
+			goto IL_00ad;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1046>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_8 = ___0_operationResponse;
-		NullCheck(L_8);
-		int16_t L_9 = L_8->___ReturnCode;
-		if ((!(((uint32_t)L_9) == ((uint32_t)((int32_t)-2)))))
-		{
-			goto IL_0058;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1048>
-		RuntimeObject* L_10 = __this->___listener;
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_11 = ___0_operationResponse;
-		NullCheck(L_11);
-		uint8_t L_12 = L_11->___OperationCode;
-		uint8_t L_13 = L_12;
-		RuntimeObject* L_14 = Box(il2cpp_defaults.byte_class, &L_13);
-		String_t* L_15;
-		L_15 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral9A1A0DEF864EC040A24126B7A194105027A0D5D4, L_14, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1046>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_10 = ___0_operationResponse;
 		NullCheck(L_10);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, 1, L_15);
-		return;
+		int16_t L_11 = L_10->___ReturnCode;
+		V_3 = (bool)((((int32_t)L_11) == ((int32_t)((int32_t)-2)))? 1 : 0);
+		bool L_12 = V_3;
+		if (!L_12)
+		{
+			goto IL_0077;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1048>
+		RuntimeObject* L_13 = __this->___listener;
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_14 = ___0_operationResponse;
+		NullCheck(L_14);
+		uint8_t L_15 = L_14->___OperationCode;
+		uint8_t L_16 = L_15;
+		RuntimeObject* L_17 = Box(il2cpp_defaults.byte_class, &L_16);
+		String_t* L_18;
+		L_18 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral9A1A0DEF864EC040A24126B7A194105027A0D5D4, L_17, NULL);
+		NullCheck(L_13);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_13, 1, L_18);
+		goto IL_00ac;
 	}
 
-IL_0058:
+IL_0077:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1052>
-		RuntimeObject* L_16 = __this->___listener;
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_17 = ___0_operationResponse;
-		NullCheck(L_17);
-		uint8_t L_18 = L_17->___OperationCode;
-		uint8_t L_19 = L_18;
-		RuntimeObject* L_20 = Box(il2cpp_defaults.byte_class, &L_19);
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_21 = ___0_operationResponse;
-		NullCheck(L_21);
-		int16_t L_22 = L_21->___ReturnCode;
-		int16_t L_23 = L_22;
-		RuntimeObject* L_24 = Box(il2cpp_defaults.int16_class, &L_23);
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_25 = ___0_operationResponse;
-		NullCheck(L_25);
-		String_t* L_26 = L_25->___DebugMessage;
-		String_t* L_27;
-		L_27 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral56F4CE3D38299DE86F612B0D25AABE7291C45297, L_20, L_24, L_26, NULL);
-		NullCheck(L_16);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_16, 1, L_27);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1052>
+		RuntimeObject* L_19 = __this->___listener;
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_20 = ___0_operationResponse;
+		NullCheck(L_20);
+		uint8_t L_21 = L_20->___OperationCode;
+		uint8_t L_22 = L_21;
+		RuntimeObject* L_23 = Box(il2cpp_defaults.byte_class, &L_22);
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_24 = ___0_operationResponse;
+		NullCheck(L_24);
+		int16_t L_25 = L_24->___ReturnCode;
+		int16_t L_26 = L_25;
+		RuntimeObject* L_27 = Box(il2cpp_defaults.int16_class, &L_26);
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_28 = ___0_operationResponse;
+		NullCheck(L_28);
+		String_t* L_29 = L_28->___DebugMessage;
+		String_t* L_30;
+		L_30 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral56F4CE3D38299DE86F612B0D25AABE7291C45297, L_23, L_27, L_29, NULL);
+		NullCheck(L_19);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_19, 1, L_30);
 	}
 
-IL_008a:
+IL_00ac:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1057>
+	}
+
+IL_00ad:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1055>
+		goto IL_00af;
+	}
+
+IL_00af:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1057>
 		return;
 	}
 }
-// Method Definition Index: 48504
+// Method Definition Index: 48584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_OnStatusChanged_mF83E07587B59DE916DC872BF17B2AA7DA147CAE2 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_statusCode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5244,472 +6132,602 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhot
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StackTrace_t7C150C7C14136F985311A83A93524B1019F70853_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0EC6B861684EFBC6F7D7FAB8ED28E170565B09C6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1605C9390111B876A1B670691E1A90A58C218D34);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral68D7F8920CC9A5C9EB6CEA86D4BDEC243463A827);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral74935E070666FF5C1140D9B3C70DF02FD27A7B52);
 		s_Il2CppMethodInitialized = true;
 	}
-	String_t* V_0 = NULL;
+	int32_t V_0 = 0;
 	int32_t V_1 = 0;
-	ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* G_B20_0 = NULL;
-	ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* G_B19_0 = NULL;
-	int32_t G_B21_0 = 0;
-	ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* G_B21_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	String_t* V_9 = NULL;
+	int32_t V_10 = 0;
+	int32_t V_11 = 0;
+	bool V_12 = false;
+	bool V_13 = false;
+	bool V_14 = false;
+	ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* G_B29_0 = NULL;
+	ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* G_B28_0 = NULL;
+	int32_t G_B30_0 = 0;
+	ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* G_B30_1 = NULL;
+	int32_t G_B41_0 = 0;
+	int32_t G_B52_0 = 0;
 	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1061>
 		int32_t L_0 = ___0_statusCode;
-		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_0, ((int32_t)1022))))
+		V_1 = L_0;
+		int32_t L_1 = V_1;
+		V_0 = L_1;
+		int32_t L_2 = V_0;
+		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_2, ((int32_t)1022))))
 		{
 			case 0:
 			{
-				goto IL_01e9;
+				goto IL_0279;
 			}
 			case 1:
 			{
-				goto IL_01e9;
+				goto IL_0279;
 			}
 			case 2:
 			{
-				goto IL_0059;
+				goto IL_0064;
 			}
 			case 3:
 			{
-				goto IL_0103;
+				goto IL_0153;
 			}
 			case 4:
 			{
-				goto IL_0212;
+				goto IL_02b4;
 			}
 		}
 	}
 	{
-		int32_t L_1 = ___0_statusCode;
-		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_1, ((int32_t)1039))))
+		goto IL_0027;
+	}
+
+IL_0027:
+	{
+		int32_t L_3 = V_0;
+		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_3, ((int32_t)1039))))
 		{
 			case 0:
 			{
-				goto IL_0212;
+				goto IL_02b4;
 			}
 			case 1:
 			{
-				goto IL_0232;
+				goto IL_02dc;
 			}
 			case 2:
 			{
-				goto IL_021a;
+				goto IL_02be;
 			}
 			case 3:
 			{
-				goto IL_01d0;
+				goto IL_025a;
 			}
 			case 4:
 			{
-				goto IL_0222;
+				goto IL_02c8;
 			}
 			case 5:
 			{
-				goto IL_022a;
+				goto IL_02d2;
 			}
 			case 6:
 			{
-				goto IL_025a;
+				goto IL_0317;
 			}
 			case 7:
 			{
-				goto IL_025a;
+				goto IL_0317;
 			}
 			case 8:
 			{
-				goto IL_025a;
+				goto IL_0317;
 			}
 			case 9:
 			{
-				goto IL_00fc;
+				goto IL_0147;
 			}
 			case 10:
 			{
-				goto IL_01e9;
+				goto IL_0279;
 			}
 		}
 	}
 	{
-		return;
+		goto IL_0317;
 	}
 
-IL_0059:
+IL_0064:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1064>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_2 = __this->___chatPeer;
-		NullCheck(L_2);
-		bool L_3;
-		L_3 = VirtualFuncInvoker0< bool >::Invoke(17, L_2);
-		if (L_3)
-		{
-			goto IL_008f;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1066>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1064>
 		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_4 = __this->___chatPeer;
 		NullCheck(L_4);
 		bool L_5;
-		L_5 = PhotonPeer_EstablishEncryption_m85A9EC5CE626B9EB6115B61F71C7AA0E5E2514E5(L_4, NULL);
-		if (L_5)
+		L_5 = VirtualFuncInvoker0< bool >::Invoke(17, L_4);
+		V_2 = (bool)((((int32_t)L_5) == ((int32_t)0))? 1 : 0);
+		bool L_6 = V_2;
+		if (!L_6)
 		{
-			goto IL_0095;
+			goto IL_00b4;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1068>
-		uint8_t L_6;
-		L_6 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_6) < ((int32_t)1)))
-		{
-			goto IL_0095;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1070>
-		RuntimeObject* L_7 = __this->___listener;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1066>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_7 = __this->___chatPeer;
 		NullCheck(L_7);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_7, 1, _stringLiteral74935E070666FF5C1140D9B3C70DF02FD27A7B52);
-		goto IL_0095;
-	}
-
-IL_008f:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1076>
-		ChatClient_TryAuthenticateOnNameServer_mDDF0C0B3A9210E6617888B7376A4B22F8B059A19(__this, NULL);
-	}
-
-IL_0095:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1079>
-		int32_t L_8;
-		L_8 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		if ((!(((uint32_t)L_8) == ((uint32_t)1))))
+		bool L_8;
+		L_8 = PhotonPeer_EstablishEncryption_m85A9EC5CE626B9EB6115B61F71C7AA0E5E2514E5(L_7, NULL);
+		V_3 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_3;
+		if (!L_9)
 		{
-			goto IL_00b7;
+			goto IL_00b1;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1081>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1068>
+		uint8_t L_10;
+		L_10 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_4 = (bool)((((int32_t)((((int32_t)L_10) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_11 = V_4;
+		if (!L_11)
+		{
+			goto IL_00b0;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1070>
+		RuntimeObject* L_12 = __this->___listener;
+		NullCheck(L_12);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_12, 1, _stringLiteral74935E070666FF5C1140D9B3C70DF02FD27A7B52);
+	}
+
+IL_00b0:
+	{
+	}
+
+IL_00b1:
+	{
+		goto IL_00bd;
+	}
+
+IL_00b4:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1076>
+		ChatClient_TryAuthenticateOnNameServer_mDDF0C0B3A9210E6617888B7376A4B22F8B059A19(__this, NULL);
+	}
+
+IL_00bd:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1079>
+		int32_t L_13;
+		L_13 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		V_5 = (bool)((((int32_t)L_13) == ((int32_t)1))? 1 : 0);
+		bool L_14 = V_5;
+		if (!L_14)
+		{
+			goto IL_00ea;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1081>
 		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 2, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1082>
-		RuntimeObject* L_9 = __this->___listener;
-		int32_t L_10;
-		L_10 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		NullCheck(L_9);
-		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_9, L_10);
-		return;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1082>
+		RuntimeObject* L_15 = __this->___listener;
+		int32_t L_16;
+		L_16 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		NullCheck(L_15);
+		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_15, L_16);
+		goto IL_0142;
 	}
 
-IL_00b7:
+IL_00ea:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1084>
-		int32_t L_11;
-		L_11 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		if ((!(((uint32_t)L_11) == ((uint32_t)6))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1084>
+		int32_t L_17;
+		L_17 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		V_6 = (bool)((((int32_t)L_17) == ((int32_t)6))? 1 : 0);
+		bool L_18 = V_6;
+		if (!L_18)
 		{
-			goto IL_025a;
+			goto IL_0142;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1086>
-		bool L_12;
-		L_12 = ChatClient_AuthenticateOnFrontEnd_mA7969A2B821D59B68D4475A328952E8971E922DE(__this, NULL);
-		if (L_12)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1086>
+		bool L_19;
+		L_19 = ChatClient_AuthenticateOnFrontEnd_mA7969A2B821D59B68D4475A328952E8971E922DE(__this, NULL);
+		V_7 = (bool)((((int32_t)L_19) == ((int32_t)0))? 1 : 0);
+		bool L_20 = V_7;
+		if (!L_20)
 		{
-			goto IL_025a;
+			goto IL_0141;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1088>
-		uint8_t L_13;
-		L_13 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_13) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1088>
+		uint8_t L_21;
+		L_21 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_8 = (bool)((((int32_t)((((int32_t)L_21) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_22 = V_8;
+		if (!L_22)
 		{
-			goto IL_025a;
+			goto IL_0140;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1090>
-		RuntimeObject* L_14 = __this->___listener;
-		int32_t L_15;
-		L_15 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		int32_t L_16 = L_15;
-		RuntimeObject* L_17 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_16);
-		String_t* L_18;
-		L_18 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1605C9390111B876A1B670691E1A90A58C218D34, L_17, NULL);
-		NullCheck(L_14);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_14, 1, L_18);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1094>
-		return;
-	}
-
-IL_00fc:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1097>
-		ChatClient_TryAuthenticateOnNameServer_mDDF0C0B3A9210E6617888B7376A4B22F8B059A19(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1098>
-		return;
-	}
-
-IL_0103:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1100>
-		int32_t L_19;
-		L_19 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		V_1 = L_19;
-		int32_t L_20 = V_1;
-		if ((((int32_t)L_20) == ((int32_t)4)))
-		{
-			goto IL_0160;
-		}
-	}
-	{
-		int32_t L_21 = V_1;
-		if ((((int32_t)L_21) == ((int32_t)((int32_t)10))))
-		{
-			goto IL_019b;
-		}
-	}
-	{
-		int32_t L_22 = V_1;
-		if ((!(((uint32_t)L_22) == ((uint32_t)((int32_t)12)))))
-		{
-			goto IL_0168;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1103>
-		ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline(__this, (bool)0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1104>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_23 = __this->___chatPeer;
-		NullCheck(L_23);
-		L_23->___NameServerPortOverride = (uint16_t)0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1105>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_24 = __this->___chatPeer;
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_25 = __this->___chatPeer;
-		NullCheck(L_25);
-		uint8_t L_26;
-		L_26 = PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline(L_25, NULL);
-		if ((((int32_t)L_26) == ((int32_t)1)))
-		{
-			G_B20_0 = L_24;
-			goto IL_0145;
-		}
-		G_B19_0 = L_24;
-	}
-	{
-		G_B21_0 = 1;
-		G_B21_1 = G_B19_0;
-		goto IL_0146;
-	}
-
-IL_0145:
-	{
-		G_B21_0 = 0;
-		G_B21_1 = G_B20_0;
-	}
-
-IL_0146:
-	{
-		NullCheck(G_B21_1);
-		PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline(G_B21_1, G_B21_0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1106>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1090>
+		RuntimeObject* L_23 = __this->___listener;
+		int32_t L_24;
+		L_24 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		int32_t L_25 = L_24;
+		RuntimeObject* L_26 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_25);
 		String_t* L_27;
-		L_27 = ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline(__this, NULL);
-		String_t* L_28;
-		L_28 = ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline(__this, NULL);
-		bool L_29;
-		L_29 = ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121(__this, L_27, L_28, (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)NULL, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1109>
-		return;
+		L_27 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1605C9390111B876A1B670691E1A90A58C218D34, L_26, NULL);
+		NullCheck(L_23);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_23, 1, L_27);
 	}
 
-IL_0160:
+IL_0140:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1112>
-		bool L_30;
-		L_30 = ChatClient_ConnectToFrontEnd_m879F8C0ABFB420829231375D08CB8F31DD4A11D0(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1115>
-		return;
 	}
 
-IL_0168:
+IL_0141:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1121>
-		String_t* L_31 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
-		V_0 = L_31;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1125>
-		RuntimeObject* L_32 = __this->___listener;
-		int32_t L_33;
-		L_33 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		int32_t L_34 = L_33;
-		RuntimeObject* L_35 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_34);
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_36 = __this->___chatPeer;
-		NullCheck(L_36);
+	}
+
+IL_0142:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1094>
+		goto IL_0317;
+	}
+
+IL_0147:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1097>
+		ChatClient_TryAuthenticateOnNameServer_mDDF0C0B3A9210E6617888B7376A4B22F8B059A19(__this, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1098>
+		goto IL_0317;
+	}
+
+IL_0153:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1100>
+		int32_t L_28;
+		L_28 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		V_11 = L_28;
+		int32_t L_29 = V_11;
+		V_10 = L_29;
+		int32_t L_30 = V_10;
+		if ((((int32_t)L_30) == ((int32_t)4)))
+		{
+			goto IL_01c1;
+		}
+	}
+	{
+		goto IL_0166;
+	}
+
+IL_0166:
+	{
+		int32_t L_31 = V_10;
+		if ((((int32_t)L_31) == ((int32_t)((int32_t)10))))
+		{
+			goto IL_01cd;
+		}
+	}
+	{
+		goto IL_016e;
+	}
+
+IL_016e:
+	{
+		int32_t L_32 = V_10;
+		if ((((int32_t)L_32) == ((int32_t)((int32_t)12))))
+		{
+			goto IL_0176;
+		}
+	}
+	{
+		goto IL_01cf;
+	}
+
+IL_0176:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1103>
+		ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline(__this, (bool)0, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1104>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_33 = __this->___chatPeer;
+		NullCheck(L_33);
+		L_33->___NameServerPortOverride = (uint16_t)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1105>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_34 = __this->___chatPeer;
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_35 = __this->___chatPeer;
+		NullCheck(L_35);
+		uint8_t L_36;
+		L_36 = PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline(L_35, NULL);
+		if ((((int32_t)L_36) == ((int32_t)1)))
+		{
+			G_B29_0 = L_34;
+			goto IL_01a1;
+		}
+		G_B28_0 = L_34;
+	}
+	{
+		G_B30_0 = 1;
+		G_B30_1 = G_B28_0;
+		goto IL_01a2;
+	}
+
+IL_01a1:
+	{
+		G_B30_0 = 0;
+		G_B30_1 = G_B29_0;
+	}
+
+IL_01a2:
+	{
+		NullCheck(G_B30_1);
+		PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline(G_B30_1, G_B30_0, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1106>
 		String_t* L_37;
-		L_37 = PhotonPeer_get_ServerAddress_m457DB66B44D79E66E4328D51C40EA5E2DB481108(L_36, NULL);
-		String_t* L_38 = V_0;
-		String_t* L_39;
-		L_39 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral0EC6B861684EFBC6F7D7FAB8ED28E170565B09C6, L_35, L_37, L_38, NULL);
-		NullCheck(L_32);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_32, 2, L_39);
+		L_37 = ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline(__this, NULL);
+		String_t* L_38;
+		L_38 = ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline(__this, NULL);
+		bool L_39;
+		L_39 = ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121(__this, L_37, L_38, (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)NULL, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1109>
+		goto IL_0317;
 	}
 
-IL_019b:
+IL_01c1:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1128>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_40;
-		L_40 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		if (!L_40)
-		{
-			goto IL_01af;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1130>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_41;
-		L_41 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		NullCheck(L_41);
-		AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline(L_41, NULL, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1112>
+		bool L_40;
+		L_40 = ChatClient_ConnectToFrontEnd_m879F8C0ABFB420829231375D08CB8F31DD4A11D0(__this, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1115>
+		goto IL_0317;
 	}
 
-IL_01af:
+IL_01cd:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1132>
-		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)11), NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1133>
-		RuntimeObject* L_42 = __this->___listener;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1118>
+		goto IL_0214;
+	}
+
+IL_01cf:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1121>
+		String_t* L_41 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
+		V_9 = L_41;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1123>
+		StackTrace_t7C150C7C14136F985311A83A93524B1019F70853* L_42 = (StackTrace_t7C150C7C14136F985311A83A93524B1019F70853*)il2cpp_codegen_object_new(StackTrace_t7C150C7C14136F985311A83A93524B1019F70853_il2cpp_TypeInfo_var);
+		StackTrace__ctor_m269D00E49783BC3205FD5C7E879888884D72107C(L_42, (bool)1, NULL);
 		NullCheck(L_42);
-		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_42, ((int32_t)11));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1134>
-		RuntimeObject* L_43 = __this->___listener;
-		NullCheck(L_43);
-		InterfaceActionInvoker0::Invoke(1, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_43);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1135>
-		return;
-	}
-
-IL_01d0:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1137>
+		String_t* L_43;
+		L_43 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_42);
+		V_9 = L_43;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1125>
 		RuntimeObject* L_44 = __this->___listener;
+		int32_t L_45;
+		L_45 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		int32_t L_46 = L_45;
+		RuntimeObject* L_47 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_46);
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_48 = __this->___chatPeer;
+		NullCheck(L_48);
+		String_t* L_49;
+		L_49 = PhotonPeer_get_ServerAddress_m457DB66B44D79E66E4328D51C40EA5E2DB481108(L_48, NULL);
+		String_t* L_50 = V_9;
+		String_t* L_51;
+		L_51 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral0EC6B861684EFBC6F7D7FAB8ED28E170565B09C6, L_47, L_49, L_50, NULL);
 		NullCheck(L_44);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_44, 1, _stringLiteral68D7F8920CC9A5C9EB6CEA86D4BDEC243463A827);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1138>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 8, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1139>
-		return;
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_44, 2, L_51);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1126>
+		goto IL_0214;
 	}
 
-IL_01e9:
+IL_0214:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1143>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 1, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1146>
-		bool L_45;
-		L_45 = ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline(__this, NULL);
-		if (!L_45)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1128>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_52;
+		L_52 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		V_12 = (bool)((!(((RuntimeObject*)(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)L_52) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_53 = V_12;
+		if (!L_53)
 		{
-			goto IL_020a;
+			goto IL_0232;
 		}
 	}
 	{
-		int32_t L_46;
-		L_46 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		if ((!(((uint32_t)L_46) == ((uint32_t)1))))
-		{
-			goto IL_020a;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1148>
-		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)12), NULL);
-		return;
-	}
-
-IL_020a:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1152>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 1, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1155>
-		return;
-	}
-
-IL_0212:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1158>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 6, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1159>
-		return;
-	}
-
-IL_021a:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1161>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1162>
-		return;
-	}
-
-IL_0222:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1164>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 2, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1165>
-		return;
-	}
-
-IL_022a:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1167>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 3, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1168>
-		return;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1130>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_54;
+		L_54 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		NullCheck(L_54);
+		AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline(L_54, NULL, NULL);
 	}
 
 IL_0232:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1170>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 5, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1173>
-		bool L_47;
-		L_47 = ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline(__this, NULL);
-		if (!L_47)
-		{
-			goto IL_0253;
-		}
-	}
-	{
-		int32_t L_48;
-		L_48 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		if ((!(((uint32_t)L_48) == ((uint32_t)1))))
-		{
-			goto IL_0253;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1175>
-		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)12), NULL);
-		return;
-	}
-
-IL_0253:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1179>
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 5, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1132>
+		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)11), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1133>
+		RuntimeObject* L_55 = __this->___listener;
+		NullCheck(L_55);
+		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_55, ((int32_t)11));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1134>
+		RuntimeObject* L_56 = __this->___listener;
+		NullCheck(L_56);
+		InterfaceActionInvoker0::Invoke(1, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_56);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1135>
+		goto IL_0317;
 	}
 
 IL_025a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1183>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1137>
+		RuntimeObject* L_57 = __this->___listener;
+		NullCheck(L_57);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_57, 1, _stringLiteral68D7F8920CC9A5C9EB6CEA86D4BDEC243463A827);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1138>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 8, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1139>
+		goto IL_0317;
+	}
+
+IL_0279:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1143>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 1, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1146>
+		bool L_58;
+		L_58 = ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline(__this, NULL);
+		if (!L_58)
+		{
+			goto IL_0294;
+		}
+	}
+	{
+		int32_t L_59;
+		L_59 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		G_B41_0 = ((((int32_t)L_59) == ((int32_t)1))? 1 : 0);
+		goto IL_0295;
+	}
+
+IL_0294:
+	{
+		G_B41_0 = 0;
+	}
+
+IL_0295:
+	{
+		V_13 = (bool)G_B41_0;
+		bool L_60 = V_13;
+		if (!L_60)
+		{
+			goto IL_02a8;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1148>
+		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)12), NULL);
+		goto IL_02b2;
+	}
+
+IL_02a8:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1152>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 1, NULL);
+	}
+
+IL_02b2:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1155>
+		goto IL_0317;
+	}
+
+IL_02b4:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1158>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 6, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1159>
+		goto IL_0317;
+	}
+
+IL_02be:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1161>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1162>
+		goto IL_0317;
+	}
+
+IL_02c8:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1164>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 2, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1165>
+		goto IL_0317;
+	}
+
+IL_02d2:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1167>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 3, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1168>
+		goto IL_0317;
+	}
+
+IL_02dc:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1170>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 5, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1173>
+		bool L_61;
+		L_61 = ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline(__this, NULL);
+		if (!L_61)
+		{
+			goto IL_02f7;
+		}
+	}
+	{
+		int32_t L_62;
+		L_62 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		G_B52_0 = ((((int32_t)L_62) == ((int32_t)1))? 1 : 0);
+		goto IL_02f8;
+	}
+
+IL_02f7:
+	{
+		G_B52_0 = 0;
+	}
+
+IL_02f8:
+	{
+		V_14 = (bool)G_B52_0;
+		bool L_63 = V_14;
+		if (!L_63)
+		{
+			goto IL_030b;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1175>
+		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, ((int32_t)12), NULL);
+		goto IL_0315;
+	}
+
+IL_030b:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1179>
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, 5, NULL);
+	}
+
+IL_0315:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1181>
+		goto IL_0317;
+	}
+
+IL_0317:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1183>
 		return;
 	}
 }
-// Method Definition Index: 48505
+// Method Definition Index: 48585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_TryAuthenticateOnNameServer_mDDF0C0B3A9210E6617888B7376A4B22F8B059A19 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5720,65 +6738,82 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_TryAuthenticateOnNameServer_m
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1778C9BC36C93CBA913DFA368A05534210106FD0);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1220>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1220>
 		bool L_0 = __this->___didAuthenticate;
-		if (L_0)
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0063;
+			goto IL_007c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1222>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_1 = __this->___chatPeer;
-		String_t* L_2;
-		L_2 = ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline(__this, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1222>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_2 = __this->___chatPeer;
 		String_t* L_3;
-		L_3 = ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline(__this, NULL);
+		L_3 = ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline(__this, NULL);
 		String_t* L_4;
-		L_4 = ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5_inline(__this, NULL);
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_5;
-		L_5 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		NullCheck(L_1);
-		bool L_6;
-		L_6 = ChatPeer_AuthenticateOnNameServer_m31221AA4DF632CB3DB9BBDA4614AB1241F538BA3(L_1, L_2, L_3, L_4, L_5, NULL);
-		__this->___didAuthenticate = L_6;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1223>
-		bool L_7 = __this->___didAuthenticate;
-		if (L_7)
+		L_4 = ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline(__this, NULL);
+		String_t* L_5;
+		L_5 = ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5(__this, NULL);
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_6;
+		L_6 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		NullCheck(L_2);
+		bool L_7;
+		L_7 = ChatPeer_AuthenticateOnNameServer_m31221AA4DF632CB3DB9BBDA4614AB1241F538BA3(L_2, L_3, L_4, L_5, L_6, NULL);
+		__this->___didAuthenticate = L_7;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1223>
+		bool L_8 = __this->___didAuthenticate;
+		V_1 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_1;
+		if (!L_9)
 		{
-			goto IL_0063;
+			goto IL_007b;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1225>
-		uint8_t L_8;
-		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_8) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1225>
+		uint8_t L_10;
+		L_10 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_10) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_11 = V_2;
+		if (!L_11)
 		{
-			goto IL_0063;
+			goto IL_007a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1227>
-		RuntimeObject* L_9 = __this->___listener;
-		int32_t L_10;
-		L_10 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		int32_t L_11 = L_10;
-		RuntimeObject* L_12 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_11);
-		String_t* L_13;
-		L_13 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1778C9BC36C93CBA913DFA368A05534210106FD0, L_12, NULL);
-		NullCheck(L_9);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_9, 1, L_13);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1227>
+		RuntimeObject* L_12 = __this->___listener;
+		int32_t L_13;
+		L_13 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		int32_t L_14 = L_13;
+		RuntimeObject* L_15 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_14);
+		String_t* L_16;
+		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1778C9BC36C93CBA913DFA368A05534210106FD0, L_15, NULL);
+		NullCheck(L_12);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_12, 1, L_16);
 	}
 
-IL_0063:
+IL_007a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1231>
+	}
+
+IL_007b:
+	{
+	}
+
+IL_007c:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1231>
 		return;
 	}
 }
-// Method Definition Index: 48506
+// Method Definition Index: 48586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendChannelOperation_mDB9A461F277FC2A7F0574F9BAF93CDAB94FA97D8 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, uint8_t ___1_operation, int32_t ___2_historyLength, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5791,8 +6826,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendChannelOperation_mDB9A461
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1235>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1235>
 		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_0 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_0, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
 		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_1 = L_0;
@@ -5800,38 +6837,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendChannelOperation_mDB9A461
 		NullCheck(L_1);
 		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_1, (uint8_t)0, (RuntimeObject*)L_2, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1237>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1237>
 		int32_t L_3 = ___2_historyLength;
-		if (!L_3)
+		V_1 = (bool)((!(((uint32_t)L_3) <= ((uint32_t)0)))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
 		{
-			goto IL_001f;
+			goto IL_0029;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1239>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_4 = V_0;
-		int32_t L_5 = ___2_historyLength;
-		int32_t L_6 = L_5;
-		RuntimeObject* L_7 = Box(il2cpp_defaults.int32_class, &L_6);
-		NullCheck(L_4);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_4, (uint8_t)((int32_t)14), L_7, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1239>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_5 = V_0;
+		int32_t L_6 = ___2_historyLength;
+		int32_t L_7 = L_6;
+		RuntimeObject* L_8 = Box(il2cpp_defaults.int32_class, &L_7);
+		NullCheck(L_5);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_5, (uint8_t)((int32_t)14), L_8, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
 	}
 
-IL_001f:
+IL_0029:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1242>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_8 = __this->___chatPeer;
-		uint8_t L_9 = ___1_operation;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_10 = V_0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1242>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_9 = __this->___chatPeer;
+		uint8_t L_10 = ___1_operation;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_11 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_11 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
-		NullCheck(L_8);
-		bool L_12;
-		L_12 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_8, L_9, L_10, L_11);
-		return L_12;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_12 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_9);
+		bool L_13;
+		L_13 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_9, L_10, L_11, L_12);
+		V_2 = L_13;
+		goto IL_003e;
+	}
+
+IL_003e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1243>
+		bool L_14 = V_2;
+		return L_14;
 	}
 }
-// Method Definition Index: 48507
+// Method Definition Index: 48587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m380A7506206A6F1493EF61005ECC712D9BD9BE28 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5848,9 +6895,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m38
 	int32_t V_2 = 0;
 	String_t* V_3 = NULL;
 	ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* V_4 = NULL;
-	String_t* V_5 = NULL;
+	bool V_5 = false;
+	String_t* V_6 = NULL;
+	bool V_7 = false;
+	int32_t G_B3_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1249>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1249>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_1 = L_0->___Parameters;
@@ -5858,7 +6908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m38
 		RuntimeObject* L_2;
 		L_2 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_1, (uint8_t)3, NULL);
 		V_0 = L_2;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1250>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1250>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
 		NullCheck(L_3);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_4 = L_3->___Parameters;
@@ -5866,7 +6916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m38
 		RuntimeObject* L_5;
 		L_5 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_4, (uint8_t)5, NULL);
 		V_1 = ((String_t*)CastclassSealed((RuntimeObject*)L_5, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1251>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1251>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_6 = ___0_eventData;
 		NullCheck(L_6);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_7 = L_6->___Parameters;
@@ -5874,12 +6924,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m38
 		RuntimeObject* L_8;
 		L_8 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_7, (uint8_t)8, NULL);
 		V_2 = ((*(int32_t*)UnBox(L_8, il2cpp_defaults.int32_class)));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1254>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1254>
 		String_t* L_9;
 		L_9 = ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E(__this, NULL);
 		if (!L_9)
 		{
-			goto IL_0069;
+			goto IL_0048;
 		}
 	}
 	{
@@ -5889,96 +6939,111 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m38
 		NullCheck(L_10);
 		bool L_12;
 		L_12 = String_Equals_mCD5F35DEDCAFE51ACD4E033726FC2EF8DF7E9B4D(L_10, L_11, NULL);
-		if (!L_12)
+		G_B3_0 = ((int32_t)(L_12));
+		goto IL_0049;
+	}
+
+IL_0048:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0049:
+	{
+		V_5 = (bool)G_B3_0;
+		bool L_13 = V_5;
+		if (!L_13)
 		{
-			goto IL_0069;
+			goto IL_0073;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1256>
-		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_13 = ___0_eventData;
-		NullCheck(L_13);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_14 = L_13->___Parameters;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1256>
+		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_14 = ___0_eventData;
 		NullCheck(L_14);
-		RuntimeObject* L_15;
-		L_15 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_14, (uint8_t)((int32_t)225), NULL);
-		V_5 = ((String_t*)CastclassSealed((RuntimeObject*)L_15, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1257>
-		String_t* L_16 = V_5;
-		String_t* L_17;
-		L_17 = ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F(__this, L_16, NULL);
-		V_3 = L_17;
-		goto IL_0071;
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_15 = L_14->___Parameters;
+		NullCheck(L_15);
+		RuntimeObject* L_16;
+		L_16 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_15, (uint8_t)((int32_t)225), NULL);
+		V_6 = ((String_t*)CastclassSealed((RuntimeObject*)L_16, il2cpp_defaults.string_class));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1257>
+		String_t* L_17 = V_6;
+		String_t* L_18;
+		L_18 = ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F(__this, L_17, NULL);
+		V_3 = L_18;
+		goto IL_007d;
 	}
 
-IL_0069:
+IL_0073:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1261>
-		String_t* L_18 = V_1;
-		String_t* L_19;
-		L_19 = ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F(__this, L_18, NULL);
-		V_3 = L_19;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1261>
+		String_t* L_19 = V_1;
+		String_t* L_20;
+		L_20 = ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F(__this, L_19, NULL);
+		V_3 = L_20;
 	}
 
-IL_0071:
+IL_007d:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1265>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_20 = __this->___PrivateChannels;
-		String_t* L_21 = V_3;
-		NullCheck(L_20);
-		bool L_22;
-		L_22 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_20, L_21, (&V_4), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		if (L_22)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1265>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_21 = __this->___PrivateChannels;
+		String_t* L_22 = V_3;
+		NullCheck(L_21);
+		bool L_23;
+		L_23 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_21, L_22, (&V_4), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
+		V_7 = (bool)((((int32_t)L_23) == ((int32_t)0))? 1 : 0);
+		bool L_24 = V_7;
+		if (!L_24)
 		{
-			goto IL_00b2;
+			goto IL_00c9;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1267>
-		String_t* L_23 = V_3;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_24 = (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1*)il2cpp_codegen_object_new(ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1_il2cpp_TypeInfo_var);
-		ChatChannel__ctor_m0C6E9FBE4AC69157786CA8E3CA9036064E9D99EC(L_24, L_23, NULL);
-		V_4 = L_24;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1268>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_25 = V_4;
-		NullCheck(L_25);
-		ChatChannel_set_IsPrivate_mC15D3E62B0A6EB24F6C1D0C6EC7F7857886D8068_inline(L_25, (bool)1, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1269>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_26 = V_4;
-		int32_t L_27 = __this->___MessageLimit;
-		NullCheck(L_26);
-		L_26->___MessageLimit = L_27;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1270>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_28 = __this->___PrivateChannels;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_29 = V_4;
-		NullCheck(L_29);
-		String_t* L_30 = L_29->___Name;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_31 = V_4;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1267>
+		String_t* L_25 = V_3;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_26 = (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1*)il2cpp_codegen_object_new(ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1_il2cpp_TypeInfo_var);
+		ChatChannel__ctor_m0C6E9FBE4AC69157786CA8E3CA9036064E9D99EC(L_26, L_25, NULL);
+		V_4 = L_26;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1268>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_27 = V_4;
+		NullCheck(L_27);
+		ChatChannel_set_IsPrivate_mC15D3E62B0A6EB24F6C1D0C6EC7F7857886D8068_inline(L_27, (bool)1, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1269>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_28 = V_4;
+		int32_t L_29 = __this->___MessageLimit;
 		NullCheck(L_28);
-		Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026(L_28, L_30, L_31, Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026_RuntimeMethod_var);
+		L_28->___MessageLimit = L_29;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1270>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_30 = __this->___PrivateChannels;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_31 = V_4;
+		NullCheck(L_31);
+		String_t* L_32 = L_31->___Name;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_33 = V_4;
+		NullCheck(L_30);
+		Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026(L_30, L_32, L_33, Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026_RuntimeMethod_var);
 	}
 
-IL_00b2:
+IL_00c9:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1273>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_32 = V_4;
-		String_t* L_33 = V_1;
-		RuntimeObject* L_34 = V_0;
-		int32_t L_35 = V_2;
-		NullCheck(L_32);
-		ChatChannel_Add_m22E0343342399B1C9130CCDD12325EAA80DA9440(L_32, L_33, L_34, L_35, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1274>
-		RuntimeObject* L_36 = __this->___listener;
-		String_t* L_37 = V_1;
-		RuntimeObject* L_38 = V_0;
-		String_t* L_39 = V_3;
-		NullCheck(L_36);
-		InterfaceActionInvoker3< String_t*, RuntimeObject*, String_t* >::Invoke(5, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_36, L_37, L_38, L_39);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1275>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1273>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_34 = V_4;
+		String_t* L_35 = V_1;
+		RuntimeObject* L_36 = V_0;
+		int32_t L_37 = V_2;
+		NullCheck(L_34);
+		ChatChannel_Add_m22E0343342399B1C9130CCDD12325EAA80DA9440(L_34, L_35, L_36, L_37, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1274>
+		RuntimeObject* L_38 = __this->___listener;
+		String_t* L_39 = V_1;
+		RuntimeObject* L_40 = V_0;
+		String_t* L_41 = V_3;
+		NullCheck(L_38);
+		InterfaceActionInvoker3< String_t*, RuntimeObject*, String_t* >::Invoke(5, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_38, L_39, L_40, L_41);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1275>
 		return;
 	}
 }
-// Method Definition Index: 48508
+// Method Definition Index: 48588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB6D4309A64B61FA34E2A7B45E7FAC476C2B1F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5997,8 +7062,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB
 	String_t* V_2 = NULL;
 	int32_t V_3 = 0;
 	ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* V_4 = NULL;
+	bool V_5 = false;
+	bool V_6 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1279>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1279>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_1 = L_0->___Parameters;
@@ -6006,7 +7073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB
 		RuntimeObject* L_2;
 		L_2 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_1, (uint8_t)2, NULL);
 		V_0 = ((ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)Castclass((RuntimeObject*)L_2, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1280>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1280>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
 		NullCheck(L_3);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_4 = L_3->___Parameters;
@@ -6014,7 +7081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB
 		RuntimeObject* L_5;
 		L_5 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_4, (uint8_t)4, NULL);
 		V_1 = ((StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)Castclass((RuntimeObject*)L_5, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1281>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1281>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_6 = ___0_eventData;
 		NullCheck(L_6);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_7 = L_6->___Parameters;
@@ -6022,7 +7089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB
 		RuntimeObject* L_8;
 		L_8 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_7, (uint8_t)1, NULL);
 		V_2 = ((String_t*)CastclassSealed((RuntimeObject*)L_8, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1282>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1282>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_9 = ___0_eventData;
 		NullCheck(L_9);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_10 = L_9->___Parameters;
@@ -6030,63 +7097,71 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB
 		RuntimeObject* L_11;
 		L_11 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_10, (uint8_t)8, NULL);
 		V_3 = ((*(int32_t*)UnBox(L_11, il2cpp_defaults.int32_class)));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1285>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1285>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_12 = __this->___PublicChannels;
 		String_t* L_13 = V_2;
 		NullCheck(L_12);
 		bool L_14;
 		L_14 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_12, L_13, (&V_4), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		if (L_14)
+		V_5 = (bool)((((int32_t)L_14) == ((int32_t)0))? 1 : 0);
+		bool L_15 = V_5;
+		if (!L_15)
 		{
-			goto IL_007e;
+			goto IL_0094;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1287>
-		uint8_t L_15;
-		L_15 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_15) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1287>
+		uint8_t L_16;
+		L_16 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_6 = (bool)((((int32_t)((((int32_t)L_16) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_17 = V_6;
+		if (!L_17)
 		{
-			goto IL_007d;
+			goto IL_0092;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1289>
-		RuntimeObject* L_16 = __this->___listener;
-		String_t* L_17 = V_2;
-		String_t* L_18;
-		L_18 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralD0A9AA74760549C6A732B0EC13F9519F26FC67E4, L_17, _stringLiteralA79561E1B5A82C6D02201984FF815A7AA4012C74, NULL);
-		NullCheck(L_16);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_16, 2, L_18);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1289>
+		RuntimeObject* L_18 = __this->___listener;
+		String_t* L_19 = V_2;
+		String_t* L_20;
+		L_20 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralD0A9AA74760549C6A732B0EC13F9519F26FC67E4, L_19, _stringLiteralA79561E1B5A82C6D02201984FF815A7AA4012C74, NULL);
+		NullCheck(L_18);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_18, 2, L_20);
 	}
 
-IL_007d:
+IL_0092:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1291>
-		return;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1291>
+		goto IL_00ae;
 	}
 
-IL_007e:
+IL_0094:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1294>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_19 = V_4;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_20 = V_1;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_21 = V_0;
-		int32_t L_22 = V_3;
-		NullCheck(L_19);
-		ChatChannel_Add_m3906378A35460170D74185680E5D50946D59FEE9(L_19, L_20, L_21, L_22, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1295>
-		RuntimeObject* L_23 = __this->___listener;
-		String_t* L_24 = V_2;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_25 = V_1;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_26 = V_0;
-		NullCheck(L_23);
-		InterfaceActionInvoker3< String_t*, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(4, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_23, L_24, L_25, L_26);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1296>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1294>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_21 = V_4;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_23 = V_0;
+		int32_t L_24 = V_3;
+		NullCheck(L_21);
+		ChatChannel_Add_m3906378A35460170D74185680E5D50946D59FEE9(L_21, L_22, L_23, L_24, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1295>
+		RuntimeObject* L_25 = __this->___listener;
+		String_t* L_26 = V_2;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_27 = V_1;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_28 = V_0;
+		NullCheck(L_25);
+		InterfaceActionInvoker3< String_t*, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(4, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_25, L_26, L_27, L_28);
+	}
+
+IL_00ae:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1296>
 		return;
 	}
 }
-// Method Definition Index: 48509
+// Method Definition Index: 48589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleSubscribeEvent_m2EDD7435FC9D8267571BAC98A3974D082799509B (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6104,13 +7179,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleSubscribeEvent_m2EDD743
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
 	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* V_1 = NULL;
 	int32_t V_2 = 0;
-	String_t* V_3 = NULL;
-	ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* V_4 = NULL;
-	RuntimeObject* V_5 = NULL;
-	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* V_6 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_7 = NULL;
+	bool V_3 = false;
+	String_t* V_4 = NULL;
+	ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* V_5 = NULL;
+	RuntimeObject* V_6 = NULL;
+	bool V_7 = false;
+	bool V_8 = false;
+	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* V_9 = NULL;
+	bool V_10 = false;
+	bool V_11 = false;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_12 = NULL;
+	bool V_13 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1300>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1300>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_1 = L_0->___Parameters;
@@ -6118,7 +7199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleSubscribeEvent_m2EDD743
 		RuntimeObject* L_2;
 		L_2 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_1, (uint8_t)0, NULL);
 		V_0 = ((StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)Castclass((RuntimeObject*)L_2, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1301>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1301>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
 		NullCheck(L_3);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_4 = L_3->___Parameters;
@@ -6126,167 +7207,183 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleSubscribeEvent_m2EDD743
 		RuntimeObject* L_5;
 		L_5 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_4, (uint8_t)((int32_t)15), NULL);
 		V_1 = ((BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4*)Castclass((RuntimeObject*)L_5, BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1302>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1302>
 		V_2 = 0;
-		goto IL_00d3;
+		goto IL_00fa;
 	}
 
-IL_002c:
+IL_002d:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1304>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1304>
 		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_6 = V_1;
 		int32_t L_7 = V_2;
 		NullCheck(L_6);
 		int32_t L_8 = L_7;
 		uint8_t L_9 = (uint8_t)(L_6)->GetAt(static_cast<il2cpp_array_size_t>(L_8));
-		if (!L_9)
+		V_3 = (bool)L_9;
+		bool L_10 = V_3;
+		if (!L_10)
 		{
-			goto IL_00cf;
+			goto IL_00f5;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1306>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = V_0;
-		int32_t L_11 = V_2;
-		NullCheck(L_10);
-		int32_t L_12 = L_11;
-		String_t* L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
-		V_3 = L_13;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1308>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_14 = __this->___PublicChannels;
-		String_t* L_15 = V_3;
-		NullCheck(L_14);
-		bool L_16;
-		L_16 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_14, L_15, (&V_4), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		if (L_16)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1306>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = V_0;
+		int32_t L_12 = V_2;
+		NullCheck(L_11);
+		int32_t L_13 = L_12;
+		String_t* L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
+		V_4 = L_14;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1308>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_15 = __this->___PublicChannels;
+		String_t* L_16 = V_4;
+		NullCheck(L_15);
+		bool L_17;
+		L_17 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_15, L_16, (&V_5), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
+		V_7 = (bool)((((int32_t)L_17) == ((int32_t)0))? 1 : 0);
+		bool L_18 = V_7;
+		if (!L_18)
 		{
-			goto IL_0071;
+			goto IL_0083;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1310>
-		String_t* L_17 = V_3;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_18 = (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1*)il2cpp_codegen_object_new(ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1_il2cpp_TypeInfo_var);
-		ChatChannel__ctor_m0C6E9FBE4AC69157786CA8E3CA9036064E9D99EC(L_18, L_17, NULL);
-		V_4 = L_18;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1311>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_19 = V_4;
-		int32_t L_20 = __this->___MessageLimit;
-		NullCheck(L_19);
-		L_19->___MessageLimit = L_20;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1312>
-		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_21 = __this->___PublicChannels;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_22 = V_4;
-		NullCheck(L_22);
-		String_t* L_23 = L_22->___Name;
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_24 = V_4;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1310>
+		String_t* L_19 = V_4;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_20 = (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1*)il2cpp_codegen_object_new(ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1_il2cpp_TypeInfo_var);
+		ChatChannel__ctor_m0C6E9FBE4AC69157786CA8E3CA9036064E9D99EC(L_20, L_19, NULL);
+		V_5 = L_20;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1311>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_21 = V_5;
+		int32_t L_22 = __this->___MessageLimit;
 		NullCheck(L_21);
-		Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026(L_21, L_23, L_24, Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026_RuntimeMethod_var);
+		L_21->___MessageLimit = L_22;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1312>
+		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_23 = __this->___PublicChannels;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_24 = V_5;
+		NullCheck(L_24);
+		String_t* L_25 = L_24->___Name;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_26 = V_5;
+		NullCheck(L_23);
+		Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026(L_23, L_25, L_26, Dictionary_2_Add_mCA366AA506232AC4A0775B449E5490FAAE29B026_RuntimeMethod_var);
 	}
 
-IL_0071:
+IL_0083:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1315>
-		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_25 = ___0_eventData;
-		NullCheck(L_25);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_26 = L_25->___Parameters;
-		NullCheck(L_26);
-		bool L_27;
-		L_27 = ParameterDictionary_TryGetValue_mBA556F2681C5F8AAE5058D98EDECAD8AEE154EA5(L_26, (uint8_t)((int32_t)22), (&V_5), NULL);
-		if (!L_27)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1315>
+		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_27 = ___0_eventData;
+		NullCheck(L_27);
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_28 = L_27->___Parameters;
+		NullCheck(L_28);
+		bool L_29;
+		L_29 = ParameterDictionary_TryGetValue_mBA556F2681C5F8AAE5058D98EDECAD8AEE154EA5(L_28, (uint8_t)((int32_t)22), (&V_6), NULL);
+		V_8 = L_29;
+		bool L_30 = V_8;
+		if (!L_30)
 		{
-			goto IL_0094;
+			goto IL_00ad;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1317>
-		RuntimeObject* L_28 = V_5;
-		V_6 = ((Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)IsInstClass((RuntimeObject*)L_28, Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1318>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_29 = V_4;
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_30 = V_6;
-		NullCheck(L_29);
-		ChatChannel_ReadChannelProperties_m8A24F53556005A092A43DD57FD9BF99E3BAB3D35(L_29, L_30, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1317>
+		RuntimeObject* L_31 = V_6;
+		V_9 = ((Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)IsInstClass((RuntimeObject*)L_31, Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1318>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_32 = V_5;
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_33 = V_9;
+		NullCheck(L_32);
+		ChatChannel_ReadChannelProperties_m8A24F53556005A092A43DD57FD9BF99E3BAB3D35(L_32, L_33, NULL);
 	}
 
-IL_0094:
+IL_00ad:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1320>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_31 = V_4;
-		NullCheck(L_31);
-		bool L_32;
-		L_32 = ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline(L_31, NULL);
-		if (!L_32)
-		{
-			goto IL_00ab;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1322>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_33 = V_4;
-		String_t* L_34;
-		L_34 = ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E(__this, NULL);
-		NullCheck(L_33);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1320>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_34 = V_5;
+		NullCheck(L_34);
 		bool L_35;
-		L_35 = ChatChannel_AddSubscriber_m99C1D8A453B5D493031845BD8642B2E21CC52198(L_33, L_34, NULL);
+		L_35 = ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline(L_34, NULL);
+		V_10 = L_35;
+		bool L_36 = V_10;
+		if (!L_36)
+		{
+			goto IL_00ca;
+		}
 	}
-
-IL_00ab:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1324>
-		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_36 = ___0_eventData;
-		NullCheck(L_36);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_37 = L_36->___Parameters;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1322>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_37 = V_5;
+		String_t* L_38;
+		L_38 = ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E(__this, NULL);
 		NullCheck(L_37);
-		bool L_38;
-		L_38 = ParameterDictionary_TryGetValue_mBA556F2681C5F8AAE5058D98EDECAD8AEE154EA5(L_37, (uint8_t)((int32_t)23), (&V_5), NULL);
-		if (!L_38)
-		{
-			goto IL_00cf;
-		}
+		bool L_39;
+		L_39 = ChatChannel_AddSubscriber_m99C1D8A453B5D493031845BD8642B2E21CC52198(L_37, L_38, NULL);
 	}
+
+IL_00ca:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1326>
-		RuntimeObject* L_39 = V_5;
-		V_7 = ((StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)IsInst((RuntimeObject*)L_39, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1327>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_40 = V_4;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_41 = V_7;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1324>
+		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_40 = ___0_eventData;
 		NullCheck(L_40);
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_41 = L_40->___Parameters;
+		NullCheck(L_41);
 		bool L_42;
-		L_42 = ChatChannel_AddSubscribers_mF79231AA897C23C7901F4767C7AD8C917C1DA8B0(L_40, L_41, NULL);
-	}
-
-IL_00cf:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1302>
-		int32_t L_43 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_43, 1));
-	}
-
-IL_00d3:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1302>
-		int32_t L_44 = V_2;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_45 = V_0;
-		NullCheck(L_45);
-		if ((((int32_t)L_44) < ((int32_t)((int32_t)(((RuntimeArray*)L_45)->max_length)))))
+		L_42 = ParameterDictionary_TryGetValue_mBA556F2681C5F8AAE5058D98EDECAD8AEE154EA5(L_41, (uint8_t)((int32_t)23), (&V_6), NULL);
+		V_11 = L_42;
+		bool L_43 = V_11;
+		if (!L_43)
 		{
-			goto IL_002c;
+			goto IL_00f4;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1343>
-		RuntimeObject* L_46 = __this->___listener;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_47 = V_0;
-		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_48 = V_1;
-		NullCheck(L_46);
-		InterfaceActionInvoker2< StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*, BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* >::Invoke(6, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_46, L_47, L_48);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1344>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1326>
+		RuntimeObject* L_44 = V_6;
+		V_12 = ((StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)IsInst((RuntimeObject*)L_44, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1327>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_45 = V_5;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_46 = V_12;
+		NullCheck(L_45);
+		bool L_47;
+		L_47 = ChatChannel_AddSubscribers_mF79231AA897C23C7901F4767C7AD8C917C1DA8B0(L_45, L_46, NULL);
+	}
+
+IL_00f4:
+	{
+	}
+
+IL_00f5:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1302>
+		int32_t L_48 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_48, 1));
+	}
+
+IL_00fa:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1302>
+		int32_t L_49 = V_2;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_50 = V_0;
+		NullCheck(L_50);
+		V_13 = (bool)((((int32_t)L_49) < ((int32_t)((int32_t)(((RuntimeArray*)L_50)->max_length))))? 1 : 0);
+		bool L_51 = V_13;
+		if (L_51)
+		{
+			goto IL_002d;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1343>
+		RuntimeObject* L_52 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_53 = V_0;
+		BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* L_54 = V_1;
+		NullCheck(L_52);
+		InterfaceActionInvoker2< StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*, BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* >::Invoke(6, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_52, L_53, L_54);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1344>
 		return;
 	}
 }
-// Method Definition Index: 48510
+// Method Definition Index: 48590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUnsubscribeEvent_m905C05E19B4D368A7A59D7F1F06A86B251AC7461 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6301,66 +7398,69 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUnsubscribeEvent_m905C0
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
 	int32_t V_1 = 0;
 	String_t* V_2 = NULL;
+	bool V_3 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1349>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1349>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = EventData_get_Item_mACA137D18353A551D1A1B2B18F055E4E0B7A7D02(L_0, (uint8_t)0, NULL);
 		V_0 = ((StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)Castclass((RuntimeObject*)L_1, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1350>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1350>
 		V_1 = 0;
-		goto IL_0033;
+		goto IL_0036;
 	}
 
-IL_0011:
+IL_0012:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1352>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1352>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		String_t* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_2 = L_5;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1353>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1353>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_6 = __this->___PublicChannels;
 		String_t* L_7 = V_2;
 		NullCheck(L_6);
 		bool L_8;
 		L_8 = Dictionary_2_Remove_m952BC71E0A6D29F848B1C6D854B9183CE0A5E83A(L_6, L_7, Dictionary_2_Remove_m952BC71E0A6D29F848B1C6D854B9183CE0A5E83A_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1354>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1354>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_9 = __this->___PublicChannelsUnsubscribing;
 		String_t* L_10 = V_2;
 		NullCheck(L_9);
 		bool L_11;
 		L_11 = HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA(L_9, L_10, HashSet_1_Remove_m97303C08928AB7A9364E7908F34670D92348D9DA_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1350>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1350>
 		int32_t L_12 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_12, 1));
 	}
 
-IL_0033:
+IL_0036:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1350>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1350>
 		int32_t L_13 = V_1;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = V_0;
 		NullCheck(L_14);
-		if ((((int32_t)L_13) < ((int32_t)((int32_t)(((RuntimeArray*)L_14)->max_length)))))
+		V_3 = (bool)((((int32_t)L_13) < ((int32_t)((int32_t)(((RuntimeArray*)L_14)->max_length))))? 1 : 0);
+		bool L_15 = V_3;
+		if (L_15)
 		{
-			goto IL_0011;
+			goto IL_0012;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1357>
-		RuntimeObject* L_15 = __this->___listener;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = V_0;
-		NullCheck(L_15);
-		InterfaceActionInvoker1< StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* >::Invoke(7, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_15, L_16);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1358>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1357>
+		RuntimeObject* L_16 = __this->___listener;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_17 = V_0;
+		NullCheck(L_16);
+		InterfaceActionInvoker1< StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* >::Invoke(7, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_16, L_17);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1358>
 		return;
 	}
 }
-// Method Definition Index: 48511
+// Method Definition Index: 48591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleAuthResponse_m17B43A51ED0F7F675A42E4BAAB273DFCF791C14F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* ___0_operationResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6377,362 +7477,435 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleAuthResponse_m17B43A51E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE1838DC1CF507F5E0B8451D36D23E70F3222CC7F);
 		s_Il2CppMethodInitialized = true;
 	}
-	String_t* V_0 = NULL;
-	int16_t V_1 = 0;
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	String_t* V_7 = NULL;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	int16_t V_11 = 0;
+	int16_t V_12 = 0;
+	bool V_13 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1362>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1362>
 		uint8_t L_0;
 		L_0 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_0) < ((int32_t)3)))
+		V_0 = (bool)((((int32_t)((((int32_t)L_0) < ((int32_t)3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0030;
+			goto IL_003b;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1364>
-		RuntimeObject* L_1 = __this->___listener;
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_2 = ___0_operationResponse;
-		NullCheck(L_2);
-		String_t* L_3;
-		L_3 = OperationResponse_ToStringFull_mB3ECC86F024A425BD00664B6CDFAB67A250D7A23(L_2, NULL);
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_4 = __this->___chatPeer;
-		NullCheck(L_4);
-		String_t* L_5;
-		L_5 = ChatPeer_get_NameServerAddress_m34FD6CEB0A89DF565D492EB7ED3E12CDC17A9797(L_4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1364>
+		RuntimeObject* L_2 = __this->___listener;
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_3 = ___0_operationResponse;
+		NullCheck(L_3);
+		String_t* L_4;
+		L_4 = OperationResponse_ToStringFull_mB3ECC86F024A425BD00664B6CDFAB67A250D7A23(L_3, NULL);
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_5 = __this->___chatPeer;
+		NullCheck(L_5);
 		String_t* L_6;
-		L_6 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_3, _stringLiteral42AFA618414215017E02F8F7EC202AD435873C33, L_5, NULL);
-		NullCheck(L_1);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_1, 3, L_6);
+		L_6 = ChatPeer_get_NameServerAddress_m34FD6CEB0A89DF565D492EB7ED3E12CDC17A9797(L_5, NULL);
+		String_t* L_7;
+		L_7 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_4, _stringLiteral42AFA618414215017E02F8F7EC202AD435873C33, L_6, NULL);
+		NullCheck(L_2);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 3, L_7);
 	}
 
-IL_0030:
+IL_003b:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1367>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_7 = ___0_operationResponse;
-		NullCheck(L_7);
-		int16_t L_8 = L_7->___ReturnCode;
-		if (L_8)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1367>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_8 = ___0_operationResponse;
+		NullCheck(L_8);
+		int16_t L_9 = L_8->___ReturnCode;
+		V_1 = (bool)((((int32_t)L_9) == ((int32_t)0))? 1 : 0);
+		bool L_10 = V_1;
+		if (!L_10)
 		{
-			goto IL_0195;
+			goto IL_01ec;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1369>
-		int32_t L_9;
-		L_9 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		if ((!(((uint32_t)L_9) == ((uint32_t)2))))
-		{
-			goto IL_0131;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1371>
-		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 4, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1372>
-		RuntimeObject* L_10 = __this->___listener;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1369>
 		int32_t L_11;
 		L_11 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		NullCheck(L_10);
-		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_10, L_11);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1374>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_12 = ___0_operationResponse;
-		NullCheck(L_12);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_13 = L_12->___Parameters;
+		V_2 = (bool)((((int32_t)L_11) == ((int32_t)2))? 1 : 0);
+		bool L_12 = V_2;
+		if (!L_12)
+		{
+			goto IL_0178;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1371>
+		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 4, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1372>
+		RuntimeObject* L_13 = __this->___listener;
+		int32_t L_14;
+		L_14 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
 		NullCheck(L_13);
-		bool L_14;
-		L_14 = ParameterDictionary_ContainsKey_m77BEFACAD281084DC233697EF94B7D8B55589AD2(L_13, (uint8_t)((int32_t)221), NULL);
-		if (!L_14)
+		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_13, L_14);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1374>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_15 = ___0_operationResponse;
+		NullCheck(L_15);
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_16 = L_15->___Parameters;
+		NullCheck(L_16);
+		bool L_17;
+		L_17 = ParameterDictionary_ContainsKey_m77BEFACAD281084DC233697EF94B7D8B55589AD2(L_16, (uint8_t)((int32_t)221), NULL);
+		V_3 = L_17;
+		bool L_18 = V_3;
+		if (!L_18)
 		{
-			goto IL_00bd;
+			goto IL_00e6;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1376>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_15;
-		L_15 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		if (L_15)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1376>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_19;
+		L_19 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		V_4 = (bool)((((RuntimeObject*)(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)L_19) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_20 = V_4;
+		if (!L_20)
 		{
-			goto IL_0084;
+			goto IL_00a9;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1378>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_16 = (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)il2cpp_codegen_object_new(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C_il2cpp_TypeInfo_var);
-		AuthenticationValues__ctor_m0EC34240479292C7E3D292072C7AE92D1CEA7C60(L_16, NULL);
-		ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline(__this, L_16, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1378>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_21 = (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)il2cpp_codegen_object_new(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C_il2cpp_TypeInfo_var);
+		AuthenticationValues__ctor_m0EC34240479292C7E3D292072C7AE92D1CEA7C60(L_21, NULL);
+		ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline(__this, L_21, NULL);
 	}
 
-IL_0084:
+IL_00a9:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1380>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_17;
-		L_17 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_18 = ___0_operationResponse;
-		NullCheck(L_18);
-		RuntimeObject* L_19;
-		L_19 = OperationResponse_get_Item_mEB2FFC5B967D14E344238A457F480DCD9E976422(L_18, (uint8_t)((int32_t)221), NULL);
-		NullCheck(L_17);
-		AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline(L_17, L_19, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1382>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_20 = ___0_operationResponse;
-		NullCheck(L_20);
-		RuntimeObject* L_21;
-		L_21 = OperationResponse_get_Item_mEB2FFC5B967D14E344238A457F480DCD9E976422(L_20, (uint8_t)((int32_t)230), NULL);
-		ChatClient_set_FrontendAddress_m11BEEFC4E38A657099753638560CF27FD8BEA8C6_inline(__this, ((String_t*)CastclassSealed((RuntimeObject*)L_21, il2cpp_defaults.string_class)), NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1385>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_22 = __this->___chatPeer;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1380>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_22;
+		L_22 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_23 = ___0_operationResponse;
+		NullCheck(L_23);
+		RuntimeObject* L_24;
+		L_24 = OperationResponse_get_Item_mEB2FFC5B967D14E344238A457F480DCD9E976422(L_23, (uint8_t)((int32_t)221), NULL);
 		NullCheck(L_22);
-		VirtualActionInvoker0::Invoke(8, L_22);
-		goto IL_00d7;
-	}
-
-IL_00bd:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1389>
-		uint8_t L_23;
-		L_23 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_23) < ((int32_t)1)))
-		{
-			goto IL_00d7;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1391>
-		RuntimeObject* L_24 = __this->___listener;
-		NullCheck(L_24);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_24, 1, _stringLiteralE1838DC1CF507F5E0B8451D36D23E70F3222CC7F);
-	}
-
-IL_00d7:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1394>
+		AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline(L_22, L_24, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1382>
 		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_25 = ___0_operationResponse;
 		NullCheck(L_25);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_26 = L_25->___Parameters;
-		NullCheck(L_26);
-		bool L_27;
-		L_27 = ParameterDictionary_ContainsKey_m77BEFACAD281084DC233697EF94B7D8B55589AD2(L_26, (uint8_t)((int32_t)225), NULL);
-		if (!L_27)
-		{
-			goto IL_0248;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1396>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_28 = ___0_operationResponse;
-		NullCheck(L_28);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_29 = L_28->___Parameters;
-		NullCheck(L_29);
-		RuntimeObject* L_30;
-		L_30 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_29, (uint8_t)((int32_t)225), NULL);
-		V_0 = ((String_t*)IsInstSealed((RuntimeObject*)L_30, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1397>
-		String_t* L_31 = V_0;
-		bool L_32;
-		L_32 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_31, NULL);
-		if (L_32)
-		{
-			goto IL_0248;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1399>
-		String_t* L_33 = V_0;
-		ChatClient_set_UserId_m5B177DA1889900F53C5AC0B55FB9C765469970B3(__this, L_33, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1400>
-		RuntimeObject* L_34 = __this->___listener;
-		String_t* L_35;
-		L_35 = ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E(__this, NULL);
-		String_t* L_36;
-		L_36 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralDD40E444A09210A07CFBB05D9F7F4710084F5B77, L_35, NULL);
-		NullCheck(L_34);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_34, 3, L_36);
-		return;
+		RuntimeObject* L_26;
+		L_26 = OperationResponse_get_Item_mEB2FFC5B967D14E344238A457F480DCD9E976422(L_25, (uint8_t)((int32_t)230), NULL);
+		ChatClient_set_FrontendAddress_m11BEEFC4E38A657099753638560CF27FD8BEA8C6_inline(__this, ((String_t*)CastclassSealed((RuntimeObject*)L_26, il2cpp_defaults.string_class)), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1385>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_27 = __this->___chatPeer;
+		NullCheck(L_27);
+		VirtualActionInvoker0::Invoke(8, L_27);
+		goto IL_010e;
 	}
 
-IL_0131:
+IL_00e6:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1404>
-		int32_t L_37;
-		L_37 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		if ((!(((uint32_t)L_37) == ((uint32_t)6))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1389>
+		uint8_t L_28;
+		L_28 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_28) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_29 = V_5;
+		if (!L_29)
 		{
-			goto IL_0248;
+			goto IL_010d;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1406>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1391>
+		RuntimeObject* L_30 = __this->___listener;
+		NullCheck(L_30);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_30, 1, _stringLiteralE1838DC1CF507F5E0B8451D36D23E70F3222CC7F);
+	}
+
+IL_010d:
+	{
+	}
+
+IL_010e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1394>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_31 = ___0_operationResponse;
+		NullCheck(L_31);
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_32 = L_31->___Parameters;
+		NullCheck(L_32);
+		bool L_33;
+		L_33 = ParameterDictionary_ContainsKey_m77BEFACAD281084DC233697EF94B7D8B55589AD2(L_32, (uint8_t)((int32_t)225), NULL);
+		V_6 = L_33;
+		bool L_34 = V_6;
+		if (!L_34)
+		{
+			goto IL_0175;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1396>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_35 = ___0_operationResponse;
+		NullCheck(L_35);
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_36 = L_35->___Parameters;
+		NullCheck(L_36);
+		RuntimeObject* L_37;
+		L_37 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_36, (uint8_t)((int32_t)225), NULL);
+		V_7 = ((String_t*)IsInstSealed((RuntimeObject*)L_37, il2cpp_defaults.string_class));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1397>
+		String_t* L_38 = V_7;
+		bool L_39;
+		L_39 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_38, NULL);
+		V_8 = (bool)((((int32_t)L_39) == ((int32_t)0))? 1 : 0);
+		bool L_40 = V_8;
+		if (!L_40)
+		{
+			goto IL_0174;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1399>
+		String_t* L_41 = V_7;
+		ChatClient_set_UserId_m5B177DA1889900F53C5AC0B55FB9C765469970B3(__this, L_41, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1400>
+		RuntimeObject* L_42 = __this->___listener;
+		String_t* L_43;
+		L_43 = ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E(__this, NULL);
+		String_t* L_44;
+		L_44 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralDD40E444A09210A07CFBB05D9F7F4710084F5B77, L_43, NULL);
+		NullCheck(L_42);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_42, 3, L_44);
+	}
+
+IL_0174:
+	{
+	}
+
+IL_0175:
+	{
+		goto IL_01e6;
+	}
+
+IL_0178:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1404>
+		int32_t L_45;
+		L_45 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		V_9 = (bool)((((int32_t)L_45) == ((int32_t)6))? 1 : 0);
+		bool L_46 = V_9;
+		if (!L_46)
+		{
+			goto IL_01e6;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1406>
 		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 7, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1407>
-		RuntimeObject* L_38 = __this->___listener;
-		int32_t L_39;
-		L_39 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		NullCheck(L_38);
-		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_38, L_39);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1408>
-		RuntimeObject* L_40 = __this->___listener;
-		NullCheck(L_40);
-		InterfaceActionInvoker0::Invoke(2, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_40);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1409>
-		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* L_41 = (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(&__this->___statusToSetWhenConnected);
-		bool L_42;
-		L_42 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline(L_41, Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
-		if (!L_42)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1407>
+		RuntimeObject* L_47 = __this->___listener;
+		int32_t L_48;
+		L_48 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		NullCheck(L_47);
+		InterfaceActionInvoker1< int32_t >::Invoke(3, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_47, L_48);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1408>
+		RuntimeObject* L_49 = __this->___listener;
+		NullCheck(L_49);
+		InterfaceActionInvoker0::Invoke(2, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_49);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1409>
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* L_50 = (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(&__this->___statusToSetWhenConnected);
+		bool L_51;
+		L_51 = Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_inline(L_50, Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var);
+		V_10 = L_51;
+		bool L_52 = V_10;
+		if (!L_52)
 		{
-			goto IL_0248;
+			goto IL_01e5;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1411>
-		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* L_43 = (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(&__this->___statusToSetWhenConnected);
-		int32_t L_44;
-		L_44 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA(L_43, Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
-		RuntimeObject* L_45 = __this->___messageToSetWhenConnected;
-		bool L_46;
-		L_46 = ChatClient_SetOnlineStatus_mA793BD64EB3D9ED4E360835951BD0333424C918D(__this, L_44, L_45, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1412>
-		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* L_47 = (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(&__this->___statusToSetWhenConnected);
-		il2cpp_codegen_initobj(L_47, sizeof(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28));
-		return;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1411>
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* L_53 = (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(&__this->___statusToSetWhenConnected);
+		int32_t L_54;
+		L_54 = Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA(L_53, Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var);
+		RuntimeObject* L_55 = __this->___messageToSetWhenConnected;
+		bool L_56;
+		L_56 = ChatClient_SetOnlineStatus_mA793BD64EB3D9ED4E360835951BD0333424C918D(__this, L_54, L_55, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1412>
+		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* L_57 = (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28*)(&__this->___statusToSetWhenConnected);
+		il2cpp_codegen_initobj(L_57, sizeof(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28));
 	}
 
-IL_0195:
+IL_01e5:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1420>
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_48 = ___0_operationResponse;
-		NullCheck(L_48);
-		int16_t L_49 = L_48->___ReturnCode;
-		V_1 = L_49;
-		int16_t L_50 = V_1;
-		if ((((int32_t)L_50) == ((int32_t)((int32_t)-3))))
-		{
-			goto IL_01ef;
-		}
-	}
-	{
-		int16_t L_51 = V_1;
-		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_51, ((int32_t)32753))))
-		{
-			case 0:
-			{
-				goto IL_01f9;
-			}
-			case 1:
-			{
-				goto IL_0201;
-			}
-			case 2:
-			{
-				goto IL_01d2;
-			}
-			case 3:
-			{
-				goto IL_01dc;
-			}
-			case 4:
-			{
-				goto IL_01e6;
-			}
-		}
-	}
-	{
-		int16_t L_52 = V_1;
-		if ((!(((uint32_t)L_52) == ((uint32_t)((int32_t)32767)))))
-		{
-			goto IL_0201;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1423>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 7, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1424>
-		goto IL_0201;
-	}
-
-IL_01d2:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1426>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)11), NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1427>
-		goto IL_0201;
-	}
-
-IL_01dc:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1429>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)9), NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1430>
-		goto IL_0201;
 	}
 
 IL_01e6:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1432>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 8, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1433>
-		goto IL_0201;
+		goto IL_02c4;
 	}
 
-IL_01ef:
+IL_01ec:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1435>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)10), NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1436>
-		goto IL_0201;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1420>
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_58 = ___0_operationResponse;
+		NullCheck(L_58);
+		int16_t L_59 = L_58->___ReturnCode;
+		V_12 = L_59;
+		int16_t L_60 = V_12;
+		V_11 = L_60;
+		int16_t L_61 = V_11;
+		if ((((int32_t)L_61) == ((int32_t)((int32_t)-3))))
+		{
+			goto IL_0259;
+		}
 	}
-
-IL_01f9:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1438>
-		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)12), NULL);
+		goto IL_0201;
 	}
 
 IL_0201:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1442>
-		uint8_t L_53;
-		L_53 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_53) < ((int32_t)1)))
+		int16_t L_62 = V_11;
+		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_62, ((int32_t)32753))))
 		{
-			goto IL_023c;
+			case 0:
+			{
+				goto IL_0264;
+			}
+			case 1:
+			{
+				goto IL_026f;
+			}
+			case 2:
+			{
+				goto IL_0239;
+			}
+			case 3:
+			{
+				goto IL_0244;
+			}
+			case 4:
+			{
+				goto IL_024f;
+			}
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1444>
-		RuntimeObject* L_54 = __this->___listener;
-		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_55 = ___0_operationResponse;
-		NullCheck(L_55);
-		String_t* L_56;
-		L_56 = OperationResponse_ToStringFull_mB3ECC86F024A425BD00664B6CDFAB67A250D7A23(L_55, NULL);
-		int32_t L_57;
-		L_57 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
-		int32_t L_58 = L_57;
-		RuntimeObject* L_59 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_58);
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_60 = __this->___chatPeer;
-		NullCheck(L_60);
-		String_t* L_61;
-		L_61 = PhotonPeer_get_ServerAddress_m457DB66B44D79E66E4328D51C40EA5E2DB481108(L_60, NULL);
-		String_t* L_62;
-		L_62 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral7526A376267BC0A823CE3D35016583D70B156712, L_56, L_59, L_61, NULL);
-		NullCheck(L_54);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_54, 1, L_62);
+		goto IL_0224;
 	}
 
-IL_023c:
+IL_0224:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1448>
-		int32_t L_63;
-		L_63 = ChatClient_get_DisconnectedCause_mE36D0EDB819FF001973B6D318B1DB4CD7C1CC9B6_inline(__this, NULL);
-		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, L_63, NULL);
+		int16_t L_63 = V_11;
+		if ((((int32_t)L_63) == ((int32_t)((int32_t)32767))))
+		{
+			goto IL_022f;
+		}
+	}
+	{
+		goto IL_026f;
 	}
 
-IL_0248:
+IL_022f:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1450>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1423>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 7, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1424>
+		goto IL_026f;
+	}
+
+IL_0239:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1426>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)11), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1427>
+		goto IL_026f;
+	}
+
+IL_0244:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1429>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)9), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1430>
+		goto IL_026f;
+	}
+
+IL_024f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1432>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, 8, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1433>
+		goto IL_026f;
+	}
+
+IL_0259:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1435>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)10), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1436>
+		goto IL_026f;
+	}
+
+IL_0264:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1438>
+		ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline(__this, ((int32_t)12), NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1439>
+		goto IL_026f;
+	}
+
+IL_026f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1442>
+		uint8_t L_64;
+		L_64 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_13 = (bool)((((int32_t)((((int32_t)L_64) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_65 = V_13;
+		if (!L_65)
+		{
+			goto IL_02b6;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1444>
+		RuntimeObject* L_66 = __this->___listener;
+		OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* L_67 = ___0_operationResponse;
+		NullCheck(L_67);
+		String_t* L_68;
+		L_68 = OperationResponse_ToStringFull_mB3ECC86F024A425BD00664B6CDFAB67A250D7A23(L_67, NULL);
+		int32_t L_69;
+		L_69 = ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline(__this, NULL);
+		int32_t L_70 = L_69;
+		RuntimeObject* L_71 = Box(ChatState_t051505084374FEB7E666EAF9C3D7A8DFBA5119D6_il2cpp_TypeInfo_var, &L_70);
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_72 = __this->___chatPeer;
+		NullCheck(L_72);
+		String_t* L_73;
+		L_73 = PhotonPeer_get_ServerAddress_m457DB66B44D79E66E4328D51C40EA5E2DB481108(L_72, NULL);
+		String_t* L_74;
+		L_74 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral7526A376267BC0A823CE3D35016583D70B156712, L_68, L_71, L_73, NULL);
+		NullCheck(L_66);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_66, 1, L_74);
+	}
+
+IL_02b6:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1448>
+		int32_t L_75;
+		L_75 = ChatClient_get_DisconnectedCause_mE36D0EDB819FF001973B6D318B1DB4CD7C1CC9B6_inline(__this, NULL);
+		ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52(__this, L_75, NULL);
+	}
+
+IL_02c4:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1450>
 		return;
 	}
 }
-// Method Definition Index: 48512
+// Method Definition Index: 48592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleStatusUpdate_m10E9C9324C8204A4887C67648683EA3A49C556F7 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6745,8 +7918,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleStatusUpdate_m10E9C9324
 	int32_t V_1 = 0;
 	RuntimeObject* V_2 = NULL;
 	bool V_3 = false;
+	bool V_4 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1454>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1454>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_1 = L_0->___Parameters;
@@ -6754,7 +7928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleStatusUpdate_m10E9C9324
 		RuntimeObject* L_2;
 		L_2 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_1, (uint8_t)5, NULL);
 		V_0 = ((String_t*)CastclassSealed((RuntimeObject*)L_2, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1455>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1455>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
 		NullCheck(L_3);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_4 = L_3->___Parameters;
@@ -6762,9 +7936,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleStatusUpdate_m10E9C9324
 		RuntimeObject* L_5;
 		L_5 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_4, (uint8_t)((int32_t)10), NULL);
 		V_1 = ((*(int32_t*)UnBox(L_5, il2cpp_defaults.int32_class)));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1457>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1457>
 		V_2 = NULL;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1458>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1458>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_6 = ___0_eventData;
 		NullCheck(L_6);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_7 = L_6->___Parameters;
@@ -6772,39 +7946,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleStatusUpdate_m10E9C9324
 		bool L_8;
 		L_8 = ParameterDictionary_ContainsKey_m77BEFACAD281084DC233697EF94B7D8B55589AD2(L_7, (uint8_t)3, NULL);
 		V_3 = L_8;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1459>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1459>
 		bool L_9 = V_3;
-		if (!L_9)
+		V_4 = L_9;
+		bool L_10 = V_4;
+		if (!L_10)
 		{
-			goto IL_0044;
+			goto IL_004b;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1461>
-		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_10 = ___0_eventData;
-		NullCheck(L_10);
-		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_11 = L_10->___Parameters;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1461>
+		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_11 = ___0_eventData;
 		NullCheck(L_11);
-		RuntimeObject* L_12;
-		L_12 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_11, (uint8_t)3, NULL);
-		V_2 = L_12;
+		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_12 = L_11->___Parameters;
+		NullCheck(L_12);
+		RuntimeObject* L_13;
+		L_13 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_12, (uint8_t)3, NULL);
+		V_2 = L_13;
 	}
 
-IL_0044:
+IL_004b:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1464>
-		RuntimeObject* L_13 = __this->___listener;
-		String_t* L_14 = V_0;
-		int32_t L_15 = V_1;
-		bool L_16 = V_3;
-		RuntimeObject* L_17 = V_2;
-		NullCheck(L_13);
-		InterfaceActionInvoker4< String_t*, int32_t, bool, RuntimeObject* >::Invoke(8, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_13, L_14, L_15, L_16, L_17);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1465>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1464>
+		RuntimeObject* L_14 = __this->___listener;
+		String_t* L_15 = V_0;
+		int32_t L_16 = V_1;
+		bool L_17 = V_3;
+		RuntimeObject* L_18 = V_2;
+		NullCheck(L_14);
+		InterfaceActionInvoker4< String_t*, int32_t, bool, RuntimeObject* >::Invoke(8, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_14, L_15, L_16, L_17, L_18);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1465>
 		return;
 	}
 }
-// Method Definition Index: 48513
+// Method Definition Index: 48593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectToFrontEnd_m879F8C0ABFB420829231375D08CB8F31DD4A11D0 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6816,76 +7992,95 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectToFrontEnd_m879F8C0ABF
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA86D8D1F03036F57943C7BD6C7E29797408CE238);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1469>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1469>
 		ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline(__this, 6, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1471>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1471>
 		uint8_t L_0;
 		L_0 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_0) < ((int32_t)3)))
+		V_0 = (bool)((((int32_t)((((int32_t)L_0) < ((int32_t)3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_002c;
+			goto IL_0038;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1473>
-		RuntimeObject* L_1 = __this->___listener;
-		String_t* L_2;
-		L_2 = ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline(__this, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1473>
+		RuntimeObject* L_2 = __this->___listener;
 		String_t* L_3;
-		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7C82A48E16CE752BFB1F18655003416C01CCB606, L_2, NULL);
-		NullCheck(L_1);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_1, 3, L_3);
+		L_3 = ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline(__this, NULL);
+		String_t* L_4;
+		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7C82A48E16CE752BFB1F18655003416C01CCB606, L_3, NULL);
+		NullCheck(L_2);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_2, 3, L_4);
 	}
 
-IL_002c:
+IL_0038:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1484>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_4 = __this->___chatPeer;
-		String_t* L_5;
-		L_5 = ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline(__this, NULL);
-		String_t* L_6 = __this->___ProxyServerAddress;
-		NullCheck(L_4);
-		bool L_7;
-		L_7 = VirtualFuncInvoker5< bool, String_t*, String_t*, String_t*, RuntimeObject*, RuntimeObject* >::Invoke(7, L_4, L_5, L_6, _stringLiteral73442709295E0907BAB5FF689567842B1B7D4C01, NULL, NULL);
-		if (L_7)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1484>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_5 = __this->___chatPeer;
+		String_t* L_6;
+		L_6 = ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline(__this, NULL);
+		String_t* L_7 = __this->___ProxyServerAddress;
+		NullCheck(L_5);
+		bool L_8;
+		L_8 = VirtualFuncInvoker5< bool, String_t*, String_t*, String_t*, RuntimeObject*, RuntimeObject* >::Invoke(7, L_5, L_6, L_7, _stringLiteral73442709295E0907BAB5FF689567842B1B7D4C01, NULL, NULL);
+		V_1 = (bool)((((int32_t)L_8) == ((int32_t)0))? 1 : 0);
+		bool L_9 = V_1;
+		if (!L_9)
 		{
-			goto IL_0073;
+			goto IL_0091;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1486>
-		uint8_t L_8;
-		L_8 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_8) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1486>
+		uint8_t L_10;
+		L_10 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_10) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_11 = V_2;
+		if (!L_11)
 		{
-			goto IL_0071;
+			goto IL_008d;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1488>
-		RuntimeObject* L_9 = __this->___listener;
-		String_t* L_10;
-		L_10 = ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline(__this, NULL);
-		String_t* L_11;
-		L_11 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralA86D8D1F03036F57943C7BD6C7E29797408CE238, L_10, NULL);
-		NullCheck(L_9);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_9, 1, L_11);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1488>
+		RuntimeObject* L_12 = __this->___listener;
+		String_t* L_13;
+		L_13 = ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline(__this, NULL);
+		String_t* L_14;
+		L_14 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralA86D8D1F03036F57943C7BD6C7E29797408CE238, L_13, NULL);
+		NullCheck(L_12);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_12, 1, L_14);
 	}
 
-IL_0071:
+IL_008d:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1490>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1490>
+		V_3 = (bool)0;
+		goto IL_0095;
 	}
 
-IL_0073:
+IL_0091:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1493>
-		return (bool)1;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1493>
+		V_3 = (bool)1;
+		goto IL_0095;
+	}
+
+IL_0095:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1494>
+		bool L_15 = V_3;
+		return L_15;
 	}
 }
-// Method Definition Index: 48514
+// Method Definition Index: 48594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AuthenticateOnFrontEnd_mA7969A2B821D59B68D4475A328952E8971E922DE (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6901,118 +8096,144 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AuthenticateOnFrontEnd_mA7969
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral68981F620708F9798BD0661A61FE7446FBE99BB1);
 		s_Il2CppMethodInitialized = true;
 	}
-	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
+	bool V_0 = false;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_4 = NULL;
+	bool V_5 = false;
+	bool V_6 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1498>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1498>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0;
 		L_0 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		if (!L_0)
+		V_0 = (bool)((!(((RuntimeObject*)(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)L_0) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0080;
+			goto IL_00af;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1500>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_1;
-		L_1 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
-		NullCheck(L_1);
-		RuntimeObject* L_2;
-		L_2 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_1, NULL);
-		if (L_2)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1500>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_2;
+		L_2 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		NullCheck(L_2);
+		RuntimeObject* L_3;
+		L_3 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_2, NULL);
+		V_1 = (bool)((((RuntimeObject*)(RuntimeObject*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
 		{
-			goto IL_0031;
+			goto IL_0050;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1502>
-		uint8_t L_3;
-		L_3 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_3) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1502>
+		uint8_t L_5;
+		L_5 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_2 = (bool)((((int32_t)((((int32_t)L_5) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_6 = V_2;
+		if (!L_6)
 		{
-			goto IL_002f;
+			goto IL_0049;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1504>
-		RuntimeObject* L_4 = __this->___listener;
-		NullCheck(L_4);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_4, 1, _stringLiteral42A6CA5262FE7F016760CB20C16434E6FB8F41F9);
-	}
-
-IL_002f:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1506>
-		return (bool)0;
-	}
-
-IL_0031:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1510>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_5 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_5, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_6 = L_5;
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_7;
-		L_7 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1504>
+		RuntimeObject* L_7 = __this->___listener;
 		NullCheck(L_7);
-		RuntimeObject* L_8;
-		L_8 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_7, NULL);
-		NullCheck(L_6);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_6, (uint8_t)((int32_t)221), L_8, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		V_0 = L_6;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1511>
-		int32_t L_9 = __this->___PrivateChatHistoryLength;
-		if ((((int32_t)L_9) <= ((int32_t)(-1))))
-		{
-			goto IL_0069;
-		}
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_7, 1, _stringLiteral42A6CA5262FE7F016760CB20C16434E6FB8F41F9);
 	}
+
+IL_0049:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1513>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_10 = V_0;
-		int32_t L_11 = __this->___PrivateChatHistoryLength;
-		int32_t L_12 = L_11;
-		RuntimeObject* L_13 = Box(il2cpp_defaults.int32_class, &L_12);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1506>
+		V_3 = (bool)0;
+		goto IL_00da;
+	}
+
+IL_0050:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1510>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_8 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_8, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_9 = L_8;
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_10;
+		L_10 = ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline(__this, NULL);
 		NullCheck(L_10);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_10, (uint8_t)((int32_t)14), L_13, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-	}
-
-IL_0069:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1516>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_14 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_15 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_16 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
-		NullCheck(L_14);
-		bool L_17;
-		L_17 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_14, (uint8_t)((int32_t)230), L_15, L_16);
-		return L_17;
-	}
-
-IL_0080:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1521>
-		uint8_t L_18;
-		L_18 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_18) < ((int32_t)1)))
+		RuntimeObject* L_11;
+		L_11 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_10, NULL);
+		NullCheck(L_9);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_9, (uint8_t)((int32_t)221), L_11, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		V_4 = L_9;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1511>
+		int32_t L_12 = __this->___PrivateChatHistoryLength;
+		V_5 = (bool)((((int32_t)L_12) > ((int32_t)(-1)))? 1 : 0);
+		bool L_13 = V_5;
+		if (!L_13)
 		{
-			goto IL_009a;
+			goto IL_0095;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1523>
-		RuntimeObject* L_19 = __this->___listener;
-		NullCheck(L_19);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_19, 1, _stringLiteral68981F620708F9798BD0661A61FE7446FBE99BB1);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1513>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_14 = V_4;
+		int32_t L_15 = __this->___PrivateChatHistoryLength;
+		int32_t L_16 = L_15;
+		RuntimeObject* L_17 = Box(il2cpp_defaults.int32_class, &L_16);
+		NullCheck(L_14);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_14, (uint8_t)((int32_t)14), L_17, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
 	}
 
-IL_009a:
+IL_0095:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1525>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1516>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_18 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_19 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_20 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_18);
+		bool L_21;
+		L_21 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_18, (uint8_t)((int32_t)230), L_19, L_20);
+		V_3 = L_21;
+		goto IL_00da;
+	}
+
+IL_00af:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1521>
+		uint8_t L_22;
+		L_22 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_6 = (bool)((((int32_t)((((int32_t)L_22) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_23 = V_6;
+		if (!L_23)
+		{
+			goto IL_00d6;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1523>
+		RuntimeObject* L_24 = __this->___listener;
+		NullCheck(L_24);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_24, 1, _stringLiteral68981F620708F9798BD0661A61FE7446FBE99BB1);
+	}
+
+IL_00d6:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1525>
+		V_3 = (bool)0;
+		goto IL_00da;
+	}
+
+IL_00da:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1527>
+		bool L_25 = V_3;
+		return L_25;
 	}
 }
-// Method Definition Index: 48515
+// Method Definition Index: 48595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserUnsubscribedEvent_m6E44BD9864D21DF5BEF3F5585D2DA5E7C152D046 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7028,8 +8249,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserUnsubscribedEvent_m
 	String_t* V_0 = NULL;
 	String_t* V_1 = NULL;
 	ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* V_2 = NULL;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1531>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1531>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_1 = L_0->___Parameters;
@@ -7037,7 +8264,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserUnsubscribedEvent_m
 		RuntimeObject* L_2;
 		L_2 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_1, (uint8_t)1, NULL);
 		V_0 = ((String_t*)IsInstSealed((RuntimeObject*)L_2, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1532>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1532>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
 		NullCheck(L_3);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_4 = L_3->___Parameters;
@@ -7045,116 +8272,144 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserUnsubscribedEvent_m
 		RuntimeObject* L_5;
 		L_5 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_4, (uint8_t)((int32_t)225), NULL);
 		V_1 = ((String_t*)IsInstSealed((RuntimeObject*)L_5, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1534>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1534>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_6 = __this->___PublicChannels;
 		String_t* L_7 = V_0;
 		NullCheck(L_6);
 		bool L_8;
 		L_8 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_6, L_7, (&V_2), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		if (!L_8)
+		V_3 = L_8;
+		bool L_9 = V_3;
+		if (!L_9)
 		{
-			goto IL_008d;
+			goto IL_00bf;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1536>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_9 = V_2;
-		NullCheck(L_9);
-		bool L_10;
-		L_10 = ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline(L_9, NULL);
-		if (L_10)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1536>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_10 = V_2;
+		NullCheck(L_10);
+		bool L_11;
+		L_11 = ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline(L_10, NULL);
+		V_4 = (bool)((((int32_t)L_11) == ((int32_t)0))? 1 : 0);
+		bool L_12 = V_4;
+		if (!L_12)
 		{
-			goto IL_0061;
+			goto IL_007d;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1538>
-		uint8_t L_11;
-		L_11 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_11) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1538>
+		uint8_t L_13;
+		L_13 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_13) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_14 = V_5;
+		if (!L_14)
 		{
-			goto IL_0061;
+			goto IL_007c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1540>
-		RuntimeObject* L_12 = __this->___listener;
-		String_t* L_13 = V_0;
-		String_t* L_14 = V_1;
-		String_t* L_15;
-		L_15 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralA82892C79BF7C320FA3BFB55413015A1377BBF81, L_13, L_14, NULL);
-		NullCheck(L_12);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_12, 2, L_15);
-	}
-
-IL_0061:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1543>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_16 = V_2;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1540>
+		RuntimeObject* L_15 = __this->___listener;
+		String_t* L_16 = V_0;
 		String_t* L_17 = V_1;
-		NullCheck(L_16);
-		bool L_18;
-		L_18 = ChatChannel_RemoveSubscriber_m77F6089D6E0D3158EB99FD8696CF4314F5D4E73D(L_16, L_17, NULL);
-		if (L_18)
-		{
-			goto IL_00ae;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1545>
-		uint8_t L_19;
-		L_19 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_19) < ((int32_t)2)))
-		{
-			goto IL_00ae;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1547>
-		RuntimeObject* L_20 = __this->___listener;
-		String_t* L_21 = V_0;
-		String_t* L_22 = V_1;
-		String_t* L_23;
-		L_23 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralF6F2030C05AC7B710C8B0CB6D94308D4BD9FB5DF, L_21, L_22, NULL);
-		NullCheck(L_20);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_20, 2, L_23);
-		goto IL_00ae;
+		String_t* L_18;
+		L_18 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralA82892C79BF7C320FA3BFB55413015A1377BBF81, L_16, L_17, NULL);
+		NullCheck(L_15);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_15, 2, L_18);
 	}
 
-IL_008d:
+IL_007c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1553>
-		uint8_t L_24;
-		L_24 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_24) < ((int32_t)2)))
+	}
+
+IL_007d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1543>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_19 = V_2;
+		String_t* L_20 = V_1;
+		NullCheck(L_19);
+		bool L_21;
+		L_21 = ChatChannel_RemoveSubscriber_m77F6089D6E0D3158EB99FD8696CF4314F5D4E73D(L_19, L_20, NULL);
+		V_6 = (bool)((((int32_t)L_21) == ((int32_t)0))? 1 : 0);
+		bool L_22 = V_6;
+		if (!L_22)
 		{
-			goto IL_00ae;
+			goto IL_00bc;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1555>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1545>
+		uint8_t L_23;
+		L_23 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_7 = (bool)((((int32_t)((((int32_t)L_23) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_24 = V_7;
+		if (!L_24)
+		{
+			goto IL_00bb;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1547>
 		RuntimeObject* L_25 = __this->___listener;
 		String_t* L_26 = V_0;
 		String_t* L_27 = V_1;
 		String_t* L_28;
-		L_28 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralD54B5B3649F0373103D67B6B7A8A9F07DB0123C4, L_26, L_27, NULL);
+		L_28 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralF6F2030C05AC7B710C8B0CB6D94308D4BD9FB5DF, L_26, L_27, NULL);
 		NullCheck(L_25);
 		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_25, 2, L_28);
 	}
 
-IL_00ae:
+IL_00bb:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1558>
-		RuntimeObject* L_29 = __this->___listener;
-		String_t* L_30 = V_0;
-		String_t* L_31 = V_1;
-		NullCheck(L_29);
-		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(10, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_29, L_30, L_31);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1559>
+	}
+
+IL_00bc:
+	{
+		goto IL_00ee;
+	}
+
+IL_00bf:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1553>
+		uint8_t L_29;
+		L_29 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_8 = (bool)((((int32_t)((((int32_t)L_29) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_30 = V_8;
+		if (!L_30)
+		{
+			goto IL_00ed;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1555>
+		RuntimeObject* L_31 = __this->___listener;
+		String_t* L_32 = V_0;
+		String_t* L_33 = V_1;
+		String_t* L_34;
+		L_34 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralD54B5B3649F0373103D67B6B7A8A9F07DB0123C4, L_32, L_33, NULL);
+		NullCheck(L_31);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_31, 2, L_34);
+	}
+
+IL_00ed:
+	{
+	}
+
+IL_00ee:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1558>
+		RuntimeObject* L_35 = __this->___listener;
+		String_t* L_36 = V_0;
+		String_t* L_37 = V_1;
+		NullCheck(L_35);
+		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(10, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_35, L_36, L_37);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1559>
 		return;
 	}
 }
-// Method Definition Index: 48516
+// Method Definition Index: 48596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserSubscribedEvent_m8F835E34839B69198C7D0067421F1B2BD30A48AC (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7172,8 +8427,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserSubscribedEvent_m8F
 	String_t* V_0 = NULL;
 	String_t* V_1 = NULL;
 	ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* V_2 = NULL;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	int32_t G_B12_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1563>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1563>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_0 = ___0_eventData;
 		NullCheck(L_0);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_1 = L_0->___Parameters;
@@ -7181,7 +8445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserSubscribedEvent_m8F
 		RuntimeObject* L_2;
 		L_2 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_1, (uint8_t)1, NULL);
 		V_0 = ((String_t*)IsInstSealed((RuntimeObject*)L_2, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1564>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1564>
 		EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* L_3 = ___0_eventData;
 		NullCheck(L_3);
 		ParameterDictionary_t86A1C953B1E7C11059D12BAAE61E0021124E08F3* L_4 = L_3->___Parameters;
@@ -7189,178 +8453,225 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserSubscribedEvent_m8F
 		RuntimeObject* L_5;
 		L_5 = ParameterDictionary_get_Item_m8B3EF326A2553ED8DD48D04B1378B38B341544A3(L_4, (uint8_t)((int32_t)225), NULL);
 		V_1 = ((String_t*)IsInstSealed((RuntimeObject*)L_5, il2cpp_defaults.string_class));
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1566>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1566>
 		Dictionary_2_tF780F25E987C96A8AEDC6E8A3F4AB29019427B9E* L_6 = __this->___PublicChannels;
 		String_t* L_7 = V_0;
 		NullCheck(L_6);
 		bool L_8;
 		L_8 = Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574(L_6, L_7, (&V_2), Dictionary_2_TryGetValue_m3719415B76D0DF0B0491A2A81DFF2713B7F96574_RuntimeMethod_var);
-		if (!L_8)
+		V_3 = L_8;
+		bool L_9 = V_3;
+		if (!L_9)
 		{
-			goto IL_00ec;
+			goto IL_012f;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1568>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_9 = V_2;
-		NullCheck(L_9);
-		bool L_10;
-		L_10 = ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline(L_9, NULL);
-		if (L_10)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1568>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_10 = V_2;
+		NullCheck(L_10);
+		bool L_11;
+		L_11 = ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline(L_10, NULL);
+		V_4 = (bool)((((int32_t)L_11) == ((int32_t)0))? 1 : 0);
+		bool L_12 = V_4;
+		if (!L_12)
 		{
-			goto IL_0064;
+			goto IL_007d;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1570>
-		uint8_t L_11;
-		L_11 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_11) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1570>
+		uint8_t L_13;
+		L_13 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_5 = (bool)((((int32_t)((((int32_t)L_13) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_14 = V_5;
+		if (!L_14)
 		{
-			goto IL_0064;
+			goto IL_007c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1572>
-		RuntimeObject* L_12 = __this->___listener;
-		String_t* L_13 = V_0;
-		String_t* L_14 = V_1;
-		String_t* L_15;
-		L_15 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral85018838CBFFFF831100BA4A581064C1BA9AC7EE, L_13, L_14, NULL);
-		NullCheck(L_12);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_12, 2, L_15);
-	}
-
-IL_0064:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1575>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_16 = V_2;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1572>
+		RuntimeObject* L_15 = __this->___listener;
+		String_t* L_16 = V_0;
 		String_t* L_17 = V_1;
-		NullCheck(L_16);
-		bool L_18;
-		L_18 = ChatChannel_AddSubscriber_m99C1D8A453B5D493031845BD8642B2E21CC52198(L_16, L_17, NULL);
-		if (L_18)
-		{
-			goto IL_0093;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1577>
-		uint8_t L_19;
-		L_19 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_19) < ((int32_t)2)))
-		{
-			goto IL_010d;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1579>
-		RuntimeObject* L_20 = __this->___listener;
-		String_t* L_21 = V_0;
-		String_t* L_22 = V_1;
-		String_t* L_23;
-		L_23 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral28109F85CA80D67F72ADABF892ADE86ECA967B8C, L_21, L_22, NULL);
-		NullCheck(L_20);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_20, 2, L_23);
-		goto IL_010d;
+		String_t* L_18;
+		L_18 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral85018838CBFFFF831100BA4A581064C1BA9AC7EE, L_16, L_17, NULL);
+		NullCheck(L_15);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_15, 2, L_18);
 	}
 
-IL_0093:
+IL_007c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1582>
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_24 = V_2;
-		NullCheck(L_24);
-		int32_t L_25;
-		L_25 = ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline(L_24, NULL);
-		if ((((int32_t)L_25) <= ((int32_t)0)))
+	}
+
+IL_007d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1575>
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_19 = V_2;
+		String_t* L_20 = V_1;
+		NullCheck(L_19);
+		bool L_21;
+		L_21 = ChatChannel_AddSubscriber_m99C1D8A453B5D493031845BD8642B2E21CC52198(L_19, L_20, NULL);
+		V_6 = (bool)((((int32_t)L_21) == ((int32_t)0))? 1 : 0);
+		bool L_22 = V_6;
+		if (!L_22)
 		{
-			goto IL_010d;
+			goto IL_00be;
 		}
 	}
 	{
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_26 = V_2;
-		NullCheck(L_26);
-		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_27 = L_26->___Subscribers;
-		NullCheck(L_27);
-		int32_t L_28;
-		L_28 = HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_inline(L_27, HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1577>
+		uint8_t L_23;
+		L_23 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_7 = (bool)((((int32_t)((((int32_t)L_23) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_24 = V_7;
+		if (!L_24)
+		{
+			goto IL_00bb;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1579>
+		RuntimeObject* L_25 = __this->___listener;
+		String_t* L_26 = V_0;
+		String_t* L_27 = V_1;
+		String_t* L_28;
+		L_28 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral28109F85CA80D67F72ADABF892ADE86ECA967B8C, L_26, L_27, NULL);
+		NullCheck(L_25);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_25, 2, L_28);
+	}
+
+IL_00bb:
+	{
+		goto IL_012c;
+	}
+
+IL_00be:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1582>
 		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_29 = V_2;
 		NullCheck(L_29);
 		int32_t L_30;
 		L_30 = ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline(L_29, NULL);
-		if ((((int32_t)L_28) <= ((int32_t)L_30)))
+		if ((((int32_t)L_30) <= ((int32_t)0)))
 		{
-			goto IL_010d;
+			goto IL_00dc;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1584>
-		uint8_t L_31;
-		L_31 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_31) < ((int32_t)2)))
-		{
-			goto IL_010d;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1586>
-		RuntimeObject* L_32 = __this->___listener;
-		String_t* L_33 = V_0;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_31 = V_2;
+		NullCheck(L_31);
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_32 = L_31->___Subscribers;
+		NullCheck(L_32);
+		int32_t L_33;
+		L_33 = HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_inline(L_32, HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_RuntimeMethod_var);
 		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_34 = V_2;
 		NullCheck(L_34);
-		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_35 = L_34->___Subscribers;
-		NullCheck(L_35);
-		int32_t L_36;
-		L_36 = HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_inline(L_35, HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_RuntimeMethod_var);
-		int32_t L_37 = L_36;
-		RuntimeObject* L_38 = Box(il2cpp_defaults.int32_class, &L_37);
-		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_39 = V_2;
-		NullCheck(L_39);
-		int32_t L_40;
-		L_40 = ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline(L_39, NULL);
-		int32_t L_41 = L_40;
-		RuntimeObject* L_42 = Box(il2cpp_defaults.int32_class, &L_41);
-		String_t* L_43;
-		L_43 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral4957F3CE2FF4C82ED66B5502CC44FA8717A4B529, L_33, L_38, L_42, NULL);
-		NullCheck(L_32);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_32, 2, L_43);
-		goto IL_010d;
+		int32_t L_35;
+		L_35 = ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline(L_34, NULL);
+		G_B12_0 = ((((int32_t)L_33) > ((int32_t)L_35))? 1 : 0);
+		goto IL_00dd;
 	}
 
-IL_00ec:
+IL_00dc:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1600>
-		uint8_t L_44;
-		L_44 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_44) < ((int32_t)2)))
+		G_B12_0 = 0;
+	}
+
+IL_00dd:
+	{
+		V_8 = (bool)G_B12_0;
+		bool L_36 = V_8;
+		if (!L_36)
 		{
-			goto IL_010d;
+			goto IL_012c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1602>
-		RuntimeObject* L_45 = __this->___listener;
-		String_t* L_46 = V_0;
-		String_t* L_47 = V_1;
-		String_t* L_48;
-		L_48 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralFADBBFF7D5071017209F0FAF588398FCC772AD53, L_46, L_47, NULL);
-		NullCheck(L_45);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_45, 2, L_48);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1584>
+		uint8_t L_37;
+		L_37 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_9 = (bool)((((int32_t)((((int32_t)L_37) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_38 = V_9;
+		if (!L_38)
+		{
+			goto IL_012b;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1586>
+		RuntimeObject* L_39 = __this->___listener;
+		String_t* L_40 = V_0;
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_41 = V_2;
+		NullCheck(L_41);
+		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_42 = L_41->___Subscribers;
+		NullCheck(L_42);
+		int32_t L_43;
+		L_43 = HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_inline(L_42, HashSet_1_get_Count_mAF52C76F83E02DA4DDF4B21CD4D2910BA7CF157F_RuntimeMethod_var);
+		int32_t L_44 = L_43;
+		RuntimeObject* L_45 = Box(il2cpp_defaults.int32_class, &L_44);
+		ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* L_46 = V_2;
+		NullCheck(L_46);
+		int32_t L_47;
+		L_47 = ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline(L_46, NULL);
+		int32_t L_48 = L_47;
+		RuntimeObject* L_49 = Box(il2cpp_defaults.int32_class, &L_48);
+		String_t* L_50;
+		L_50 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral4957F3CE2FF4C82ED66B5502CC44FA8717A4B529, L_40, L_45, L_49, NULL);
+		NullCheck(L_39);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_39, 2, L_50);
 	}
 
-IL_010d:
+IL_012b:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1605>
-		RuntimeObject* L_49 = __this->___listener;
-		String_t* L_50 = V_0;
-		String_t* L_51 = V_1;
-		NullCheck(L_49);
-		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(9, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_49, L_50, L_51);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1606>
+	}
+
+IL_012c:
+	{
+		goto IL_015e;
+	}
+
+IL_012f:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1600>
+		uint8_t L_51;
+		L_51 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_10 = (bool)((((int32_t)((((int32_t)L_51) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_52 = V_10;
+		if (!L_52)
+		{
+			goto IL_015d;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1602>
+		RuntimeObject* L_53 = __this->___listener;
+		String_t* L_54 = V_0;
+		String_t* L_55 = V_1;
+		String_t* L_56;
+		L_56 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralFADBBFF7D5071017209F0FAF588398FCC772AD53, L_54, L_55, NULL);
+		NullCheck(L_53);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_53, 2, L_56);
+	}
+
+IL_015d:
+	{
+	}
+
+IL_015e:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1605>
+		RuntimeObject* L_57 = __this->___listener;
+		String_t* L_58 = V_0;
+		String_t* L_59 = V_1;
+		NullCheck(L_57);
+		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(9, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_57, L_58, L_59);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1606>
 		return;
 	}
 }
-// Method Definition Index: 48517
+// Method Definition Index: 48597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_m939246D7BA362744B82F8721FD4881ED15BFBB4F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channel, int32_t ___1_lastMsgId, int32_t ___2_messagesFromHistory, ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* ___3_creationOptions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7389,356 +8700,443 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_m939246D7BA362744B8
 	bool V_1 = false;
 	Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* V_2 = NULL;
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_3 = NULL;
-	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_4 = NULL;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	bool V_8 = false;
+	bool V_9 = false;
+	bool V_10 = false;
+	bool V_11 = false;
+	bool V_12 = false;
+	bool V_13 = false;
+	bool V_14 = false;
+	bool V_15 = false;
+	bool V_16 = false;
+	bool V_17 = false;
+	bool V_18 = false;
+	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_19 = NULL;
+	bool V_20 = false;
+	bool V_21 = false;
+	bool V_22 = false;
+	int32_t G_B17_0 = 0;
+	int32_t G_B38_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1620>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1620>
 		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_0 = ___3_creationOptions;
-		if (L_0)
+		V_4 = (bool)((((RuntimeObject*)(ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_4;
+		if (!L_1)
 		{
-			goto IL_000b;
+			goto IL_0015;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1622>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1622>
 		il2cpp_codegen_runtime_class_init_inline(ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_il2cpp_TypeInfo_var);
-		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_1 = ((ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_StaticFields*)il2cpp_codegen_static_fields_for(ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_il2cpp_TypeInfo_var))->___Default;
-		___3_creationOptions = L_1;
+		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_2 = ((ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_StaticFields*)il2cpp_codegen_static_fields_for(ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270_il2cpp_TypeInfo_var))->___Default;
+		___3_creationOptions = L_2;
 	}
 
-IL_000b:
+IL_0015:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1624>
-		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_2 = ___3_creationOptions;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = ChannelCreationOptions_get_MaxSubscribers_m1F147E5851EF027099B954B5D4CADB288112ECA9_inline(L_2, NULL);
-		V_0 = L_3;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1625>
-		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_4 = ___3_creationOptions;
-		NullCheck(L_4);
-		bool L_5;
-		L_5 = ChannelCreationOptions_get_PublishSubscribers_m1DE43FC2FA2BC1B223AD3006D33726E429EC1CD4_inline(L_4, NULL);
-		V_1 = L_5;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1626>
-		int32_t L_6 = V_0;
-		if ((((int32_t)L_6) >= ((int32_t)0)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1624>
+		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_3 = ___3_creationOptions;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = ChannelCreationOptions_get_MaxSubscribers_m1F147E5851EF027099B954B5D4CADB288112ECA9_inline(L_3, NULL);
+		V_0 = L_4;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1625>
+		ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* L_5 = ___3_creationOptions;
+		NullCheck(L_5);
+		bool L_6;
+		L_6 = ChannelCreationOptions_get_PublishSubscribers_m1DE43FC2FA2BC1B223AD3006D33726E429EC1CD4_inline(L_5, NULL);
+		V_1 = L_6;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1626>
+		int32_t L_7 = V_0;
+		V_5 = (bool)((((int32_t)L_7) < ((int32_t)0))? 1 : 0);
+		bool L_8 = V_5;
+		if (!L_8)
 		{
-			goto IL_003b;
+			goto IL_005e;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1628>
-		uint8_t L_7;
-		L_7 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_7) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1628>
+		uint8_t L_9;
+		L_9 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_6 = (bool)((((int32_t)((((int32_t)L_9) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_10 = V_6;
+		if (!L_10)
 		{
-			goto IL_0039;
+			goto IL_0056;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1630>
-		RuntimeObject* L_8 = __this->___listener;
-		NullCheck(L_8);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_8, 1, _stringLiteralDCD847B3D35C89810672FAB55F56E8C4AA9705AC);
-	}
-
-IL_0039:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1632>
-		return (bool)0;
-	}
-
-IL_003b:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1634>
-		int32_t L_9 = ___1_lastMsgId;
-		if ((((int32_t)L_9) >= ((int32_t)0)))
-		{
-			goto IL_005b;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1636>
-		uint8_t L_10;
-		L_10 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_10) < ((int32_t)1)))
-		{
-			goto IL_0059;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1638>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1630>
 		RuntimeObject* L_11 = __this->___listener;
 		NullCheck(L_11);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_11, 1, _stringLiteral0B5A4CDE2DD8CEA11EF5E3451DD217D6A15AD17D);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_11, 1, _stringLiteralDCD847B3D35C89810672FAB55F56E8C4AA9705AC);
 	}
 
-IL_0059:
+IL_0056:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1640>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1632>
+		V_7 = (bool)0;
+		goto IL_0239;
 	}
 
-IL_005b:
+IL_005e:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1642>
-		int32_t L_12 = ___2_messagesFromHistory;
-		if ((((int32_t)L_12) >= ((int32_t)(-1))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1634>
+		int32_t L_12 = ___1_lastMsgId;
+		V_8 = (bool)((((int32_t)L_12) < ((int32_t)0))? 1 : 0);
+		bool L_13 = V_8;
+		if (!L_13)
 		{
-			goto IL_007c;
+			goto IL_0097;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1644>
-		uint8_t L_13;
-		L_13 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_13) < ((int32_t)2)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1636>
+		uint8_t L_14;
+		L_14 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_9 = (bool)((((int32_t)((((int32_t)L_14) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_15 = V_9;
+		if (!L_15)
 		{
-			goto IL_0079;
+			goto IL_008f;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1646>
-		RuntimeObject* L_14 = __this->___listener;
-		NullCheck(L_14);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_14, 2, _stringLiteral07445570109C992757EB9C92D1E61BACF9E55F91);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1638>
+		RuntimeObject* L_16 = __this->___listener;
+		NullCheck(L_16);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_16, 1, _stringLiteral0B5A4CDE2DD8CEA11EF5E3451DD217D6A15AD17D);
 	}
 
-IL_0079:
+IL_008f:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1648>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1640>
+		V_7 = (bool)0;
+		goto IL_0239;
+	}
+
+IL_0097:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1642>
+		int32_t L_17 = ___2_messagesFromHistory;
+		V_10 = (bool)((((int32_t)L_17) < ((int32_t)(-1)))? 1 : 0);
+		bool L_18 = V_10;
+		if (!L_18)
+		{
+			goto IL_00cc;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1644>
+		uint8_t L_19;
+		L_19 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_11 = (bool)((((int32_t)((((int32_t)L_19) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_20 = V_11;
+		if (!L_20)
+		{
+			goto IL_00c8;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1646>
+		RuntimeObject* L_21 = __this->___listener;
+		NullCheck(L_21);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_21, 2, _stringLiteral07445570109C992757EB9C92D1E61BACF9E55F91);
+	}
+
+IL_00c8:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1648>
 		___2_messagesFromHistory = (-1);
 	}
 
-IL_007c:
+IL_00cc:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1650>
-		int32_t L_15 = ___1_lastMsgId;
-		if ((((int32_t)L_15) <= ((int32_t)0)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1650>
+		int32_t L_22 = ___1_lastMsgId;
+		if ((((int32_t)L_22) <= ((int32_t)0)))
 		{
-			goto IL_00a0;
+			goto IL_00d6;
 		}
 	}
 	{
-		int32_t L_16 = ___2_messagesFromHistory;
-		if (L_16)
-		{
-			goto IL_00a0;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1652>
-		uint8_t L_17;
-		L_17 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_17) < ((int32_t)2)))
-		{
-			goto IL_009d;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1654>
-		RuntimeObject* L_18 = __this->___listener;
-		NullCheck(L_18);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_18, 2, _stringLiteralEA2EDCE0F75D698215106063C4484FB4DE0395E9);
+		int32_t L_23 = ___2_messagesFromHistory;
+		G_B17_0 = ((((int32_t)L_23) == ((int32_t)0))? 1 : 0);
+		goto IL_00d7;
 	}
 
-IL_009d:
+IL_00d6:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1656>
+		G_B17_0 = 0;
+	}
+
+IL_00d7:
+	{
+		V_12 = (bool)G_B17_0;
+		bool L_24 = V_12;
+		if (!L_24)
+		{
+			goto IL_0108;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1652>
+		uint8_t L_25;
+		L_25 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_13 = (bool)((((int32_t)((((int32_t)L_25) < ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_26 = V_13;
+		if (!L_26)
+		{
+			goto IL_0104;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1654>
+		RuntimeObject* L_27 = __this->___listener;
+		NullCheck(L_27);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_27, 2, _stringLiteralEA2EDCE0F75D698215106063C4484FB4DE0395E9);
+	}
+
+IL_0104:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1656>
 		___1_lastMsgId = 0;
 	}
 
-IL_00a0:
+IL_0108:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1658>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1658>
 		V_2 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)NULL;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1659>
-		bool L_19 = V_1;
-		if (!L_19)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1659>
+		bool L_28 = V_1;
+		V_14 = L_28;
+		bool L_29 = V_14;
+		if (!L_29)
 		{
-			goto IL_00ee;
+			goto IL_0176;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1661>
-		int32_t L_20 = V_0;
-		if ((((int32_t)L_20) <= ((int32_t)((int32_t)100))))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1661>
+		int32_t L_30 = V_0;
+		V_15 = (bool)((((int32_t)L_30) > ((int32_t)((int32_t)100)))? 1 : 0);
+		bool L_31 = V_15;
+		if (!L_31)
 		{
-			goto IL_00d2;
+			goto IL_0158;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1663>
-		uint8_t L_21;
-		L_21 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
-		if ((((int32_t)L_21) < ((int32_t)1)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1663>
+		uint8_t L_32;
+		L_32 = ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338(__this, NULL);
+		V_16 = (bool)((((int32_t)((((int32_t)L_32) < ((int32_t)1))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_33 = V_16;
+		if (!L_33)
 		{
-			goto IL_00d0;
+			goto IL_0150;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1665>
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1666>
-		RuntimeObject* L_22 = __this->___listener;
-		int32_t L_23 = ((int32_t)100);
-		RuntimeObject* L_24 = Box(il2cpp_defaults.int32_class, &L_23);
-		String_t* L_25;
-		L_25 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralE9E2E3F5DF3ABF46A5982E73A60F7A768AE2BD7D, L_24, NULL);
-		NullCheck(L_22);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_22, 1, L_25);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1665>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1666>
+		RuntimeObject* L_34 = __this->___listener;
+		int32_t L_35 = ((int32_t)100);
+		RuntimeObject* L_36 = Box(il2cpp_defaults.int32_class, &L_35);
+		String_t* L_37;
+		L_37 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralE9E2E3F5DF3ABF46A5982E73A60F7A768AE2BD7D, L_36, NULL);
+		NullCheck(L_34);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IChatClientListener_t7809F4EE0368FF3496A7123CCAFF8BA0B1A02B2F_il2cpp_TypeInfo_var, L_34, 1, L_37);
 	}
 
-IL_00d0:
+IL_0150:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1668>
-		return (bool)0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1668>
+		V_7 = (bool)0;
+		goto IL_0239;
 	}
 
-IL_00d2:
+IL_0158:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1670>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_26 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)il2cpp_codegen_object_new(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329(L_26, Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_RuntimeMethod_var);
-		V_2 = L_26;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1671>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_27 = V_2;
-		uint8_t L_28 = ((uint8_t)((int32_t)254));
-		RuntimeObject* L_29 = Box(il2cpp_defaults.byte_class, &L_28);
-		bool L_30 = ((bool)1);
-		RuntimeObject* L_31 = Box(il2cpp_defaults.boolean_class, &L_30);
-		NullCheck(L_27);
-		Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD(L_27, L_29, L_31, Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1670>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_38 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)il2cpp_codegen_object_new(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329(L_38, Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_RuntimeMethod_var);
+		V_2 = L_38;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1671>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_39 = V_2;
+		uint8_t L_40 = ((uint8_t)((int32_t)254));
+		RuntimeObject* L_41 = Box(il2cpp_defaults.byte_class, &L_40);
+		bool L_42 = ((bool)1);
+		RuntimeObject* L_43 = Box(il2cpp_defaults.boolean_class, &L_42);
+		NullCheck(L_39);
+		Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD(L_39, L_41, L_43, Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_RuntimeMethod_var);
 	}
 
-IL_00ee:
+IL_0176:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1673>
-		int32_t L_32 = V_0;
-		if ((((int32_t)L_32) <= ((int32_t)0)))
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1673>
+		int32_t L_44 = V_0;
+		V_17 = (bool)((((int32_t)L_44) > ((int32_t)0))? 1 : 0);
+		bool L_45 = V_17;
+		if (!L_45)
 		{
-			goto IL_0111;
+			goto IL_01ab;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1675>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_33 = V_2;
-		if (L_33)
-		{
-			goto IL_00fb;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1677>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_34 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)il2cpp_codegen_object_new(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329(L_34, Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_RuntimeMethod_var);
-		V_2 = L_34;
-	}
-
-IL_00fb:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1679>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_35 = V_2;
-		uint8_t L_36 = ((uint8_t)((int32_t)255));
-		RuntimeObject* L_37 = Box(il2cpp_defaults.byte_class, &L_36);
-		int32_t L_38 = V_0;
-		int32_t L_39 = L_38;
-		RuntimeObject* L_40 = Box(il2cpp_defaults.int32_class, &L_39);
-		NullCheck(L_35);
-		Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD(L_35, L_37, L_40, Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_RuntimeMethod_var);
-	}
-
-IL_0111:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1690>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_41 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_41, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		V_4 = L_41;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_42 = V_4;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_43 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)1);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_44 = L_43;
-		String_t* L_45 = ___0_channel;
-		NullCheck(L_44);
-		(L_44)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_45);
-		NullCheck(L_42);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_42, (uint8_t)0, (RuntimeObject*)L_44, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_46 = V_4;
-		V_3 = L_46;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1691>
-		int32_t L_47 = ___2_messagesFromHistory;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1675>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_46 = V_2;
+		V_18 = (bool)((((RuntimeObject*)(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)L_46) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_47 = V_18;
 		if (!L_47)
 		{
-			goto IL_013e;
+			goto IL_0193;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1693>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_48 = V_3;
-		int32_t L_49 = ___2_messagesFromHistory;
-		int32_t L_50 = L_49;
-		RuntimeObject* L_51 = Box(il2cpp_defaults.int32_class, &L_50);
-		NullCheck(L_48);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_48, (uint8_t)((int32_t)14), L_51, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1677>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_48 = (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA*)il2cpp_codegen_object_new(Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329(L_48, Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_RuntimeMethod_var);
+		V_2 = L_48;
 	}
 
-IL_013e:
+IL_0193:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1695>
-		int32_t L_52 = ___1_lastMsgId;
-		if ((((int32_t)L_52) <= ((int32_t)0)))
-		{
-			goto IL_0154;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1697>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_53 = V_3;
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_54 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)1);
-		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_55 = L_54;
-		int32_t L_56 = ___1_lastMsgId;
-		NullCheck(L_55);
-		(L_55)->SetAt(static_cast<il2cpp_array_size_t>(0), (int32_t)L_56);
-		NullCheck(L_53);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_53, (uint8_t)((int32_t)9), (RuntimeObject*)L_55, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1679>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_49 = V_2;
+		uint8_t L_50 = ((uint8_t)((int32_t)255));
+		RuntimeObject* L_51 = Box(il2cpp_defaults.byte_class, &L_50);
+		int32_t L_52 = V_0;
+		int32_t L_53 = L_52;
+		RuntimeObject* L_54 = Box(il2cpp_defaults.int32_class, &L_53);
+		NullCheck(L_49);
+		Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD(L_49, L_51, L_54, Dictionary_2_set_Item_m1A840355E8EDAECEA9D0C6F5E51B248FAA449CBD_RuntimeMethod_var);
 	}
 
-IL_0154:
+IL_01ab:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1699>
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_57 = V_2;
-		if (!L_57)
-		{
-			goto IL_0169;
-		}
-	}
-	{
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_58 = V_2;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1690>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_55 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_55, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		V_19 = L_55;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_56 = V_19;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_57 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)1);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_58 = L_57;
+		String_t* L_59 = ___0_channel;
 		NullCheck(L_58);
-		int32_t L_59;
-		L_59 = Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549(L_58, Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549_RuntimeMethod_var);
-		if ((((int32_t)L_59) <= ((int32_t)0)))
+		(L_58)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)L_59);
+		NullCheck(L_56);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_56, (uint8_t)0, (RuntimeObject*)L_58, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_60 = V_19;
+		V_3 = L_60;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1691>
+		int32_t L_61 = ___2_messagesFromHistory;
+		V_20 = (bool)((!(((uint32_t)L_61) <= ((uint32_t)0)))? 1 : 0);
+		bool L_62 = V_20;
+		if (!L_62)
 		{
-			goto IL_0169;
+			goto IL_01e3;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1701>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_60 = V_3;
-		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_61 = V_2;
-		NullCheck(L_60);
-		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_60, (uint8_t)((int32_t)22), L_61, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1693>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_63 = V_3;
+		int32_t L_64 = ___2_messagesFromHistory;
+		int32_t L_65 = L_64;
+		RuntimeObject* L_66 = Box(il2cpp_defaults.int32_class, &L_65);
+		NullCheck(L_63);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_63, (uint8_t)((int32_t)14), L_66, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
 	}
 
-IL_0169:
+IL_01e3:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1704>
-		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_62 = __this->___chatPeer;
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_63 = V_3;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1695>
+		int32_t L_67 = ___1_lastMsgId;
+		V_21 = (bool)((((int32_t)L_67) > ((int32_t)0))? 1 : 0);
+		bool L_68 = V_21;
+		if (!L_68)
+		{
+			goto IL_0202;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1697>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_69 = V_3;
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_70 = (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C*)SZArrayNew(Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C_il2cpp_TypeInfo_var, (uint32_t)1);
+		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_71 = L_70;
+		int32_t L_72 = ___1_lastMsgId;
+		NullCheck(L_71);
+		(L_71)->SetAt(static_cast<il2cpp_array_size_t>(0), (int32_t)L_72);
+		NullCheck(L_69);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_69, (uint8_t)((int32_t)9), (RuntimeObject*)L_71, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+	}
+
+IL_0202:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1699>
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_73 = V_2;
+		if (!L_73)
+		{
+			goto IL_0210;
+		}
+	}
+	{
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_74 = V_2;
+		NullCheck(L_74);
+		int32_t L_75;
+		L_75 = Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549(L_74, Dictionary_2_get_Count_m4DDA9442C238A443489115E22B026AD366851549_RuntimeMethod_var);
+		G_B38_0 = ((((int32_t)L_75) > ((int32_t)0))? 1 : 0);
+		goto IL_0211;
+	}
+
+IL_0210:
+	{
+		G_B38_0 = 0;
+	}
+
+IL_0211:
+	{
+		V_22 = (bool)G_B38_0;
+		bool L_76 = V_22;
+		if (!L_76)
+		{
+			goto IL_0223;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1701>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_77 = V_3;
+		Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* L_78 = V_2;
+		NullCheck(L_77);
+		Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20(L_77, (uint8_t)((int32_t)22), L_78, Dictionary_2_Add_m172B6DC23E861887432196C468285C1492E0CC20_RuntimeMethod_var);
+	}
+
+IL_0223:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1704>
+		ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* L_79 = __this->___chatPeer;
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_80 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_64 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
-		NullCheck(L_62);
-		bool L_65;
-		L_65 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_62, (uint8_t)0, L_63, L_64);
-		return L_65;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_81 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable;
+		NullCheck(L_79);
+		bool L_82;
+		L_82 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, L_79, (uint8_t)0, L_80, L_81);
+		V_7 = L_82;
+		goto IL_0239;
+	}
+
+IL_0239:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:1705>
+		bool L_83 = V_7;
+		return L_83;
 	}
 }
 #ifdef __clang__
@@ -7757,7 +9155,7 @@ IL_0169:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48518
+// Method Definition Index: 48598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatEventCode__ctor_m4B7FEAA30BD9990E6B094E6352A1764A580C9B3B (ChatEventCode_t971D6853DE3EAE4E0F99C9D76C30E2F1D2614473* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7773,7 +9171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatEventCode__ctor_m4B7FEAA30BD9990E6B0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48519
+// Method Definition Index: 48599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatOperationCode__ctor_m989B83DC47DF6ADEFF96163EEA139FE96511DAB8 (ChatOperationCode_t906F6ACF5232598FE4F4161B3F0961D19C796D72* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7789,7 +9187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatOperationCode__ctor_m989B83DC47DF6AD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48520
+// Method Definition Index: 48600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatParameterCode__ctor_mFEA179722A1E99CC17839F327498C5AF1ED2538E (ChatParameterCode_tA1A9C40C6CDC0D5D31BF98B5407A236E14AFBBBF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7805,27 +9203,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatParameterCode__ctor_mFEA179722A1E99C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48521
+// Method Definition Index: 48601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatPeer_get_NameServerAddress_m34FD6CEB0A89DF565D492EB7ED3E12CDC17A9797 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
+	String_t* V_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:36>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:36>
 		String_t* L_0;
 		L_0 = ChatPeer_GetNameServerAddress_m658289FA23C7386FB38A03CF3B51C973302BB217(__this, NULL);
-		return L_0;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:36>
+		String_t* L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 48522
+// Method Definition Index: 48602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatPeer_get_IsProtocolSecure_mBAD912D7CCE3E3D3C771CBAA6A1DE1E965723AFE (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:38>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:38>
 		uint8_t L_0;
 		L_0 = PhotonPeer_get_UsedProtocol_m0C826B71A5E50635D2E83BC680354DB7B082930E(__this, NULL);
-		return (bool)((((int32_t)L_0) == ((int32_t)5))? 1 : 0);
+		V_0 = (bool)((((int32_t)L_0) == ((int32_t)5))? 1 : 0);
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:38>
+		bool L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 48523
+// Method Definition Index: 48603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__ctor_mA7BE40BE95B917104BCECEA560E5A314855FC3B0 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, RuntimeObject* ___0_listener, uint8_t ___1_protocol, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7836,21 +9252,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__ctor_mA7BE40BE95B917104BCECEA5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:30>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:30>
 		__this->___NameServerHost = _stringLiteral77E3A5DFDF30AC18B4DB9AC5D034EFEA29F1AAE3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___NameServerHost), (void*)_stringLiteral77E3A5DFDF30AC18B4DB9AC5D034EFEA29F1AAE3);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:43>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:43>
 		RuntimeObject* L_0 = ___0_listener;
 		uint8_t L_1 = ___1_protocol;
 		il2cpp_codegen_runtime_class_init_inline(PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C_il2cpp_TypeInfo_var);
 		PhotonPeer__ctor_m4B6EBB14AAE0DC89805C74016319A73904ECA3E0(__this, L_0, L_1, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:45>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:45>
 		ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:46>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:46>
 		return;
 	}
 }
-// Method Definition Index: 48524
+// Method Definition Index: 48604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7865,83 +9281,92 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer_ConfigUnitySockets_mAFCA08575EA
 		s_Il2CppMethodInitialized = true;
 	}
 	Type_t* V_0 = NULL;
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:54>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:54>
 		V_0 = (Type_t*)NULL;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:72>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:72>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
 		Type_t* L_0;
 		L_0 = il2cpp_codegen_get_type(_stringLiteralCB68C7C4D22B75A2C98587E5B35395233B0F5BF6, (bool)0, Type_GetType_m50BCE4A0EB39D97381431E6CC2576C50DCE69C67_RuntimeMethod_var, ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:73>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:73>
 		Type_t* L_1 = V_0;
 		bool L_2;
 		L_2 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_1, (Type_t*)NULL, NULL);
-		if (!L_2)
+		V_1 = L_2;
+		bool L_3 = V_1;
+		if (!L_3)
 		{
-			goto IL_0023;
+			goto IL_0028;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:75>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:75>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
-		Type_t* L_3;
-		L_3 = il2cpp_codegen_get_type(_stringLiteral1F8B28CFFF704DB3769B10DBB3290A133248008A, (bool)0, Type_GetType_m50BCE4A0EB39D97381431E6CC2576C50DCE69C67_RuntimeMethod_var, ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B_RuntimeMethod_var);
-		V_0 = L_3;
+		Type_t* L_4;
+		L_4 = il2cpp_codegen_get_type(_stringLiteral1F8B28CFFF704DB3769B10DBB3290A133248008A, (bool)0, Type_GetType_m50BCE4A0EB39D97381431E6CC2576C50DCE69C67_RuntimeMethod_var, ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B_RuntimeMethod_var);
+		V_0 = L_4;
 	}
 
-IL_0023:
+IL_0028:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:77>
-		Type_t* L_4 = V_0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:77>
+		Type_t* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
-		bool L_5;
-		L_5 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_4, (Type_t*)NULL, NULL);
-		if (!L_5)
+		bool L_6;
+		L_6 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_5, (Type_t*)NULL, NULL);
+		V_2 = L_6;
+		bool L_7 = V_2;
+		if (!L_7)
 		{
-			goto IL_0038;
+			goto IL_0041;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:79>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:79>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
-		Type_t* L_6;
-		L_6 = il2cpp_codegen_get_type(_stringLiteralF21EBFE1C104A20E9BD26C28A1EFC59E11FB4C8C, (bool)0, Type_GetType_m50BCE4A0EB39D97381431E6CC2576C50DCE69C67_RuntimeMethod_var, ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B_RuntimeMethod_var);
-		V_0 = L_6;
+		Type_t* L_8;
+		L_8 = il2cpp_codegen_get_type(_stringLiteralF21EBFE1C104A20E9BD26C28A1EFC59E11FB4C8C, (bool)0, Type_GetType_m50BCE4A0EB39D97381431E6CC2576C50DCE69C67_RuntimeMethod_var, ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B_RuntimeMethod_var);
+		V_0 = L_8;
 	}
 
-IL_0038:
+IL_0041:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:83>
-		Type_t* L_7 = V_0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:83>
+		Type_t* L_9 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
-		bool L_8;
-		L_8 = Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172(L_7, (Type_t*)NULL, NULL);
-		if (!L_8)
+		bool L_10;
+		L_10 = Type_op_Inequality_m83209C7BB3C05DFBEA3B6199B0BEFE8037301172(L_9, (Type_t*)NULL, NULL);
+		V_3 = L_10;
+		bool L_11 = V_3;
+		if (!L_11)
 		{
-			goto IL_005b;
+			goto IL_006a;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:85>
-		Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* L_9 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)__this)->___SocketImplementationConfig;
-		Type_t* L_10 = V_0;
-		NullCheck(L_9);
-		Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1(L_9, 4, L_10, Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:86>
-		Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* L_11 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)__this)->___SocketImplementationConfig;
-		Type_t* L_12 = V_0;
-		NullCheck(L_11);
-		Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1(L_11, 5, L_12, Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:85>
+		Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* L_12 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)__this)->___SocketImplementationConfig;
+		Type_t* L_13 = V_0;
+		NullCheck(L_12);
+		Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1(L_12, 4, L_13, Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:86>
+		Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* L_14 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)__this)->___SocketImplementationConfig;
+		Type_t* L_15 = V_0;
+		NullCheck(L_14);
+		Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1(L_14, 5, L_15, Dictionary_2_set_Item_mAE765E357E41A8F8E5B4BB7432F18D8C7CC3BDC1_RuntimeMethod_var);
 	}
 
-IL_005b:
+IL_006a:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:93>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:93>
 		return;
 	}
 }
-// Method Definition Index: 48525
+// Method Definition Index: 48605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatPeer_GetNameServerAddress_m658289FA23C7386FB38A03CF3B51C973302BB217 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7957,11 +9382,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatPeer_GetNameServerAddress_m6582
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	uint8_t V_1 = 0;
+	bool V_1 = false;
+	uint8_t V_2 = 0;
+	uint8_t V_3 = 0;
+	String_t* V_4 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:105>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:105>
 		V_0 = 0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:106>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:106>
 		il2cpp_codegen_runtime_class_init_inline(ChatPeer_t216E56C8D1791380415477470013A3787DF76D43_il2cpp_TypeInfo_var);
 		Dictionary_2_tCA6FC027A4EAE9285D2860309E61DB2B271D9A80* L_0 = ((ChatPeer_t216E56C8D1791380415477470013A3787DF76D43_StaticFields*)il2cpp_codegen_static_fields_for(ChatPeer_t216E56C8D1791380415477470013A3787DF76D43_il2cpp_TypeInfo_var))->___ProtocolToNameServerPort;
 		uint8_t L_1;
@@ -7969,113 +9397,127 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatPeer_GetNameServerAddress_m6582
 		NullCheck(L_0);
 		bool L_2;
 		L_2 = Dictionary_2_TryGetValue_m7A41D6DDBFFD29C4429FA26A1BA2BF864009A3BE(L_0, L_1, (&V_0), Dictionary_2_TryGetValue_m7A41D6DDBFFD29C4429FA26A1BA2BF864009A3BE_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:108>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:108>
 		uint16_t L_3 = __this->___NameServerPortOverride;
-		if (!L_3)
+		V_1 = (bool)((!(((uint32_t)L_3) <= ((uint32_t)0)))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
 		{
-			goto IL_0045;
+			goto IL_004e;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:110>
-		RuntimeObject* L_4;
-		L_4 = PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline(__this, NULL);
-		uint16_t L_5 = __this->___NameServerPortOverride;
-		uint16_t L_6 = L_5;
-		RuntimeObject* L_7 = Box(il2cpp_defaults.uint16_class, &L_6);
-		String_t* L_8;
-		L_8 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1AE9B3CF5AE017754E39259FE1ECEDCE06CA1CBF, L_7, NULL);
-		NullCheck(L_4);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IPhotonPeerListener_tCF670245092F1C9F0BB8F83AE0742E9473417E6D_il2cpp_TypeInfo_var, L_4, 3, L_8);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:111>
-		uint16_t L_9 = __this->___NameServerPortOverride;
-		V_0 = L_9;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:110>
+		RuntimeObject* L_5;
+		L_5 = PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline(__this, NULL);
+		uint16_t L_6 = __this->___NameServerPortOverride;
+		uint16_t L_7 = L_6;
+		RuntimeObject* L_8 = Box(il2cpp_defaults.uint16_class, &L_7);
+		String_t* L_9;
+		L_9 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1AE9B3CF5AE017754E39259FE1ECEDCE06CA1CBF, L_8, NULL);
+		NullCheck(L_5);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IPhotonPeerListener_tCF670245092F1C9F0BB8F83AE0742E9473417E6D_il2cpp_TypeInfo_var, L_5, 3, L_9);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:111>
+		uint16_t L_10 = __this->___NameServerPortOverride;
+		V_0 = L_10;
 	}
 
-IL_0045:
+IL_004e:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:114>
-		uint8_t L_10;
-		L_10 = PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline(__this, NULL);
-		V_1 = L_10;
-		uint8_t L_11 = V_1;
-		switch (L_11)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:114>
+		uint8_t L_11;
+		L_11 = PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline(__this, NULL);
+		V_3 = L_11;
+		uint8_t L_12 = V_3;
+		V_2 = L_12;
+		uint8_t L_13 = V_2;
+		switch (L_13)
 		{
 			case 0:
 			{
-				goto IL_006c;
+				goto IL_0077;
 			}
 			case 1:
 			{
-				goto IL_006c;
+				goto IL_0077;
 			}
 			case 2:
 			{
-				goto IL_00b1;
+				goto IL_00c5;
 			}
 			case 3:
 			{
-				goto IL_00b1;
+				goto IL_00c5;
 			}
 			case 4:
 			{
-				goto IL_0083;
+				goto IL_0091;
 			}
 			case 5:
 			{
-				goto IL_009a;
+				goto IL_00ab;
 			}
 		}
 	}
 	{
-		goto IL_00b1;
+		goto IL_00c5;
 	}
 
-IL_006c:
+IL_0077:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:118>
-		String_t* L_12 = __this->___NameServerHost;
-		int32_t L_13 = V_0;
-		int32_t L_14 = L_13;
-		RuntimeObject* L_15 = Box(il2cpp_defaults.int32_class, &L_14);
-		String_t* L_16;
-		L_16 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralAD6CD2C36915DEB6A18BCF0F46B294FC1D97072F, L_12, L_15, NULL);
-		return L_16;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:118>
+		String_t* L_14 = __this->___NameServerHost;
+		int32_t L_15 = V_0;
+		int32_t L_16 = L_15;
+		RuntimeObject* L_17 = Box(il2cpp_defaults.int32_class, &L_16);
+		String_t* L_18;
+		L_18 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralAD6CD2C36915DEB6A18BCF0F46B294FC1D97072F, L_14, L_17, NULL);
+		V_4 = L_18;
+		goto IL_00cb;
 	}
 
-IL_0083:
+IL_0091:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:120>
-		String_t* L_17 = __this->___NameServerHost;
-		int32_t L_18 = V_0;
-		int32_t L_19 = L_18;
-		RuntimeObject* L_20 = Box(il2cpp_defaults.int32_class, &L_19);
-		String_t* L_21;
-		L_21 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral80E7CF73ABE78832F677B6B12A03A933ED22EDCE, L_17, L_20, NULL);
-		return L_21;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:120>
+		String_t* L_19 = __this->___NameServerHost;
+		int32_t L_20 = V_0;
+		int32_t L_21 = L_20;
+		RuntimeObject* L_22 = Box(il2cpp_defaults.int32_class, &L_21);
+		String_t* L_23;
+		L_23 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral80E7CF73ABE78832F677B6B12A03A933ED22EDCE, L_19, L_22, NULL);
+		V_4 = L_23;
+		goto IL_00cb;
 	}
 
-IL_009a:
+IL_00ab:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:122>
-		String_t* L_22 = __this->___NameServerHost;
-		int32_t L_23 = V_0;
-		int32_t L_24 = L_23;
-		RuntimeObject* L_25 = Box(il2cpp_defaults.int32_class, &L_24);
-		String_t* L_26;
-		L_26 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralEA6824010DE96FAEEDC5701C23C1377985B771A8, L_22, L_25, NULL);
-		return L_26;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:122>
+		String_t* L_24 = __this->___NameServerHost;
+		int32_t L_25 = V_0;
+		int32_t L_26 = L_25;
+		RuntimeObject* L_27 = Box(il2cpp_defaults.int32_class, &L_26);
+		String_t* L_28;
+		L_28 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralEA6824010DE96FAEEDC5701C23C1377985B771A8, L_24, L_27, NULL);
+		V_4 = L_28;
+		goto IL_00cb;
 	}
 
-IL_00b1:
+IL_00c5:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:124>
-		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_27 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
-		ArgumentOutOfRangeException__ctor_mB596C51BFA864B65C2CED275458FAE90F7CD29C9(L_27, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_27, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ChatPeer_GetNameServerAddress_m658289FA23C7386FB38A03CF3B51C973302BB217_RuntimeMethod_var)));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:124>
+		ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F* L_29 = (ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentOutOfRangeException_tEA2822DAF62B10EEED00E0E3A341D4BAF78CF85F_il2cpp_TypeInfo_var)));
+		ArgumentOutOfRangeException__ctor_mB596C51BFA864B65C2CED275458FAE90F7CD29C9(L_29, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_29, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ChatPeer_GetNameServerAddress_m658289FA23C7386FB38A03CF3B51C973302BB217_RuntimeMethod_var)));
+	}
+
+IL_00cb:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:126>
+		String_t* L_30 = V_4;
+		return L_30;
 	}
 }
-// Method Definition Index: 48526
+// Method Definition Index: 48606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatPeer_AuthenticateOnNameServer_m31221AA4DF632CB3DB9BBDA4614AB1241F538BA3 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, String_t* ___0_appId, String_t* ___1_appVersion, String_t* ___2_region, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___3_authValues, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8090,186 +9532,228 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatPeer_AuthenticateOnNameServer_m31221
 		s_Il2CppMethodInitialized = true;
 	}
 	Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* V_0 = NULL;
-	SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 V_1;
-	memset((&V_1), 0, sizeof(V_1));
+	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
+	bool V_7 = false;
+	SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 V_8;
+	memset((&V_8), 0, sizeof(V_8));
+	bool V_9 = false;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:133>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:133>
 		uint8_t L_0 = ((PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C*)__this)->___DebugOut;
-		if ((((int32_t)L_0) < ((int32_t)3)))
+		V_1 = (bool)((((int32_t)((((int32_t)L_0) < ((int32_t)3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_001a;
+			goto IL_0025;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:135>
-		RuntimeObject* L_1;
-		L_1 = PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline(__this, NULL);
-		NullCheck(L_1);
-		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IPhotonPeerListener_tCF670245092F1C9F0BB8F83AE0742E9473417E6D_il2cpp_TypeInfo_var, L_1, 3, _stringLiteralB7A0517E53F97847DA11954EC5BB6A0ABEB18E1F);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:135>
+		RuntimeObject* L_2;
+		L_2 = PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline(__this, NULL);
+		NullCheck(L_2);
+		InterfaceActionInvoker2< uint8_t, String_t* >::Invoke(0, IPhotonPeerListener_tCF670245092F1C9F0BB8F83AE0742E9473417E6D_il2cpp_TypeInfo_var, L_2, 3, _stringLiteralB7A0517E53F97847DA11954EC5BB6A0ABEB18E1F);
 	}
 
-IL_001a:
+IL_0025:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:138>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_2 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_2, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
-		V_0 = L_2;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:140>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_3 = V_0;
-		String_t* L_4 = ___1_appVersion;
-		NullCheck(L_3);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_3, (uint8_t)((int32_t)220), L_4, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:141>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_5 = V_0;
-		String_t* L_6 = ___0_appId;
-		NullCheck(L_5);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_5, (uint8_t)((int32_t)224), L_6, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:142>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_7 = V_0;
-		String_t* L_8 = ___2_region;
-		NullCheck(L_7);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_7, (uint8_t)((int32_t)210), L_8, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:144>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_9 = ___3_authValues;
-		if (!L_9)
-		{
-			goto IL_00e8;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:146>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:138>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_3 = (Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*)il2cpp_codegen_object_new(Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048(L_3, Dictionary_2__ctor_m88EEEFF844FE740CF9A14946245A4BA58C7FC048_RuntimeMethod_var);
+		V_0 = L_3;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:140>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_4 = V_0;
+		String_t* L_5 = ___1_appVersion;
+		NullCheck(L_4);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_4, (uint8_t)((int32_t)220), L_5, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:141>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_6 = V_0;
+		String_t* L_7 = ___0_appId;
+		NullCheck(L_6);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_6, (uint8_t)((int32_t)224), L_7, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:142>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_8 = V_0;
+		String_t* L_9 = ___2_region;
+		NullCheck(L_8);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_8, (uint8_t)((int32_t)210), L_9, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:144>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_10 = ___3_authValues;
-		NullCheck(L_10);
-		String_t* L_11;
-		L_11 = AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline(L_10, NULL);
-		bool L_12;
-		L_12 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_11, NULL);
-		if (L_12)
+		V_2 = (bool)((!(((RuntimeObject*)(AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C*)L_10) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_11 = V_2;
+		if (!L_11)
 		{
-			goto IL_006b;
+			goto IL_0134;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:148>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_13 = V_0;
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_14 = ___3_authValues;
-		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline(L_14, NULL);
-		NullCheck(L_13);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_13, (uint8_t)((int32_t)225), L_15, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:146>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_12 = ___3_authValues;
+		NullCheck(L_12);
+		String_t* L_13;
+		L_13 = AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline(L_12, NULL);
+		bool L_14;
+		L_14 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_13, NULL);
+		V_3 = (bool)((((int32_t)L_14) == ((int32_t)0))? 1 : 0);
+		bool L_15 = V_3;
+		if (!L_15)
+		{
+			goto IL_0087;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:148>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_16 = V_0;
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_17 = ___3_authValues;
+		NullCheck(L_17);
+		String_t* L_18;
+		L_18 = AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline(L_17, NULL);
+		NullCheck(L_16);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_16, (uint8_t)((int32_t)225), L_18, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
 	}
 
-IL_006b:
+IL_0087:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:151>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_16 = ___3_authValues;
-		NullCheck(L_16);
-		uint8_t L_17;
-		L_17 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C_inline(L_16, NULL);
-		if ((((int32_t)L_17) == ((int32_t)((int32_t)255))))
-		{
-			goto IL_00e8;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:153>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_18 = V_0;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:151>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_19 = ___3_authValues;
 		NullCheck(L_19);
 		uint8_t L_20;
-		L_20 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C_inline(L_19, NULL);
-		uint8_t L_21 = ((uint8_t)L_20);
-		RuntimeObject* L_22 = Box(il2cpp_defaults.byte_class, &L_21);
-		NullCheck(L_18);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_18, (uint8_t)((int32_t)217), L_22, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:154>
+		L_20 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C(L_19, NULL);
+		V_4 = (bool)((((int32_t)((((int32_t)L_20) == ((int32_t)((int32_t)255)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_21 = V_4;
+		if (!L_21)
+		{
+			goto IL_0133;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:153>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_22 = V_0;
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_23 = ___3_authValues;
 		NullCheck(L_23);
-		RuntimeObject* L_24;
-		L_24 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_23, NULL);
-		if (!L_24)
+		uint8_t L_24;
+		L_24 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C(L_23, NULL);
+		uint8_t L_25 = ((uint8_t)L_24);
+		RuntimeObject* L_26 = Box(il2cpp_defaults.byte_class, &L_25);
+		NullCheck(L_22);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_22, (uint8_t)((int32_t)217), L_26, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:154>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_27 = ___3_authValues;
+		NullCheck(L_27);
+		RuntimeObject* L_28;
+		L_28 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_27, NULL);
+		V_5 = (bool)((!(((RuntimeObject*)(RuntimeObject*)L_28) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_29 = V_5;
+		if (!L_29)
 		{
-			goto IL_00ad;
+			goto IL_00e1;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:156>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_25 = V_0;
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_26 = ___3_authValues;
-		NullCheck(L_26);
-		RuntimeObject* L_27;
-		L_27 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_26, NULL);
-		NullCheck(L_25);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_25, (uint8_t)((int32_t)221), L_27, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
-		goto IL_00e8;
-	}
-
-IL_00ad:
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:160>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_28 = ___3_authValues;
-		NullCheck(L_28);
-		String_t* L_29;
-		L_29 = AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline(L_28, NULL);
-		bool L_30;
-		L_30 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_29, NULL);
-		if (L_30)
-		{
-			goto IL_00cd;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:162>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_31 = V_0;
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_32 = ___3_authValues;
-		NullCheck(L_32);
-		String_t* L_33;
-		L_33 = AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline(L_32, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:156>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_30 = V_0;
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_31 = ___3_authValues;
 		NullCheck(L_31);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_31, (uint8_t)((int32_t)216), L_33, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		RuntimeObject* L_32;
+		L_32 = AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline(L_31, NULL);
+		NullCheck(L_30);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_30, (uint8_t)((int32_t)221), L_32, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		goto IL_0132;
 	}
 
-IL_00cd:
+IL_00e1:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:164>
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_34 = ___3_authValues;
-		NullCheck(L_34);
-		RuntimeObject* L_35;
-		L_35 = AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline(L_34, NULL);
-		if (!L_35)
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:160>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_33 = ___3_authValues;
+		NullCheck(L_33);
+		String_t* L_34;
+		L_34 = AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline(L_33, NULL);
+		bool L_35;
+		L_35 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_34, NULL);
+		V_6 = (bool)((((int32_t)L_35) == ((int32_t)0))? 1 : 0);
+		bool L_36 = V_6;
+		if (!L_36)
 		{
-			goto IL_00e8;
+			goto IL_010c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:166>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_36 = V_0;
-		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_37 = ___3_authValues;
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:162>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_37 = V_0;
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_38 = ___3_authValues;
+		NullCheck(L_38);
+		String_t* L_39;
+		L_39 = AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline(L_38, NULL);
 		NullCheck(L_37);
-		RuntimeObject* L_38;
-		L_38 = AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline(L_37, NULL);
-		NullCheck(L_36);
-		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_36, (uint8_t)((int32_t)214), L_38, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_37, (uint8_t)((int32_t)216), L_39, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
 	}
 
-IL_00e8:
+IL_010c:
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:172>
-		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_39 = V_0;
-		il2cpp_codegen_initobj((&V_1), sizeof(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8));
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:164>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_40 = ___3_authValues;
+		NullCheck(L_40);
+		RuntimeObject* L_41;
+		L_41 = AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline(L_40, NULL);
+		V_7 = (bool)((!(((RuntimeObject*)(RuntimeObject*)L_41) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_42 = V_7;
+		if (!L_42)
+		{
+			goto IL_0131;
+		}
+	}
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:166>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_43 = V_0;
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_44 = ___3_authValues;
+		NullCheck(L_44);
+		RuntimeObject* L_45;
+		L_45 = AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline(L_44, NULL);
+		NullCheck(L_43);
+		Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4(L_43, (uint8_t)((int32_t)214), L_45, Dictionary_2_set_Item_m8BEB94760CA6F27CF244C9860AD50B9339089AF4_RuntimeMethod_var);
+	}
+
+IL_0131:
+	{
+	}
+
+IL_0132:
+	{
+	}
+
+IL_0133:
+	{
+	}
+
+IL_0134:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:172>
+		Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1* L_46 = V_0;
+		il2cpp_codegen_initobj((&V_8), sizeof(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8));
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_set_Reliability_mE183CC0D1E7EC44C9ADF1F0E17D20A3A05BD5C6A((&V_1), (bool)1, NULL);
-		bool L_40;
-		L_40 = PhotonPeer_get_IsEncryptionAvailable_mDD9BEA466A3556F2CBC320030D0E156B6382D246(__this, NULL);
-		(&V_1)->___Encrypt = L_40;
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_41 = V_1;
-		bool L_42;
-		L_42 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, __this, (uint8_t)((int32_t)230), L_39, L_41);
-		return L_42;
+		SendOptions_set_Reliability_mE183CC0D1E7EC44C9ADF1F0E17D20A3A05BD5C6A((&V_8), (bool)1, NULL);
+		bool L_47;
+		L_47 = PhotonPeer_get_IsEncryptionAvailable_mDD9BEA466A3556F2CBC320030D0E156B6382D246(__this, NULL);
+		(&V_8)->___Encrypt = L_47;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_48 = V_8;
+		bool L_49;
+		L_49 = VirtualFuncInvoker3< bool, uint8_t, Dictionary_2_t39C787A3AB4A7621A98CFE1FB232D65CBD0880C1*, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 >::Invoke(15, __this, (uint8_t)((int32_t)230), L_46, L_48);
+		V_9 = L_49;
+		goto IL_0164;
+	}
+
+IL_0164:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:173>
+		bool L_50 = V_9;
+		return L_50;
 	}
 }
-// Method Definition Index: 48527
+// Method Definition Index: 48607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__cctor_mB92DD7F353D38D803679D1553400B5277304E155 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8282,7 +9766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__cctor_mB92DD7F353D38D803679D15
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:33>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:33>
 		Dictionary_2_tCA6FC027A4EAE9285D2860309E61DB2B271D9A80* L_0 = (Dictionary_2_tCA6FC027A4EAE9285D2860309E61DB2B271D9A80*)il2cpp_codegen_object_new(Dictionary_2_tCA6FC027A4EAE9285D2860309E61DB2B271D9A80_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m3624D5290223E183D570E4CC5E15C7CC257D5F79(L_0, Dictionary_2__ctor_m3624D5290223E183D570E4CC5E15C7CC257D5F79_RuntimeMethod_var);
 		Dictionary_2_tCA6FC027A4EAE9285D2860309E61DB2B271D9A80* L_1 = L_0;
@@ -8318,134 +9802,143 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__cctor_mB92DD7F353D38D803679D15
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48528
+// Method Definition Index: 48608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
+	uint8_t V_0 = 0;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:251>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:251>
 		uint8_t L_0 = __this->___authType;
-		return L_0;
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:251>
+		uint8_t L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 48529
+// Method Definition Index: 48609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:252>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:252>
 		uint8_t L_0 = ___0_value;
 		__this->___authType = L_0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:252>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:252>
 		return;
 	}
 }
-// Method Definition Index: 48530
+// Method Definition Index: 48610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
 		String_t* L_0 = __this->___U3CAuthGetParametersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48531
+// Method Definition Index: 48611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
 		String_t* L_0 = ___0_value;
 		__this->___U3CAuthGetParametersU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAuthGetParametersU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48532
+// Method Definition Index: 48612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
 		RuntimeObject* L_0 = __this->___U3CAuthPostDataU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48533
+// Method Definition Index: 48613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CAuthPostDataU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAuthPostDataU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48534
+// Method Definition Index: 48614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
 		RuntimeObject* L_0 = __this->___U3CTokenU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48535
+// Method Definition Index: 48615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CTokenU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTokenU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48536
+// Method Definition Index: 48616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
 		String_t* L_0 = __this->___U3CUserIdU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48537
+// Method Definition Index: 48617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
 		String_t* L_0 = ___0_value;
 		__this->___U3CUserIdU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CUserIdU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48538
+// Method Definition Index: 48618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues__ctor_m0EC34240479292C7E3D292072C7AE92D1CEA7C60 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:245>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:245>
 		__this->___authType = ((int32_t)255);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:276>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:276>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:278>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:278>
 		return;
 	}
 }
-// Method Definition Index: 48539
+// Method Definition Index: 48619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues__ctor_mB097BC3108CD439CAD77D4AE77F8616FA92C929D (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:245>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:245>
 		__this->___authType = ((int32_t)255);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:282>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:282>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:284>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:284>
 		String_t* L_0 = ___0_userId;
 		AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0_inline(__this, L_0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:285>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:285>
 		return;
 	}
 }
-// Method Definition Index: 48540
+// Method Definition Index: 48620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFE26A17A25FB89D5144A822BB192D9109B3E80E6 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_stringData, const RuntimeMethod* method) 
 {
 	AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* G_B2_0 = NULL;
@@ -8453,14 +9946,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFE
 	String_t* G_B3_0 = NULL;
 	AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* G_B3_1 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:292>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:292>
 		String_t* L_0 = ___0_stringData;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
 		if (L_1)
 		{
 			G_B2_0 = __this;
-			goto IL_000c;
+			goto IL_000d;
 		}
 		G_B1_0 = __this;
 	}
@@ -8468,46 +9961,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFE
 		String_t* L_2 = ___0_stringData;
 		G_B3_0 = L_2;
 		G_B3_1 = G_B1_0;
-		goto IL_000d;
+		goto IL_000e;
 	}
 
-IL_000c:
+IL_000d:
 	{
 		G_B3_0 = ((String_t*)(NULL));
 		G_B3_1 = G_B2_0;
 	}
 
-IL_000d:
+IL_000e:
 	{
 		NullCheck(G_B3_1);
 		AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9_inline(G_B3_1, G_B3_0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:293>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:293>
 		return;
 	}
 }
-// Method Definition Index: 48541
+// Method Definition Index: 48621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFDEEAC38514C2C52DD458EE8DFFBFE3E9EE89742 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_byteData, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:300>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:300>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ___0_byteData;
 		AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9_inline(__this, (RuntimeObject*)L_0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:301>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:301>
 		return;
 	}
 }
-// Method Definition Index: 48542
+// Method Definition Index: 48622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_m38D2201739503795772FDE32E0B48BA45774CF0C (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_dictData, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:308>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:308>
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = ___0_dictData;
 		AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9_inline(__this, L_0, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:309>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:309>
 		return;
 	}
 }
-// Method Definition Index: 48543
+// Method Definition Index: 48623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_AddAuthParameter_m0B79DDC43BE54A9722A65B6AE270A3280F77CB1A (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8523,30 +10016,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_AddAuthParameter_m0
 	String_t* V_0 = NULL;
 	String_t* G_B3_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:317>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:317>
 		String_t* L_0;
 		L_0 = AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline(__this, NULL);
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
 		if (L_1)
 		{
-			goto IL_0014;
+			goto IL_0015;
 		}
 	}
 	{
 		G_B3_0 = _stringLiteral8D004CCFB2C7F7062B882865483FF7F4DC36E04E;
-		goto IL_0019;
+		goto IL_001a;
 	}
 
-IL_0014:
+IL_0015:
 	{
 		G_B3_0 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 	}
 
-IL_0019:
+IL_001a:
 	{
 		V_0 = G_B3_0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:318>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:318>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = L_2;
 		String_t* L_4;
@@ -8577,11 +10070,11 @@ IL_0019:
 		String_t* L_13;
 		L_13 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral4481DFAA44A224ED937CFB9CFFB4AEA2435C0B68, L_10, NULL);
 		AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029_inline(__this, L_13, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:319>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:319>
 		return;
 	}
 }
-// Method Definition Index: 48544
+// Method Definition Index: 48624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ToString_mA8AFE35348657942021ABA732B823022DD617E0F (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8592,8 +10085,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ToString_mA8AF
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral610AC17320941C760FFD5A2AAB296394668E096E);
 		s_Il2CppMethodInitialized = true;
 	}
+	String_t* V_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:327>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:327>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_1 = L_0;
 		String_t* L_2;
@@ -8617,7 +10111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ToString_mA8AF
 		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_8);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_9 = L_5;
 		uint8_t L_10;
-		L_10 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C_inline(__this, NULL);
+		L_10 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C(__this, NULL);
 		uint8_t L_11 = L_10;
 		RuntimeObject* L_12 = Box(CustomAuthenticationType_tC787510EF30CF4A491196ABF605F289F38143A15_il2cpp_TypeInfo_var, &L_11);
 		NullCheck(L_9);
@@ -8625,40 +10119,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ToString_mA8AF
 		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_12);
 		String_t* L_13;
 		L_13 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral610AC17320941C760FFD5A2AAB296394668E096E, L_9, NULL);
-		return L_13;
+		V_0 = L_13;
+		goto IL_0045;
+	}
+
+IL_0045:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:328>
+		String_t* L_14 = V_0;
+		return L_14;
 	}
 }
-// Method Definition Index: 48545
+// Method Definition Index: 48625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* AuthenticationValues_CopyTo_m3F2607D839FF331F256F1470F6737196FA71DA62 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___0_copy, const RuntimeMethod* method) 
 {
+	AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* V_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:337>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:337>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0 = ___0_copy;
 		uint8_t L_1;
-		L_1 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C_inline(__this, NULL);
+		L_1 = AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C(__this, NULL);
 		NullCheck(L_0);
-		AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404_inline(L_0, L_1, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:338>
+		AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404(L_0, L_1, NULL);
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:338>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_2 = ___0_copy;
 		String_t* L_3;
 		L_3 = AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline(__this, NULL);
 		NullCheck(L_2);
 		AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029_inline(L_2, L_3, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:339>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:339>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_4 = ___0_copy;
 		RuntimeObject* L_5;
 		L_5 = AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline(__this, NULL);
 		NullCheck(L_4);
 		AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9_inline(L_4, L_5, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:340>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:340>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_6 = ___0_copy;
 		String_t* L_7;
 		L_7 = AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline(__this, NULL);
 		NullCheck(L_6);
 		AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0_inline(L_6, L_7, NULL);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:341>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:341>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_8 = ___0_copy;
-		return L_8;
+		V_0 = L_8;
+		goto IL_0039;
+	}
+
+IL_0039:
+	{
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:342>
+		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_9 = V_0;
+		return L_9;
 	}
 }
 #ifdef __clang__
@@ -8669,7 +10180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48546
+// Method Definition Index: 48626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterCode__ctor_mD0F4E855C662638C7A00897ACA58D12934D93855 (ParameterCode_t4B15A3A1CFDF4D5C7D5C69BC1FDCEFD9AF3148AD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8685,7 +10196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterCode__ctor_mD0F4E855C662638C7A0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 48547
+// Method Definition Index: 48627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorCode__ctor_m06F10D940C060F2D1FD575C6279FC1552F1721D3 (ErrorCode_tB0581F5918237D121D76606DB4899640A7C43093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8736,86 +10247,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorCode__ctor_m06F10D940C060F2D1FD575C
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 48427
+// Method Definition Index: 48507
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_LastMsgId_m687ECE88274288B3CA564D41E8F129C90EAEED8A_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:57>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:57>
 		int32_t L_0 = ___0_value;
 		__this->___U3CLastMsgIdU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48429
+// Method Definition Index: 48509
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_PublishSubscribers_m2DA1D9D78E6A17E14CBA33FECB5469836E9FBB5A_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
 		bool L_0 = ___0_value;
 		__this->___U3CPublishSubscribersU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48431
+// Method Definition Index: 48511
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_MaxSubscribers_mABD8D726D312CCFA0CA5A75AFB4865F9D17C7079_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMaxSubscribersU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48450
+// Method Definition Index: 48530
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
 		int32_t L_0 = __this->___U3CStateU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48461
+// Method Definition Index: 48541
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0 = __this->___U3CAuthValuesU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48536
+// Method Definition Index: 48616
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
 		String_t* L_0 = __this->___U3CUserIdU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48462
+// Method Definition Index: 48542
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:128>
 		AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* L_0 = ___0_value;
 		__this->___U3CAuthValuesU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAuthValuesU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48537
+// Method Definition Index: 48617
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:272>
 		String_t* L_0 = ___0_value;
 		__this->___U3CUserIdU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CUserIdU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 41950
+// Method Definition Index: 42170
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8823,7 +10334,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t PhotonPeer_get_TransportP
 		return L_0;
 	}
 }
-// Method Definition Index: 41951
+// Method Definition Index: 42171
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -8832,17 +10343,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_TransportProt
 		return;
 	}
 }
-// Method Definition Index: 48451
+// Method Definition Index: 48531
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:94>
 		int32_t L_0 = ___0_value;
 		__this->___U3CStateU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 41896
+// Method Definition Index: 42116
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_SerializationProtocolType_m3A949C39212B0109744721F7CEFC122C6C4C573B_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -8851,221 +10362,200 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_Serialization
 		return;
 	}
 }
-// Method Definition Index: 48449
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:74>
-		String_t* L_0 = ___0_value;
-		__this->___chatRegion = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___chatRegion), (void*)L_0);
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:74>
-		return;
-	}
-}
-// Method Definition Index: 48443
+// Method Definition Index: 48523
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
 		bool L_0 = ___0_value;
 		__this->___U3CEnableProtocolFallbackU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48453
+// Method Definition Index: 48533
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
 		int32_t L_0 = ___0_value;
 		__this->___U3CDisconnectedCauseU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48460
+// Method Definition Index: 48540
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AppId_m59122AD30CE686185534AB99FE427F9659C705F1_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
 		String_t* L_0 = ___0_value;
 		__this->___U3CAppIdU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAppIdU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48458
+// Method Definition Index: 48538
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AppVersion_mDCCA9627D033CA507EC3414F1B27F6620FDFD418_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
 		String_t* L_0 = ___0_value;
 		__this->___U3CAppVersionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAppVersionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48445
+// Method Definition Index: 48525
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_NameServerAddress_m151DD2A6FF91AAA0F9651E73E2B10BAC5AAC398E_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
 		String_t* L_0 = ___0_value;
 		__this->___U3CNameServerAddressU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CNameServerAddressU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48444
+// Method Definition Index: 48524
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_NameServerAddress_mCAE58820E4D0221517E68E9C7B97FE9CACAE8744_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:62>
 		String_t* L_0 = __this->___U3CNameServerAddressU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48465
+// Method Definition Index: 48545
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:200>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:200>
 		bool L_0 = __this->___U3CUseBackgroundWorkerForSendingU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48459
+// Method Definition Index: 48539
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:124>
 		String_t* L_0 = __this->___U3CAppIdU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48457
+// Method Definition Index: 48537
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:121>
 		String_t* L_0 = __this->___U3CAppVersionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48535
+// Method Definition Index: 48615
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CTokenU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTokenU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48442
+// Method Definition Index: 48522
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:59>
 		bool L_0 = __this->___U3CEnableProtocolFallbackU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48448
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:73>
-		String_t* L_0 = __this->___chatRegion;
-		return L_0;
-	}
-}
-// Method Definition Index: 48424
+// Method Definition Index: 48504
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_IsPrivate_mC15D3E62B0A6EB24F6C1D0C6EC7F7857886D8068_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:49>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:49>
 		bool L_0 = ___0_value;
 		__this->___U3CIsPrivateU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 48428
+// Method Definition Index: 48508
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:62>
 		bool L_0 = __this->___U3CPublishSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48447
+// Method Definition Index: 48527
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_FrontendAddress_m11BEEFC4E38A657099753638560CF27FD8BEA8C6_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
 		String_t* L_0 = ___0_value;
 		__this->___U3CFrontendAddressU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CFrontendAddressU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48452
+// Method Definition Index: 48532
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatClient_get_DisconnectedCause_mE36D0EDB819FF001973B6D318B1DB4CD7C1CC9B6_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:97>
 		int32_t L_0 = __this->___U3CDisconnectedCauseU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48446
+// Method Definition Index: 48526
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatClient.cs:65>
 		String_t* L_0 = __this->___U3CFrontendAddressU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48534
+// Method Definition Index: 48614
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:268>
 		RuntimeObject* L_0 = __this->___U3CTokenU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48430
+// Method Definition Index: 48510
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatChannel.cs:65>
 		int32_t L_0 = __this->___U3CMaxSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48416
+// Method Definition Index: 48496
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChannelCreationOptions_get_MaxSubscribers_m1F147E5851EF027099B954B5D4CADB288112ECA9_inline (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:16>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:16>
 		int32_t L_0 = __this->___U3CMaxSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48414
+// Method Definition Index: 48494
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChannelCreationOptions_get_PublishSubscribers_m1DE43FC2FA2BC1B223AD3006D33726E429EC1CD4_inline (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:14>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChannelCreationOptions.cs:14>
 		bool L_0 = __this->___U3CPublishSubscribersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 41900
+// Method Definition Index: 42120
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9073,67 +10563,47 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* PhotonPeer_get_Lis
 		return L_0;
 	}
 }
-// Method Definition Index: 48528
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:251>
-		uint8_t L_0 = __this->___authType;
-		return L_0;
-	}
-}
-// Method Definition Index: 48530
+// Method Definition Index: 48610
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
 		String_t* L_0 = __this->___U3CAuthGetParametersU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48532
+// Method Definition Index: 48612
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
 		RuntimeObject* L_0 = __this->___U3CAuthPostDataU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 48533
+// Method Definition Index: 48613
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:264>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CAuthPostDataU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAuthPostDataU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48531
+// Method Definition Index: 48611
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
+		//<source_info:C:/Users/saari/VR_Cardboard_Project/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:260>
 		String_t* L_0 = ___0_value;
 		__this->___U3CAuthGetParametersU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAuthGetParametersU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 48529
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, uint8_t ___0_value, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:252>
-		uint8_t L_0 = ___0_value;
-		__this->___authType = L_0;
-		//<source_info:E:/UnityProjects/VR-cardboard-project/Assets/Photon/PhotonChat/Code/ChatPeer.cs:252>
-		return;
-	}
-}
-// Method Definition Index: 11142
+// Method Definition Index: 11280
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9141,7 +10611,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 11153
+// Method Definition Index: 11291
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -9179,7 +10649,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 11160
+// Method Definition Index: 11298
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -9209,7 +10679,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 11055
+// Method Definition Index: 11185
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9217,7 +10687,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D250721629385
 		return L_0;
 	}
 }
-// Method Definition Index: 11135
+// Method Definition Index: 11273
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9225,7 +10695,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 11134
+// Method Definition Index: 11272
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9233,7 +10703,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 2131
+// Method Definition Index: 2154
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9241,7 +10711,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2
 		return L_0;
 	}
 }
-// Method Definition Index: 47531
+// Method Definition Index: 47603
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_m41CC85EEB7855CEFA3BC7A32F115387939318ED3_gshared_inline (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) 
 {
 	{

@@ -783,6 +783,8 @@ UnityEngine.PlayerPrefs::HasKey_Injected
 UnityEngine.PlayerPrefs::TrySetSetString_Injected
 UnityEngine.PlayerPrefs::DeleteKey_Injected
 UnityEngine.PlayerPrefs::GetString_Injected
+UnityEngine.Profiling.Profiler::BeginSampleImpl_Injected
+UnityEngine.Profiling.Profiler::EndSample
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_activeColorSpace
 UnityEngine.Quaternion::AngleAxis_Injected

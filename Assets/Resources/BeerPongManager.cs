@@ -15,6 +15,13 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
     public Transform player1SpawnPoint;
     public Transform player2SpawnPoint;
 
+    [Header("Score")]
+    public int player1Score = 0;
+    public int player2Score = 0;
+    public int maxScore = 6;
+
+    private bool gameOver = false;
+
     void Start()
     {
         Debug.Log("BeerPongManager Started");
@@ -43,6 +50,12 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
 
     void SpawnBallForCurrentPlayer()
     {
+        if (gameOver)
+        {
+            Debug.Log("[MASTER] Game is over, not spawning new ball.");
+            return;
+        }
+
         if (ballPrefab == null)
         {
             Debug.LogError("Ball prefab not assigned!");
@@ -55,17 +68,7 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
             PhotonNetwork.Destroy(currentBall);
         }
 
-        // Valitse spawn-piste pelaajan vuoron mukaan
-        Transform spawnPoint = null;
-
-        if (currentPlayerTurn == 1)
-        {
-            spawnPoint = player1SpawnPoint;
-        }
-        else if (currentPlayerTurn == 2)
-        {
-            spawnPoint = player2SpawnPoint;
-        }
+        Transform spawnPoint = (currentPlayerTurn == 1) ? player1SpawnPoint : player2SpawnPoint;
 
         if (spawnPoint == null)
         {
@@ -83,13 +86,13 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
 
         if (currentBall != null)
         {
-            // Transfer ownership to the player whose turn it is
             int ownerActorNumber = GetActorNumberForPlayer(currentPlayerTurn);
             PhotonView pv = currentBall.GetComponent<PhotonView>();
             if (pv != null)
             {
                 pv.TransferOwnership(ownerActorNumber);
                 Debug.Log($"Ball ownership transferred to Player {currentPlayerTurn} (Actor {ownerActorNumber})");
+                Debug.Log($"AFTER TRANSFER: photonView.OwnerActorNr = {pv.OwnerActorNr}");
             }
             else
             {
@@ -110,31 +113,17 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
 
         if (players.Length >= 2)
         {
-            // Player 1 = Master Client (first player)
-            // Player 2 = Second player
             if (playerNumber == 1)
             {
-                // Return master client's actor number
                 foreach (var p in players)
-                {
                     if (p.IsMasterClient)
-                    {
-                        Debug.Log($"Returning Player 1 (Master): {p.ActorNumber}");
                         return p.ActorNumber;
-                    }
-                }
             }
             else if (playerNumber == 2)
             {
-                // Return non-master client's actor number
                 foreach (var p in players)
-                {
                     if (!p.IsMasterClient)
-                    {
-                        Debug.Log($"Returning Player 2 (Non-Master): {p.ActorNumber}");
                         return p.ActorNumber;
-                    }
-                }
             }
         }
 
@@ -144,15 +133,17 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
 
     public void OnBallThrown()
     {
-        // Tämän pitäisi kutsua vain masterilla RPC:n kautta,
-        // mutta varmistetaan silti:
         if (!PhotonNetwork.IsMasterClient) return;
+        if (gameOver) return;
 
         Debug.Log($"Player {currentPlayerTurn} threw the ball!");
 
         // Switch turn
         currentPlayerTurn = (currentPlayerTurn == 1) ? 2 : 1;
         Debug.Log($"Turn switched to Player {currentPlayerTurn}");
+
+        // Tulostetaan pisteet kaikille jokaisen heiton jälkeen
+        photonView.RPC(nameof(RPC_PrintScores), RpcTarget.All);
 
         // Spawn new ball after delay
         StartCoroutine(RespawnBallAfterDelay());
@@ -162,5 +153,66 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
     {
         yield return new WaitForSeconds(ballRespawnDelay);
         SpawnBallForCurrentPlayer();
+    }
+
+    // === PISTEENLASKU ===
+    // Kuppi, jonka omistaja on 'cupOwnerPlayer', osui
+    public void OnCupHit(int cupOwnerPlayer)
+    {
+        if (!PhotonNetwork.IsMasterClient) return;
+        if (gameOver) return;
+
+        // Jos Player 1:n kuppi osuu -> Player 2 saa pisteen
+        int scoringPlayer = (cupOwnerPlayer == 1) ? 2 : 1;
+
+        // Päivitetään pisteet masterilla
+        if (scoringPlayer == 1)
+            player1Score++;
+        else
+            player2Score++;
+
+        bool someoneWon = (player1Score >= maxScore || player2Score >= maxScore);
+        int winnerPlayer = 0;
+        if (someoneWon)
+        {
+            winnerPlayer = (player1Score >= maxScore) ? 1 : 2;
+            gameOver = true;
+        }
+
+        // Synkataan pisteet ja mahdollinen voittaja kaikille
+        photonView.RPC(nameof(RPC_SyncScoreAndMaybeEnd),
+            RpcTarget.All,
+            player1Score,
+            player2Score,
+            winnerPlayer);
+    }
+
+    [PunRPC]
+    void RPC_SyncScoreAndMaybeEnd(int p1Score, int p2Score, int winnerPlayer)
+    {
+        player1Score = p1Score;
+        player2Score = p2Score;
+
+        Debug.Log($"Score updated - P1: {player1Score}, P2: {player2Score}");
+
+        if (winnerPlayer != 0)
+        {
+            gameOver = true;
+            Debug.Log($"GAME OVER! Player {winnerPlayer} wins!");
+
+            // Ei enää uutta palloa
+            if (PhotonNetwork.IsMasterClient && currentBall != null)
+            {
+                PhotonNetwork.Destroy(currentBall);
+                currentBall = null;
+            }
+        }
+    }
+
+    // RPC, joka tulostaa pisteet jokaisen heiton jälkeen kaikkien konsoleihin
+    [PunRPC]
+    void RPC_PrintScores()
+    {
+        Debug.Log($"SCORE UPDATE → Player 1: {player1Score}, Player 2: {player2Score}");
     }
 }

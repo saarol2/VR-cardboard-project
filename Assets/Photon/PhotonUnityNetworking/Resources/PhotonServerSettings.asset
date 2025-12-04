@@ -47,6 +47,10 @@ MonoBehaviour:
   - DestroyCup
   - DestroyCupByName
   - RPC_NotifyThrown
+  - RPC_DestroyCup
+  - RPC_NotifyCupHit
+  - RPC_PrintScores
+  - RPC_SyncScoreAndMaybeEnd
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
