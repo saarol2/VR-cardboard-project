@@ -9,6 +9,11 @@ public class NetBootstrap : MonoBehaviourPunCallbacks
     // Drag HeadAvatar (cube-only) here
     [SerializeField] GameObject headAvatarPrefab;
 
+    // NEW: Spawn points for Beer Pong
+    [Header("Spawn Points")]
+    [SerializeField] Transform player1SpawnPoint;
+    [SerializeField] Transform player2SpawnPoint;
+
     void Start()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -18,9 +23,8 @@ public class NetBootstrap : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        PhotonNetwork.JoinOrCreateRoom("Room1", new RoomOptions { MaxPlayers = 3 }, null);
+        PhotonNetwork.JoinOrCreateRoom("Room1", new RoomOptions { MaxPlayers = 2 }, null); // Changed to 2 players
     }
-
 
     public override void OnJoinedRoom()
     {
@@ -30,17 +34,35 @@ public class NetBootstrap : MonoBehaviourPunCallbacks
             return;
         }
 
-        int i = PhotonNetwork.CurrentRoom.PlayerCount - 1;
-        Vector3[] spawns = {
-        new Vector3(-0.5f, 1.6f, 0f),
-        new Vector3( 0.5f, 1.6f, 0f),
-        new Vector3(-0.5f, 1.6f, 0.6f),
-        new Vector3( 0.5f, 1.6f, 0.6f),
-    };
-        Vector3 pos = spawns[Mathf.Clamp(i, 0, spawns.Length - 1)];
+        // Determine spawn position based on player count
+        Vector3 pos;
+        Quaternion rot = Quaternion.identity;
+
+        int playerIndex = PhotonNetwork.CurrentRoom.PlayerCount - 1;
+
+        if (playerIndex == 0 && player1SpawnPoint != null)
+        {
+            pos = player1SpawnPoint.position;
+            rot = player1SpawnPoint.rotation;
+        }
+        else if (playerIndex == 1 && player2SpawnPoint != null)
+        {
+            pos = player2SpawnPoint.position;
+            rot = player2SpawnPoint.rotation;
+        }
+        else
+        {
+            // Fallback if spawn points not set
+            Debug.LogWarning("Spawn points not assigned! Using default positions.");
+            Vector3[] fallbackSpawns = {
+                new Vector3(-0.5f, 1.6f, 0f),
+                new Vector3( 0.5f, 1.6f, 0f)
+            };
+            pos = fallbackSpawns[Mathf.Clamp(playerIndex, 0, 1)];
+        }
 
         // Spawn your network head
-        GameObject myHead = PhotonNetwork.Instantiate(headAvatarPrefab.name, pos, Quaternion.identity);
+        GameObject myHead = PhotonNetwork.Instantiate(headAvatarPrefab.name, pos, rot);
 
         // Snap *local rig* (parent of Main Camera) to spawn
         var pv = myHead.GetComponent<PhotonView>();
@@ -49,10 +71,8 @@ public class NetBootstrap : MonoBehaviourPunCallbacks
             var cam = Camera.main;
             if (cam != null)
             {
-                Transform rig = cam.transform.parent ? cam.transform.parent : cam.transform; // <-- use parent if present
-                rig.SetPositionAndRotation(pos, Quaternion.identity);
-                // (optional) point forward into the room:
-                rig.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
+                Transform rig = cam.transform.parent ? cam.transform.parent : cam.transform;
+                rig.SetPositionAndRotation(pos, rot);
             }
         }
     }
