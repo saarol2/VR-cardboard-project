@@ -14,19 +14,12 @@ public class BallWatcher : MonoBehaviourPun
     void Update()
     {
         if (hasNotified || rb == null) return;
-
-        // Vain pallon omistaja tarkkailee heittoa
         if (!photonView.IsMine) return;
 
-        // Ehto milloin tulkitaan, että pallo on "heitetty"
-        // Voit säätää rajoja (velocity tms.)
         if (rb.useGravity && !rb.isKinematic && rb.linearVelocity.magnitude > 0.2f)
         {
             hasNotified = true;
-
             Debug.Log($"BallWatcher: Ball thrown by actor {photonView.Owner.ActorNumber}, notifying MasterClient");
-
-            // Kerrotaan masterille että pallo on heitetty
             photonView.RPC(nameof(RPC_NotifyThrown), RpcTarget.MasterClient);
         }
     }
@@ -34,7 +27,6 @@ public class BallWatcher : MonoBehaviourPun
     [PunRPC]
     void RPC_NotifyThrown()
     {
-        // Tämä ajetaan MASTER-KLIENTILLÄ
         Debug.Log("BallWatcher: RPC_NotifyThrown received on MasterClient");
 
         BeerPongManager manager = FindObjectOfType<BeerPongManager>();

@@ -1,14 +1,15 @@
 using UnityEngine;
 using Photon.Pun;
 using System.Collections;
+using TMPro;
 
 public class BeerPongManager : MonoBehaviourPunCallbacks
 {
     [Header("Ball Setup")]
     public GameObject ballPrefab;
-    public float ballRespawnDelay = 3f;
+    public float ballRespawnDelay = 5f;
 
-    private int currentPlayerTurn = 1; // Which player's turn (1 or 2)
+    private int currentPlayerTurn = 1;
     private GameObject currentBall;
 
     [Header("Spawn Points")]
@@ -20,11 +21,25 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
     public int player2Score = 0;
     public int maxScore = 6;
 
+    [Header("Win Effects")]
+    public AudioClip winSound;
+    private AudioSource audioSource;
+
     private bool gameOver = false;
+    private GameObject winTextPlayer1;
+    private GameObject winTextPlayer2;
 
     void Start()
     {
         Debug.Log("BeerPongManager Started");
+        
+        // Add audiosource component
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 0;
+        audioSource.volume = 1.0f;
+        
+        Debug.Log($"AudioSource created. Win sound assigned: {(winSound != null)}");
 
         if (player1SpawnPoint != null && player2SpawnPoint != null)
         {
@@ -142,7 +157,6 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
         currentPlayerTurn = (currentPlayerTurn == 1) ? 2 : 1;
         Debug.Log($"Turn switched to Player {currentPlayerTurn}");
 
-        // Tulostetaan pisteet kaikille jokaisen heiton jälkeen
         photonView.RPC(nameof(RPC_PrintScores), RpcTarget.All);
 
         // Spawn new ball after delay
@@ -155,17 +169,16 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
         SpawnBallForCurrentPlayer();
     }
 
-    // === PISTEENLASKU ===
-    // Kuppi, jonka omistaja on 'cupOwnerPlayer', osui
+    // === SCORING ===
     public void OnCupHit(int cupOwnerPlayer)
     {
         if (!PhotonNetwork.IsMasterClient) return;
         if (gameOver) return;
 
-        // Jos Player 1:n kuppi osuu -> Player 2 saa pisteen
+        // If Player 1's cup is hit -> Player 2 scores
         int scoringPlayer = (cupOwnerPlayer == 1) ? 2 : 1;
 
-        // Päivitetään pisteet masterilla
+        // Update scores on the master client
         if (scoringPlayer == 1)
             player1Score++;
         else
@@ -179,7 +192,7 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
             gameOver = true;
         }
 
-        // Synkataan pisteet ja mahdollinen voittaja kaikille
+        // Sync scores and possible winner to all
         photonView.RPC(nameof(RPC_SyncScoreAndMaybeEnd),
             RpcTarget.All,
             player1Score,
@@ -200,16 +213,86 @@ public class BeerPongManager : MonoBehaviourPunCallbacks
             gameOver = true;
             Debug.Log($"GAME OVER! Player {winnerPlayer} wins!");
 
-            // Ei enää uutta palloa
+            // No more new balls
             if (PhotonNetwork.IsMasterClient && currentBall != null)
             {
                 PhotonNetwork.Destroy(currentBall);
                 currentBall = null;
             }
+
+            // Play win sound
+            PlayWinSound();
+
+            // Show win texts to both players
+            ShowWinText(winnerPlayer);
         }
     }
 
-    // RPC, joka tulostaa pisteet jokaisen heiton jälkeen kaikkien konsoleihin
+    void PlayWinSound()
+    {
+        Debug.Log($"PlayWinSound called - winSound: {winSound != null}, audioSource: {audioSource != null}");
+        
+        if (winSound == null)
+        {
+            Debug.LogError("Win sound AudioClip is NOT assigned in Inspector!");
+            return;
+        }
+        
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource is null! Creating one now...");
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+            audioSource.spatialBlend = 0;
+            audioSource.volume = 1.0f;
+        }
+        
+        Debug.Log($"Playing win sound: {winSound.name}, volume: {audioSource.volume}");
+        audioSource.PlayOneShot(winSound, 1.0f);
+    }
+
+    void ShowWinText(int winnerPlayer)
+    {
+        string winMessage = $"Player {winnerPlayer} won!";
+
+        // Create text for Player 1
+        winTextPlayer1 = CreateWinTextObject(
+            winMessage,
+            new Vector3(0, 10, 0),
+            Quaternion.Euler(0, 90, 0) // Facing Player 1
+        );
+
+        // Create text for Player 2
+        winTextPlayer2 = CreateWinTextObject(
+            winMessage,
+            new Vector3(0, 10, 0),
+            Quaternion.Euler(0, -90, 0) // Facing Player 2
+        );
+
+        Debug.Log($"Win texts created for Player {winnerPlayer}");
+    }
+
+    GameObject CreateWinTextObject(string message, Vector3 position, Quaternion rotation)
+    {
+        GameObject textObj = new GameObject("WinText");
+        textObj.transform.position = position;
+        textObj.transform.rotation = rotation;
+
+            // Lisää TextMeshPro component
+        TextMeshPro tmp = textObj.AddComponent<TextMeshPro>();
+        tmp.text = message;
+        tmp.fontSize = 16;
+        tmp.alignment = TextAlignmentOptions.Center;
+        tmp.color = Color.yellow;
+        tmp.fontStyle = FontStyles.Bold;
+        
+        tmp.rectTransform.sizeDelta = new Vector2(20, 6);
+        tmp.fontMaterial.SetFloat("_CullMode", 2);
+
+        return textObj;
+    }
+
+    // RPC that prints scores to all consoles after each throw
     [PunRPC]
     void RPC_PrintScores()
     {

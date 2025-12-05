@@ -5,8 +5,8 @@ public class BallThrower : Interactive
 {
     [Header("Throw Settings")]
     public float minThrowForce = 5f;
-    public float maxThrowForce = 20f;
-    public float powerBarSpeed = 2f;
+    public float maxThrowForce = 17f;
+    public float powerBarSpeed = 1.7f;
 
     [Header("Visual Power Bar")]
     public float barLength = 1f;
@@ -42,14 +42,12 @@ public class BallThrower : Interactive
     {
         cam = Camera.main ? Camera.main.transform : null;
         
-        // Start with gravity off and kinematic
         if (rb != null)
         {
             rb.useGravity = false;
             rb.isKinematic = true;
         }
 
-        // Debug ownership
         if (pv != null)
         {
             Debug.Log($"BallThrower Start - IsMine: {pv.IsMine}, Owner: {pv.Owner?.ActorNumber}, Local: {PhotonNetwork.LocalPlayer.ActorNumber}");
@@ -58,12 +56,7 @@ public class BallThrower : Interactive
 
     void Update()
     {
-        // Only owner controls this ball
-        if (pv != null && !pv.IsMine)
-        {
-            // Not my ball - don't move it
-            return;
-        }
+        if (pv != null && !pv.IsMine) return;
         if (hasBeenThrown) return;
 
         if (!cam)
@@ -72,17 +65,13 @@ public class BallThrower : Interactive
             if (!cam) return;
         }
 
-        // Keep ball in front of camera until thrown
         transform.position = cam.position + cam.forward * 2f;
         transform.rotation = cam.rotation;
 
-        // If charging, oscillate power and update bar
         if (isCharging)
         {
             float t = Mathf.PingPong(Time.time * powerBarSpeed, 1f);
             currentPower = Mathf.Lerp(minThrowForce, maxThrowForce, t);
-
-            // Update power bar visual
             UpdatePowerBar(t);
         }
     }
@@ -91,15 +80,13 @@ public class BallThrower : Interactive
     {
         if (powerBar == null) return;
 
-        // Position bar to the right of the ball, separate from ball
-        Vector3 barBasePos = transform.position + transform.right * (barOffset + 0.15f); // Offset more to the right
-        Vector3 barStart = barBasePos - Vector3.up * (barLength * 0.5f); // Start from bottom
+        Vector3 barBasePos = transform.position + transform.right * (barOffset + 0.15f);
+        Vector3 barStart = barBasePos - Vector3.up * (barLength * 0.5f);
         Vector3 barEnd = barBasePos - Vector3.up * (barLength * 0.5f) + Vector3.up * (barLength * normalizedPower);
 
         powerBar.SetPosition(0, barStart);
         powerBar.SetPosition(1, barEnd);
 
-        // Color based on power
         Color barColor = Color.Lerp(minPowerColor, maxPowerColor, normalizedPower);
         powerBar.startColor = barColor;
         powerBar.endColor = barColor;
@@ -111,11 +98,9 @@ public class BallThrower : Interactive
 
         if (!isCharging)
         {
-            // First interact: start charging
             isCharging = true;
             currentPower = minThrowForce;
 
-            // Show power bar
             if (powerBar != null)
                 powerBar.enabled = true;
 
@@ -123,14 +108,12 @@ public class BallThrower : Interactive
         }
         else
         {
-            // Second interact: throw the ball with current power
             Vector3 throwDirection = cam ? cam.forward : transform.forward;
             pv.RPC("ThrowBall", RpcTarget.AllBuffered, throwDirection, currentPower);
             
             hasBeenThrown = true;
             isCharging = false;
 
-            // Hide power bar
             if (powerBar != null)
                 powerBar.enabled = false;
 

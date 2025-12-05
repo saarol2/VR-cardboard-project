@@ -9,10 +9,7 @@ public class BeerPongCup : MonoBehaviourPun
 
     void OnTriggerEnter(Collider other)
     {
-        // Osuma vain kerran / kuppi
         if (alreadyHit) return;
-
-        // Tarkista osuiko pallo
         if (other.GetComponent<BallThrower>() == null) return;
 
         alreadyHit = true;
@@ -22,14 +19,10 @@ public class BeerPongCup : MonoBehaviourPun
             $"(local actor {PhotonNetwork.LocalPlayer.ActorNumber}, isMaster={PhotonNetwork.IsMasterClient})"
         );
 
-        // 1) Ilmoita masterille pisteitä varten
         photonView.RPC(nameof(RPC_NotifyCupHit), RpcTarget.MasterClient);
-
-        // 2) Despawnataan kuppi kaikilta
         photonView.RPC(nameof(RPC_DestroyCup), RpcTarget.All);
     }
 
-    // Ajetaan vain masterilla – hoitaa pisteen
     [PunRPC]
     void RPC_NotifyCupHit()
     {
@@ -49,7 +42,6 @@ public class BeerPongCup : MonoBehaviourPun
         }
     }
 
-    // Ajetaan KAIKILLA – hoitaa kupin tuhoamisen
     [PunRPC]
     void RPC_DestroyCup()
     {
@@ -57,7 +49,6 @@ public class BeerPongCup : MonoBehaviourPun
             $"RPC_DestroyCup: Cup for Player {ownerPlayer} despawned on client {PhotonNetwork.LocalPlayer.ActorNumber}"
         );
 
-        // Paikallinen tuho, mutta RPC varmistaa, että se tapahtuu kaikilla
         Destroy(gameObject);
     }
 }

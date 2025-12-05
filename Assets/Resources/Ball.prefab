@@ -159,8 +159,8 @@ MonoBehaviour:
   twistMultiplierOverride: 0
   dwellTimerOverride: 0
   minThrowForce: 5
-  maxThrowForce: 20
-  powerBarSpeed: 2
+  maxThrowForce: 17
+  powerBarSpeed: 1.7
   barLength: 1
   barOffset: 0.5
   minPowerColor: {r: 0.58916587, g: 1, b: 0.015686274, a: 1}
